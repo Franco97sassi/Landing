@@ -1,0 +1,119 @@
+.track{
+	-webkit-animation: track 5.8s cubic-bezier(0.215, 0.610, 0.355, 1.000)infinite both;
+	        animation: track 5.8s cubic-bezier(0.215, 0.610, 0.355, 1.000)infinite both;
+}
+@-webkit-keyframes track {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px);
+            transform: translateZ(-700px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes track {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px);
+            transform: translateZ(-700px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}    
+.track2{
+	-webkit-animation: track2 5.8s cubic-bezier(0.215, 0.610, 0.355, 1.000)infinite both;
+	        animation: track2 5.8s cubic-bezier(0.215, 0.610, 0.355, 1.000)infinite both;
+}
+@-webkit-keyframes track2 {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px);
+            transform: translateZ(-700px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes track2 {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px);
+            transform: translateZ(-700px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}    
+
+
+
+
+
+
+
+.bg-pan-tr {
+	-webkit-animation: bg-pan-tr 8s both infinite;
+	        animation: bg-pan-tr 8s both infinite;
+}
+@-webkit-keyframes bg-pan-tr {
+  0% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+@keyframes bg-pan-tr {
+  0% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+.tilde:before {
+  content: "✔️ ";
+  padding-right: 8px;  color: black; /* o puedes usar #000 si prefieres el formato hexadecimal */
+}
+.alumni-font{
+  font-family: 'Alumni Sans Collegiate One', sans-serif;
+}
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.slide-in-animation {
+  animation: slideInFromLeft 1s forwards; /* 1s es la duración de la animación */
+}
