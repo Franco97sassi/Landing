@@ -1,0 +1,25 @@
+@keyframes scroll {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .scrolling-wrapper {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  .scrolling-content {
+    display: inline-flex;
+    animation: scroll 25s linear infinite;
+  }
+  
+  .scrolling-item {
+    display: inline-flex;
+    flex: 0 0 auto;
+  }
+  

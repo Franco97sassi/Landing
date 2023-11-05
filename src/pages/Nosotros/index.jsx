@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Box, Typography, Grid } from '@mui/material';
+import { Box, Typography, Grid  } from '@mui/material';
 import Carousel from 'react-material-ui-carousel';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import {   Slide } from "react-awesome-reveal";
 
 import miembro1 from "../../assets/miembro1.png";
 import miembro2 from "../../assets/miembro2.png";
@@ -14,7 +15,8 @@ import miembro7 from "../../assets/miembro7.png";
 import miembro8 from "../../assets/miembro8.png";
 import miembro9 from "../../assets/miembro9.png";
 import miembro10 from "../../assets/miembro10.png";
- const Nosotros = () => {
+import Servicios from '../Servicios';
+  const Nosotros = () => {
   const projectImages = [
     { imageUrl: miembro1, profesion: "CEO", nombre: "Mario Eduardo Diaz" },
     { imageUrl: miembro2, profesion: "QA and Fullstack Developer", nombre: "Luis Luna" },
@@ -31,19 +33,9 @@ import miembro10 from "../../assets/miembro10.png";
 
   const chunkSize = 3;
   const [currentChunk, setCurrentChunk] = useState(0);
+  const [inView, setInView] = useState(false);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      // Avanzar al siguiente grupo de imágenes
-      setCurrentChunk((prevChunk) => (prevChunk + 1) % Math.ceil(projectImages.length / chunkSize));
-    }, 3000); // Cambiar cada 3 segundos
-
-    return () => {
-      // Limpia el intervalo cuando el componente se desmonta
-      clearInterval(interval);
-    };
-  }, []);
-
+   
   const chunkedImages = projectImages.reduce((resultArray, item, index) => {
     const chunkIndex = Math.floor(index / chunkSize);
 
@@ -58,37 +50,50 @@ import miembro10 from "../../assets/miembro10.png";
 
   return (
     <div>
-      <Box sx={{ backgroundColor: "white" }}>
-        <Typography style={{ fontFamily: "'Oswald', sans-serif" }} variant="h4" sx={{ display: "flex", justifyContent: "center", paddingTop: "62px", marginBottom: "100px" }}>
+      <Servicios/> 
+      
+      <Box  sx={{  background: 'linear-gradient(to top, #333333, black)' }} >
+       
+      <Slide direction="left" triggerOnce={false} in={inView}> 
+
+        <Typography  style={{fontWeight: 700,color: 'white', fontFamily: "'Oswald', sans-serif" }} variant="h2" sx={{ display: "flex", justifyContent: "center", paddingTop: "62px",paddingBottom: "62px" }}>
           Sobre Nosotros
-        </Typography>
+        </Typography></Slide>
+       
         <Carousel
-          autoPlay={false}
-          animation="slide"
-          indicators={false}
-          navButtonsAlwaysVisible
-          navButtonsProps={{
-            style: {
-              backgroundColor: 'rgba(0, 0, 0, 0.3)',
-              borderRadius: '50%',
-              color: 'white',
-              marginTop: "-200px"
-            },
-          }}
-          NextIcon={<KeyboardArrowRightIcon />}
-          PrevIcon={<KeyboardArrowLeftIcon />}
-          index={currentChunk}
-        >
+  autoPlay={true}
+  interval={3000}
+  animation="slide"
+  indicators={false}
+  navButtonsAlwaysVisible
+  navButtonsProps={{
+    style: {
+      backgroundColor: 'rgba(0, 0, 0, 0.3)',
+      borderRadius: '50%',
+      color: 'white',
+      marginTop: "-200px"
+    },
+  }}
+  NextIcon={<KeyboardArrowRightIcon />}
+  PrevIcon={<KeyboardArrowLeftIcon />}
+  index={currentChunk}
+  onChange={(index, active) => setCurrentChunk(index)}
+>
           {chunkedImages.map((chunk, index) => (
-            <Grid backgroundColor="white" container key={index} justifyContent="center" spacing={10}>
-              {chunk.map((image, subIndex) => (
+ <Grid
+ container
+ key={index}
+ justifyContent="center"
+ spacing={10}
+ sx={{ background: 'transparent', padding: '20px' }}  
+>              {chunk.map((image, subIndex) => (
                 <Grid item key={subIndex}>
                   <Box
                     sx={{
                       display: 'flex',
                       flexDirection: 'column',
                       alignItems: 'center',
-                      textAlign: 'center',
+                      textAlign: 'center',marginTop:"50px",
                       width: "300px",
                       height: "300px",
                       borderRadius: "50%",
@@ -100,15 +105,16 @@ import miembro10 from "../../assets/miembro10.png";
                       marginLeft: '10px',
                     }}
                   >
+
                     <img
                       src={image.imageUrl}
                       alt={`Miembro ${index * chunkSize + subIndex + 1}`}
-                      style={{ width: '202.8px', height: '206.99px' }}
-                    />
-                    <Typography fontSize="18px" sx={{ fontFamily: "'Oswald', sans-serif" ,color: 'black', marginTop: '10px', fontWeight: 'bold' }}>
+                      style={{ width: '152.8px', height: '156.99px' }}
+                    />  
+                    <Typography fontSize="18px" sx={{ fontFamily: "'Oswald', sans-serif" ,color: 'white', marginTop: '10px' }}>
                       {image.profesion}
                     </Typography>
-                    <Typography fontSize="18px" sx={{fontFamily: "'Oswald', sans-serif" , color: 'black', fontWeight: 'bold' }}>
+                    <Typography fontSize="18px" sx={{fontFamily: "'Oswald', sans-serif" , color: 'white'  }}>
                       {image.nombre}
                     </Typography>
                   </Box>
@@ -116,7 +122,7 @@ import miembro10 from "../../assets/miembro10.png";
               ))}
             </Grid>
           ))}
-        </Carousel>
+        </Carousel>  
       </Box>
     </div>
   );
