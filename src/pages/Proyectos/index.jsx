@@ -26,7 +26,7 @@ import "./styles.css"
   ];
 
   const [hoverIndex, setHoverIndex] = useState(null);
-  const chunkSize = 3;
+  const chunkSize = 1;
   const [currentChunk, setCurrentChunk] = useState(0);
 
   const chunkedProjects = projectImages.reduce((resultArray, item, index) => {
@@ -69,7 +69,7 @@ Nuestros ultimos proyectos realizados con tecnologia avanzada
 
           </Typography>
          
-       <Carousel
+       {/* <Carousel
   autoPlay={true}
   interval={5000}
   animation="slide"
@@ -147,11 +147,73 @@ Nuestros ultimos proyectos realizados con tecnologia avanzada
             </Grid>
           ))}
         </Carousel>  
- 
-      </Box>
+  */}
+       
+      <Carousel
+  autoPlay={true}
+  interval={5000}
+  animation="slide"
+  indicators={false}
+  navButtonsAlwaysVisible={false}
+  index={currentChunk}
+  sx={{ padding: '0 16px' }}
+>
+  {chunkedProjects.map((chunk, index) => (
+    <Grid container key={index} spacing={2} alignItems="center" justifyContent="center">
+      {chunk.map((project, subIndex) => (
+        <React.Fragment key={subIndex}>
+          <Grid item xs={12} sm={8} md={6} lg={4} xl={3}>
+            <Box sx={{
+              width: "100%", // Asegúrate de que la imagen ocupa todo el ancho del Grid item
+              height: "250px",
+              borderRadius: "10px",
+              marginTop: "50px",
+              backgroundColor: 'rgba(30, 30, 30, 0.56)',
+              position: 'relative',
+              overflow: 'hidden',
+            }}
+            onMouseEnter={() => setHoverIndex(index)}
+            onMouseLeave={() => setHoverIndex(null)}
+            >
+              <Link href={project.url} underline="none" target="_blank" rel="noopener">
 
+              <img  
+                src={project.imageUrl}
+                alt={`Proyecto ${index * chunkSize + subIndex + 1}`}
+                style={{ width: '100%', height: '100%', objectFit: "cover", borderRadius: "10px" }}
+              />  </Link>
+            </Box>
+          </Grid>
+          <Grid item xs={12} sm={4} md={6} lg={8} xl={9}>
+            <Box sx={{
+              p: 2,
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              height: '250px', // Asegúrate de que este Box tiene la misma altura que el Box de la imagen
+            }}>
+              <Typography style={{
+        fontFamily: 'Oswald, sans-serif',
+       }}  variant="h4" gutterBottom>
+                {project.nombre}
+              </Typography>
+              <Typography  style={{
+        fontFamily: 'Oswald, sans-serif',
+       }}  >
+                Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+                Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
 
+                Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
 
+              </Typography>
+            </Box>
+          </Grid>
+        </React.Fragment>
+      ))}
+    </Grid>
+  ))}
+</Carousel>
+</Box>
       {/* email */}
       
       <Box sx={{ width: '100%', height: "100vh", background: 'linear-gradient(to right, #333333, #333333)' }}>
