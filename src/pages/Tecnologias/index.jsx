@@ -24,8 +24,7 @@ import icono from "../../assets/icono.png";
 import Carousel from 'react-material-ui-carousel';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
-import "./styles.css"
-const Servicios = () => {
+ const Tecnologias = () => {
   const projectImages = [
     { imageUrl: gif10, nombre: "Páginas Web" },
     { imageUrl: gif1, nombre: "Aplicaciones Móviles" },
@@ -96,69 +95,31 @@ const Servicios = () => {
    };
 
    const [isHovered, setIsHovered] = useState(null);
-
+ 
   return (
     <div id="servicios">
-              <Slide direction="left" triggerOnce={false} in={inView}> 
+              
+    
 
-    <Typography style={{fontWeight: 700, fontFamily: "'Oswald', sans-serif"  }}  sx={{paddingTop:"80px" ,color:"white", display: "flex", justifyContent: "center", paddingBottom: '50px', fontSize:"44px" }}>
-      ¿Qué podemos hacer por ti?
-    </Typography> </Slide>
-
-    <Grid sx={{background: 'black'  }} marginTop={-25}  container justifyContent="center"  columnSpacing={0} rowSpacing={30} paddingBottom='200px' paddingRight={20} paddingLeft={25} columns={{ xs: 15, sm: 8, md: 10, lg: 14.9 }}>
-      {projectImages.map((image, index) => (
-        <Grid item xs={2} sm={6} md={4} lg={2.5} key={index}  >
-          <Box 
-            onMouseEnter={() => setIsHovered(index)}
-            onMouseLeave={() => setIsHovered(null)}
-            sx={{
-              width: "114px", 
-              height: "104px",
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              transition: 'transform 0.3s',rowSpacing:"200px"
-            }}
-          >
-            <img
-              src={image.imageUrl}
-              alt={`Proyecto ${index + 1}`}
-  style={{ width: '100%', height: 'auto', objectFit: 'cover', borderRadius: '11px', border: "5px solid black" }}
-            />
-            <Typography 
-              style={{ fontFamily: "'Oswald', sans-serif"  }}
-              sx={{ fontSize: "20px", textAlign: 'center' ,color:"white" }}
-            >
-              {image.nombre}
-            </Typography>
-            <List sx={style} component="nav" aria-label="mailbox folders">
-              <Divider />
-            </List>
-            {isHovered === index && (
-              <Typography 
-              style={{ fontFamily: "'Oswald', sans-serif" }}
-                sx={{ fontSize: "12px", textAlign: 'center',color:"white" }}
-              >
-                Lorem ipsum dolor sit amet, consectetur adipis icing elit, sed do eiusmod tempor incid dunt utlab ore et dolore magna aliqua. Ut enim ad minim veniam weay in the sun.
-              </Typography>
-            )}
-          </Box>
-        </Grid>
-      ))}
-    </Grid>
+     
 
 
 
 
 
 
-   {/* <Box sx={{ background: '#333333' , height:"75vh"}}>
+   <Box sx={{ background: '#333333' , height:"100vh"}}>
+   <Slide direction="left" triggerOnce={false} in={inView}> 
+
+<Typography style={{fontWeight: 700, fontFamily: "'Oswald', sans-serif"  }} variant="h2" sx={{ paddingTop:"50px",color:"white", display: "flex", justifyContent: "center", paddingBottom: '50px' }}>
+ Nuestras Tecnologías
+</Typography> </Slide>
   <div className="scrolling-wrapper">
     <div className="scrolling-content">
       {chunkedImages2.map((chunk, index) => (
         <Grid container key={index} justifyContent="center" spacing={10} className="scrolling-item">
           {chunk.map((image, subIndex) => (
-            <Grid item key={subIndex} sx={{marginTop:"100px"}}>
+            <Grid item key={subIndex} sx={{marginTop:"30px"}}>
               <Box
                 sx={{
                   display: 'flex',
@@ -191,7 +152,7 @@ const Servicios = () => {
       ))}
     </div>
   </div>
-</Box> */}
+</Box>
 
  
 
@@ -201,4 +162,4 @@ const Servicios = () => {
   );
 }
 
-export default Servicios;
+export default Tecnologias;

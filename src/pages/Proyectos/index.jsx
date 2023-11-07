@@ -6,6 +6,9 @@ import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import { Slide } from "react-awesome-reveal";
 import proyecto1 from "../../assets/im22.png";
 import proyecto2 from "../../assets/proyecto2.png";
+import docappoint from "../../assets/doca.jpeg";
+import thegarden from "../../assets/thega.jpeg";
+
 import rifas from "../../assets/rifas.png"
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
@@ -17,11 +20,9 @@ import "./styles.css"
  const Proyectos = () => {
   const projectImages = [
     { imageUrl: proyecto2, url: "https://www.todofloral.com/", nombre: "Todo Floral" },
-    { imageUrl: proyecto2, url: "https://www.todofloral.com/", nombre: "Todo Floral" },
-    { imageUrl: proyecto2, url: "https://www.todofloral.com/", nombre: "Todo Floral" },
-    { imageUrl: proyecto2, url: "https://www.todofloral.com/", nombre: "Todo Floral" },
-    { imageUrl: proyecto2, url: "https://www.todofloral.com/", nombre: "Todo Floral" },
-    { imageUrl: proyecto2, url: "https://www.todofloral.com/", nombre: "Todo Floral" },
+    { imageUrl: docappoint, url: "https://www.todofloral.com/", nombre: "Docappoint" },
+    { imageUrl: thegarden, url: "https://www.todofloral.com/", nombre: "The Garden" },
+     
     // ... (otras imágenes)
   ];
 
@@ -58,16 +59,12 @@ const calculateDelay = (index) => {
 
   return (
     <div id="proyectos">
-      <Box sx={{ background: 'linear-gradient(to right, #808080, #FFFFFF)',height:"100vh" }}  >
+      <Box sx={{ background: '#333333' ,height:"100vh" }}  >
         <Slide direction="left" triggerOnce={false}>
-          <Typography  variant="h2" style={{ fontWeight: 700,fontFamily: "'Oswald', sans-serif" }} sx={{ display: "flex",paddingTop:"50px", justifyContent: "center", paddingBottom: "50px" }}>
+          <Typography  variant="h2" style={{color:"white", fontWeight: 700,fontFamily: "'Oswald', sans-serif" }} sx={{ display: "flex",paddingTop:"50px", justifyContent: "center", paddingBottom: "50px" }}>
             Proyectos
           </Typography></Slide>
-          <Typography   style={{ fontFamily: "'Oswald', sans-serif" }} sx={{textAlign:"left", display: "flex" , justifyContent: "center",paddingLeft:"50px",paddingRight:"50px" }}>
-          But we ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-Nuestros ultimos proyectos realizados con tecnologia avanzada 
-
-          </Typography>
+           
          
        {/* <Carousel
   autoPlay={true}
@@ -162,10 +159,10 @@ Nuestros ultimos proyectos realizados con tecnologia avanzada
     <Grid container key={index} spacing={2} alignItems="center" justifyContent="center">
       {chunk.map((project, subIndex) => (
         <React.Fragment key={subIndex}>
-          <Grid item xs={12} sm={8} md={6} lg={4} xl={3}>
+          <Grid item xs={12} sm={6} md={6} lg={4.5} xl={3}>
             <Box sx={{
-              width: "100%", // Asegúrate de que la imagen ocupa todo el ancho del Grid item
-              height: "250px",
+              width: "125%", // Asegúrate de que la imagen ocupa todo el ancho del Grid item
+              height: "125%",
               borderRadius: "10px",
               marginTop: "50px",
               backgroundColor: 'rgba(30, 30, 30, 0.56)',
@@ -180,24 +177,24 @@ Nuestros ultimos proyectos realizados con tecnologia avanzada
               <img  
                 src={project.imageUrl}
                 alt={`Proyecto ${index * chunkSize + subIndex + 1}`}
-                style={{ width: '100%', height: '100%', objectFit: "cover", borderRadius: "10px" }}
+                style={{ width: '100%', height: '100%', objectFit: "contain", borderRadius: "10px" }}
               />  </Link>
             </Box>
           </Grid>
-          <Grid item xs={12} sm={4} md={6} lg={8} xl={9}>
+          <Grid item xs={12} sm={4} md={6} lg={7} xl={9}>
             <Box sx={{
-              p: 2,
+              p: 15,
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'center',
               height: '250px', // Asegúrate de que este Box tiene la misma altura que el Box de la imagen
             }}>
-              <Typography style={{
+              <Typography style={{color:"white",
         fontFamily: 'Oswald, sans-serif',
        }}  variant="h4" gutterBottom>
                 {project.nombre}
               </Typography>
-              <Typography  style={{
+              <Typography  style={{color:"white",
         fontFamily: 'Oswald, sans-serif',
        }}  >
                 Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
@@ -216,7 +213,7 @@ Nuestros ultimos proyectos realizados con tecnologia avanzada
 </Box>
       {/* email */}
       
-      <Box sx={{ width: '100%', height: "100vh", background: 'linear-gradient(to right, #333333, #333333)' }}>
+      {/* <Box sx={{ width: '100%', height: "100vh", background: 'black' }}>
       <Slide direction="left" triggerOnce={false}>
           <Typography  variant="h2" style={{color:"white", fontFamily: "'Oswald', sans-serif" }} sx={{ display: "flex", justifyContent: "center" ,paddingTop:"50px" }}>
             Contactanos
@@ -264,7 +261,7 @@ Nuestros ultimos proyectos realizados con tecnologia avanzada
       
       
         <Box style={{height: "400px", position: 'relative', background: "#CCCCCC", borderRadius: '50px', border: "1px solid white", padding: "10px", marginBottom: "10px", width: "300px" }}>
-        <AccountCircleIcon sx={{ position: 'absolute', top: '-40px', left: '50%', transform: 'translateX(-50%)', fontSize: 70, color: 'black' }} />
+        <AccountCircleIcon sx={{ position: 'absolute', top: '-40px', left: '50%', transform: 'translateX(-50%)', fontSize: 70, color: '#333333' }} />
         <Stack spacing={2} sx={{ width: '100%', marginTop:"50px"}}>
     <TextField 
       sx={{
@@ -345,7 +342,7 @@ Nuestros ultimos proyectos realizados con tecnologia avanzada
           </Box>
         </Grid>
       </Grid>
-    </Box>
+    </Box> */}
     </div>
 
   );

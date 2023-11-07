@@ -4,6 +4,12 @@ import { Box, Grid, Typography } from '@mui/material'
 import Proyectos from '../Proyectos';
 import Servicios from '../Servicios';
 import Landing from '../Landing';
+import Sobre from '../Sobre';
+import Estadisticas from '../Estadisticas';
+import Clientes from '../Clientes';
+import Testimonios from '../Testimonios';
+import Contacto from '../Contacto/Contacto';
+
 // import Contacto from '../Contacto';
 
 const Inicio = () => {
@@ -15,12 +21,15 @@ const Inicio = () => {
     }}>
 
       <Landing />
-
-      
-
+      <Sobre />
+       <Estadisticas />  
+      <Clientes />
       {/* <div id="proyectos"> */}
+               <Testimonios/>
+
         <Proyectos />  
-        {/* </div> */}
+        <Contacto/>
+         {/* </div> */}
       {/* <div id="servicios">  */}
         {/* <Servicios />   */}
         {/* </div> */}

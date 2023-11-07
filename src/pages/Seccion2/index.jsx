@@ -4,9 +4,17 @@ import { Box, Grid, Typography } from '@mui/material'
 import Proyectos from '../Proyectos';
 import Servicios from '../Servicios';
 import Landing from '../Landing';
+import Sobre from '../Sobre';
+import Estadisticas from '../Estadisticas';
+import Clientes from '../Clientes';
+import Testimonios from '../Testimonios';
+import Contacto from '../Contacto/Contacto';
+import Nosotros from '../Nosotros';
+import Tecnologias from '../Tecnologias';
+
 // import Contacto from '../Contacto';
 
-const Inicio = () => {
+const Seccion2 = () => {
 
 
   return (
@@ -14,20 +22,14 @@ const Inicio = () => {
       backgroundColor: "white"
     }}>
 
-      <Landing />
+      <Servicios/>
+       
 
-      
-
-      {/* <div id="proyectos"> */}
-        <Proyectos />  
-        {/* </div> */}
-      {/* <div id="servicios">  */}
-        {/* <Servicios />   */}
-        {/* </div> */}
-         {/* <Contacto/>  */}
-    </Box>
+       <Nosotros/>
+       <Tecnologias/>
+     </Box>
     </div>
   )
 }
  
-export default Inicio
+export default Seccion2

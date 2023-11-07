@@ -7,6 +7,7 @@ import Nosotros from "./pages/Nosotros"
 import Footer from "./components/Footer"
 import "./index.css"
 import Landing from "./pages/Landing"
+import Seccion2 from "./pages/Seccion2"
 
 function App() {
   return (
@@ -15,9 +16,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Inicio />} />
         {/* <Route path="/" element={<Landing />} /> */}
-        <Route path="/servicios" element={<Servicios />} />
-        <Route path="/proyectos" element={<Proyectos />} />
-        <Route path="/nosotros" element={<Nosotros />} />
+        {/* <Route path="/servicios" element={<Servicios />} />
+        <Route path="/proyectos" element={<Proyectos />} /> */}
+        <Route path="/nosotros" element={<Seccion2/>} />
         <Route path='*' element={<h1>404 Not Found</h1>} />
       </Routes>
       <Footer />
