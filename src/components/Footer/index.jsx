@@ -342,7 +342,7 @@ const is450 = useMediaQuery('(max-width:450px)');
       Contáctanos a través del   correo   desarollotechx@gmail.com
     </Typography>
 
-    <img style={{width:"200px", marginTop:"30px", cursor:"pointer"}} src={logo}></img>
+    <img style={{marginLeft:"83px",width:"200px", marginTop:"30px", cursor:"pointer"}} src={logo}></img>
  
     </Box>
         </Box>

@@ -21,7 +21,26 @@ import "./styles.css"
   const projectImages = [
     { imageUrl: proyecto2, url: "https://www.todofloral.com/", nombre: "Todo Floral" },
     { imageUrl: docappoint, url: "https://www.todofloral.com/", nombre: "Docappoint" },
-    { imageUrl: thegarden, url: "https://www.todofloral.com/", nombre: "The Garden" },
+    { imageUrl: thegarden, url: "https://www.todofloral.com/", nombre: "Proveedora de las aryes graficas" },
+    { imageUrl: thegarden, url: "https://www.todofloral.com/", nombre: "Pixie Inmobiliaria" },
+    { imageUrl: thegarden, url: "https://www.todofloral.com/", nombre: "Canadevi" },
+    { imageUrl: thegarden, url: "https://www.todofloral.com/", nombre: "Expo Casa" },
+    { imageUrl: thegarden, url: "https://www.todofloral.com/", nombre: "Videojuego_ratfundacity" },
+    { imageUrl: thegarden, url: "https://www.todofloral.com/", nombre: "Tcitramites Migratorios" },
+    { imageUrl: thegarden, url: "https://www.todofloral.com/", nombre: "Tramites migratorios Argentina-Estados Unidos" },
+    { imageUrl: thegarden, url: "https://www.todofloral.com/", nombre: "Mb Agencia" },
+    { imageUrl: thegarden, url: "https://www.todofloral.com/", nombre: "Rifas El Venado" },
+    { imageUrl: thegarden, url: "https://www.todofloral.com/", nombre: "Contraenseña" },
+    { imageUrl: thegarden, url: "https://www.todofloral.com/", nombre: "Asociacion de la Cruz Roja Mexicana" },
+    { imageUrl: thegarden, url: "https://www.todofloral.com/", nombre: "Resumen App" },
+    { imageUrl: thegarden, url: "https://www.todofloral.com/", nombre: "Border Mailboxes" },
+    { imageUrl: thegarden, url: "https://www.todofloral.com/", nombre: "Aura Dress " },
+    { imageUrl: thegarden, url: "https://www.todofloral.com/", nombre: "Shopcyrene" },
+    { imageUrl: thegarden, url: "https://www.todofloral.com/", nombre: "Crmcypto" },
+    { imageUrl: thegarden, url: "https://www.todofloral.com/", nombre: "Marsalesmx" },
+
+
+
      
     // ... (otras imágenes)
   ];

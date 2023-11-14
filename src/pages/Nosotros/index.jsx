@@ -24,10 +24,12 @@ import Servicios from '../Servicios';
     { imageUrl: miembro4, profesion: "Jr. Fullstack Developer", nombre: "Santiago Mercado" },
     { imageUrl: miembro5, profesion: "Jr. Fullstack Developer", nombre: "Franco Sassi" },
     { imageUrl: miembro6, profesion: "Jr. Fullstack Developer", nombre: "Alejandro Bardabid" },
-    { imageUrl: miembro7, profesion: "UX/UI Designer", nombre: "Antonella Olearo" },
+    { imageUrl: miembro7, profesion: "Jr. Python Developer", nombre: "Luca" },
     { imageUrl: miembro8, profesion: "Intern", nombre: "Jim" },
-    { imageUrl: miembro9, profesion: "Community Manager", nombre: "Mariana" },
+    { imageUrl: miembro9, profesion: "Community Manager", nombre: "Zyanya" },
     { imageUrl: miembro10, profesion: "Sales Manager", nombre: "Leo" },
+    { imageUrl: miembro10, profesion: "Sales Manager", nombre: "Mario" },
+
     // Agrega las URL de las imágenes restantes aquí
   ];
 

@@ -16,6 +16,16 @@ import tecno3 from "../../assets/reactIcono.png";
 import tecno4 from "../../assets/nodo-js.png";
 import tecno5 from "../../assets/tecno5.png";
 import tecno6 from "../../assets/tecno6.png";
+import tecno7 from "../../assets/selenium.png";
+import tecno8 from "../../assets/flask.png";
+import tecno9 from "../../assets/django.png";
+import tecno10 from "../../assets/opencv.png";
+import tecno11 from "../../assets/postgres.png";
+import tecno12 from "../../assets/mongo.png";
+import tecno13 from "../../assets/tensorflow.png";
+import tecno14 from "../../assets/github.png";
+import tecno15 from "../../assets/unity.png";
+
  import { styled } from '@mui/material/styles';
  import {   Slide } from "react-awesome-reveal";
 
@@ -25,19 +35,19 @@ import Carousel from 'react-material-ui-carousel';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
  const Tecnologias = () => {
-  const projectImages = [
-    { imageUrl: gif10, nombre: "Páginas Web" },
-    { imageUrl: gif1, nombre: "Aplicaciones Móviles" },
-    { imageUrl: gif2, nombre: "Inteligencia Artificial" },
-    { imageUrl: gif3, nombre: "Ecommerce" },
-    { imageUrl: gif4, nombre: "Web Scraping" },
-    { imageUrl: gif5, nombre: "Control de Stock" },
-    { imageUrl: gif6, nombre: "Bots Personalizados" },
-    { imageUrl: gif7, nombre: "Mantenimiento" },
-    { imageUrl: gif8, nombre: "Automatización de Procesos" },
-    { imageUrl: gif9, nombre: "MarketPlace" },
-    // Agrega las URL de las imágenes restantes aquí
-  ];
+  // const projectImages = [
+  //   { imageUrl: gif10, nombre: "Páginas Web" },
+  //   { imageUrl: gif1, nombre: "Aplicaciones Móviles" },
+  //   { imageUrl: gif2, nombre: "Inteligencia Artificial" },
+  //   { imageUrl: gif3, nombre: "Ecommerce" },
+  //   { imageUrl: gif4, nombre: "Web Scraping" },
+  //   { imageUrl: gif5, nombre: "Control de Stock" },
+  //   { imageUrl: gif6, nombre: "Bots Personalizados" },
+  //   { imageUrl: gif7, nombre: "Mantenimiento" },
+  //   { imageUrl: gif8, nombre: "Automatización de Procesos" },
+  //   { imageUrl: gif9, nombre: "MarketPlace" },
+  //   // Agrega las URL de las imágenes restantes aquí
+  // ];
   const projectImages2 = [
     { imageUrl: tecno1, nombre: "HTML" },
     { imageUrl: tecno2, nombre: "CSS" },
@@ -45,6 +55,15 @@ import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
     { imageUrl: tecno4, nombre: "NODE JS" },
     { imageUrl: tecno5, nombre: "EXPRESS" },
     { imageUrl: tecno6, nombre: "MUI" },
+        { imageUrl: tecno7, nombre: "SELENIUM" },
+    { imageUrl: tecno8, nombre: "FLASK" },
+    { imageUrl: tecno9, nombre: "DJANGO" },
+    { imageUrl: tecno10, nombre: "OPENCV" },
+    { imageUrl: tecno11, nombre: "POSTGRES" },
+    { imageUrl: tecno12, nombre: "MONGO" },
+    { imageUrl: tecno13, nombre: "TENSORFLOW" },
+    { imageUrl: tecno14, nombre: "GITHUB" },
+    { imageUrl: tecno15, nombre: "UNITY" },
     
     // Agrega las URL de las imágenes restantes aquí
   ];
@@ -52,7 +71,7 @@ import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
   const [inView, setInView] = useState(false);
 
 
-  const chunkSize = 3;
+  const chunkSize =4;
   const chunkedImages2 = projectImages2.reduce((resultArray, item, index) => {
     const chunkIndex2 = Math.floor(index / chunkSize);
 
@@ -66,33 +85,33 @@ import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
   }, []);
   const [currentChunk, setCurrentChunk] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      // Avanzar al siguiente grupo de imágenes
-      setCurrentChunk((prevChunk) => (prevChunk + 1) % Math.ceil(projectImages.length / chunkSize));
-    }, 3000); // Cambiar cada 3 segundos
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     // Avanzar al siguiente grupo de imágenes
+  //     setCurrentChunk((prevChunk) => (prevChunk + 1) % Math.ceil(projectImages2.length / chunkSize));
+  //   }, 3000); // Cambiar cada 3 segundos
 
-    return () => {
-      // Limpia el intervalo cuando el componente se desmonta
-      clearInterval(interval);
-    };
-  }, []);
+  //   return () => {
+  //     // Limpia el intervalo cuando el componente se desmonta
+  //     clearInterval(interval);
+  //   };
+  // }, []);
 
-  const chunkedImages = projectImages.reduce((resultArray, item, index) => {
-    const chunkIndex = Math.floor(index / chunkSize);
+  // const chunkedImages = projectImages2.reduce((resultArray, item, index) => {
+  //   const chunkIndex = Math.floor(index / chunkSize);
 
-    if (!resultArray[chunkIndex]) {
-      resultArray[chunkIndex] = [];
-    }
+  //   if (!resultArray[chunkIndex]) {
+  //     resultArray[chunkIndex] = [];
+  //   }
 
-    resultArray[chunkIndex].push(item);
+  //   resultArray[chunkIndex].push(item);
 
-    return resultArray;
-  }, []);
-  const style = {
-    width: '100%',
-    maxWidth: 360,
-   };
+  //   return resultArray;
+  // }, []);
+  // const style = {
+  //   width: '100%',
+  //   maxWidth: 360,
+  //  };
 
    const [isHovered, setIsHovered] = useState(null);
  
@@ -117,7 +136,7 @@ import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
   <div className="scrolling-wrapper">
     <div className="scrolling-content">
       {chunkedImages2.map((chunk, index) => (
-        <Grid container key={index} justifyContent="center" spacing={10} className="scrolling-item">
+        <Grid container key={index}    className="scrolling-item">
           {chunk.map((image, subIndex) => (
             <Grid item key={subIndex} sx={{marginTop:"30px"}}>
               <Box
@@ -139,7 +158,7 @@ import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
               >
                 <img
                   src={image.imageUrl}
-                  alt={`Miembro ${index * chunkSize + subIndex + 1}`}
+                  // alt={`Miembro ${index * chunkSize + subIndex + 1}`}
                   style={{ width: '45%', height: '45%', borderRadius:"50%" }}
                 />
                 <Typography style={{ fontFamily: "'Oswald', sans-serif" }} fontSize="18px" sx={{ color: 'white', fontWeight: 'bold' }}>
