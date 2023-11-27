@@ -11,12 +11,16 @@ import miembro3 from "../../assets/miembro3.png";
 import miembro4 from "../../assets/miembro4.png";
 import miembro5 from "../../assets/miembro5.png";
 import miembro6 from "../../assets/miembro6.png";
-import miembro7 from "../../assets/miembro7.png";
+import miembro7 from "../../assets/luca1.png";
 import miembro8 from "../../assets/miembro8.png";
 import miembro9 from "../../assets/miembro9.png";
-import miembro10 from "../../assets/miembro10.png";
+import miembro20 from "../../assets/miembro20.png";
+import miembro11 from "../../assets/miembro11.jpeg";
+ import miembro12 from "../../assets/zyanya.jpeg";
+
 import Servicios from '../Servicios';
   const Nosotros = () => {
+
   const projectImages = [
     { imageUrl: miembro1, profesion: "CEO", nombre: "Mario Eduardo Diaz" },
     { imageUrl: miembro2, profesion: "QA and Fullstack Developer", nombre: "Luis Luna" },
@@ -24,11 +28,10 @@ import Servicios from '../Servicios';
     { imageUrl: miembro4, profesion: "Jr. Fullstack Developer", nombre: "Santiago Mercado" },
     { imageUrl: miembro5, profesion: "Jr. Fullstack Developer", nombre: "Franco Sassi" },
     { imageUrl: miembro6, profesion: "Jr. Fullstack Developer", nombre: "Alejandro Bardabid" },
-    { imageUrl: miembro7, profesion: "Jr. Python Developer", nombre: "Luca" },
-    { imageUrl: miembro8, profesion: "Intern", nombre: "Jim" },
-    { imageUrl: miembro9, profesion: "Community Manager", nombre: "Zyanya" },
-    { imageUrl: miembro10, profesion: "Sales Manager", nombre: "Leo" },
-    { imageUrl: miembro10, profesion: "Sales Manager", nombre: "Mario" },
+    { imageUrl: miembro7, profesion: "Jr. Python Developer", nombre: "Luca Cussino" },
+     { imageUrl: miembro12, profesion: "Community Manager", nombre: "Zyanya Zaldaña" },
+        { imageUrl: miembro11, profesion: "UX-UI Designer", nombre: "Christian Morales" },
+
 
     // Agrega las URL de las imágenes restantes aquí
   ];
@@ -51,7 +54,9 @@ import Servicios from '../Servicios';
   }, []);
 
   return (
-    <div>
+     
+          <div id="nosotros">
+
       {/* <Servicios/>  */}
       
       <Box  sx={{  background: 'white' }} >
@@ -107,12 +112,11 @@ import Servicios from '../Servicios';
                       marginLeft: '10px',
                     }}
                   >
-
-                    <img
-                      src={image.imageUrl}
-                      alt={`Miembro ${index * chunkSize + subIndex + 1}`}
-                      style={{ width: '152.8px', height: '156.99px' }}
-                    />  
+<img
+  src={image.imageUrl}
+  alt={`Miembro ${index * chunkSize + subIndex + 1}`}
+  style={{ width: '152.8px', height: '156.99px', borderRadius: '50%' }}
+/>
                     <Typography fontSize="18px" sx={{ fontFamily: "'Oswald', sans-serif" ,color: 'black', marginTop: '10px' }}>
                       {image.profesion}
                     </Typography>

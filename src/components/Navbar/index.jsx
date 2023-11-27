@@ -107,19 +107,24 @@ function Navbar() {
     };
   }, []);
   const handleAboutUsClick = () => {
-    // Si ya estamos en '/nosotros', queremos hacer scroll a la sección 'sobre nosotros'
-    // Asumiendo que tienes una sección con un id de 'sobre-nosotros' en tu componente de 'Nosotros'
+    // Comprueba si el usuario ya está en la página '/nosotros'
     if (location.pathname === '/nosotros') {
-      const section = document.getElementById('sobre-nosotros');
-      section.scrollIntoView({ behavior: 'smooth' });
+      // Realiza el desplazamiento suave hacia la sección con ID 'nosotros'
+      const section = document.getElementById('nosotros');
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
     } else {
-      // Si no, navegamos a la página y luego hacemos scroll
+      // Redirige al usuario a '/nosotros' y luego desplázate a la sección
       navigate('/nosotros', { state: { shouldScroll: true } });
     }
   };
+  
+  // En el segundo useEffect, que se ejecuta cuando cambia 'location'
   useEffect(() => {
+    // Comprueba si se debe realizar un desplazamiento después de la navegación
     if (location.pathname === '/nosotros' && location.state?.shouldScroll) {
-      const section = document.getElementById('sobre-nosotros');
+      const section = document.getElementById('nosotros');
       if (section) {
         section.scrollIntoView({ behavior: 'smooth' });
       }
@@ -173,34 +178,41 @@ function Navbar() {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => {
-                const formattedPage = page.charAt(0).toUpperCase() + page.slice(1).toLowerCase();
+             {pages.map((page) => {
+  const formattedPage = page.charAt(0).toUpperCase() + page.slice(1).toLowerCase();
 
-                return (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    {page === 'Proyectos' ? (
-                      <ScrollLink
-                        to={page.toLowerCase()}
-                        spy={true}
-                        smooth={true}
-                        offset={0}
-                        duration={10}
-                        style={{
-                          textDecoration: 'none',
-                          cursor: 'pointer',
-
-                        }}
-                      >
-                        {formattedPage}
-                      </ScrollLink>
-                    ) : (
-                      <Typography textAlign="center" style={{ fontFamily: "'Poppins', sans-serif", color: "white" }}>
-                        {formattedPage}
-                      </Typography>
-                    )}
-                  </MenuItem>
-                );
-              })}
+  return (
+    <Button
+      key={page}
+      onClick={handleCloseNavMenu} // Cambia esto para manejar el clic específicamente
+      sx={{
+        my: 2,
+        color: scrolled ? 'black' : 'white',
+        display: 'block',
+        textTransform: 'none',
+      }}
+    >
+      {page === 'Proyectos' ? (
+        // Usar ScrollLink para 'Proyectos'
+        <ScrollLink
+          to="proyectos"
+          spy={true}
+          smooth={true}
+          offset={-70} // Ajusta este valor según sea necesario
+          duration={500}
+          style={linkTextStyle}
+        >
+          {formattedPage}
+        </ScrollLink>
+      ) : (
+        // Manejo normal para otras páginas
+        <Typography textAlign="center" style={linkTextStyle}>
+          {formattedPage}
+        </Typography>
+      )}
+    </Button>
+  );
+})}
 
               <MenuItem key="Sobre Nosotros" onClick={handleCloseNavMenu}>
                 <ScrollLink
@@ -241,6 +253,11 @@ function Navbar() {
 
             {pages.map((page) => {
               const formattedPage = page.charAt(0).toUpperCase() + page.slice(1).toLowerCase();
+
+
+
+
+
 
 
               return (

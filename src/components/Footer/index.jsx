@@ -419,13 +419,16 @@ const is450 = useMediaQuery('(max-width:450px)');
     
 
     <Box sx={{display:"flex", alignItems:"center", width:"100%", justifyContent:"space-between"}}>
-<img style={{width:"27px", marginTop:"27px", marginTop:"30px", cursor:"pointer"}} src={icono2}></img>
-<img style={{width:"33px", marginTop:"33px", cursor:"pointer"}} src={whatsapp}></img>
-<img style={{width:"33px", marginTop:"33px", cursor:"pointer"}} src={linkedinFooterImg}></img>
+    <a href="https://www.facebook.com/profile.php?id=100093530245392"> 
+<img style={{width:"27px", marginTop:"27px", marginTop:"30px", cursor:"pointer"}} src={icono2}></img></a>
+<a href="https://api.whatsapp.com/send?phone=526622297062" target="_blank">
+    <img style={{ width: "33px", marginTop: "33px", cursor: "pointer" }} src={whatsapp}></img>
+  </a>
+<a href="https://www.instagram.com/techx_mx/?hl=es"> <img style={{width:"33px", marginTop:"33px", cursor:"pointer"}} src={linkedinFooterImg}></img></a>
 
     </Box>
 
-    <Typography variant="h6" style={{fontFamily: 'Rubik',fontSize: '14px',fontStyle: 'normal',fontWeight: 400, lineHeight: '26px',position: 'relative', color:"#FFF", marginTop:"32px",fontFamily: "'Oswald', sans-serif",}}>
+    {/* <Typography variant="h6" style={{fontFamily: 'Rubik',fontSize: '14px',fontStyle: 'normal',fontWeight: 400, lineHeight: '26px',position: 'relative', color:"#FFF", marginTop:"32px",fontFamily: "'Oswald', sans-serif",}}>
         QUIENES SOMOS 
         </Typography>
         <Typography variant="h6" style={{fontFamily: 'Rubik',fontSize: '14px',fontStyle: 'normal',fontWeight: 400, lineHeight: '26px',position: 'relative', color:"#FFF",fontFamily: "'Oswald', sans-serif",}}>
@@ -434,8 +437,10 @@ const is450 = useMediaQuery('(max-width:450px)');
         <Typography variant="h6" style={{fontFamily: 'Rubik',fontSize: '14px',fontStyle: 'normal',fontWeight: 400, lineHeight: '26px',position: 'relative', color:"#FFF",fontFamily: "'Oswald', sans-serif",}}>
         CONSULTA EL AVISO DE PRIVACIDAD 
         </Typography>
-    
-
+     */}
+<Typography variant="h7" style={{fontFamily: 'Rubik',fontSize: '14px',fontStyle: 'normal',fontWeight: 400, lineHeight: '26px',position: 'relative', color:"#FFF", marginTop:"32px",fontFamily: "'Oswald', sans-serif",}}>
+Todos los Derechos Reservados © 2023
+        </Typography>
     </Box>
         </Box>
       </Grid>

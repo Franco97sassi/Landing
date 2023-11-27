@@ -46,9 +46,11 @@ return (
               Redes Sociales
             </Typography>
             <Box sx={{ marginLeft:"65px", display: "flex", alignItems: "center", mb: 3, width: "100%", maxWidth: "126px", justifyContent: "space-evenly" }}>
-    <img style={{ width: "27px", marginRight: "10px", cursor: "pointer" }} src={icono2} alt="Icono Red Social 1" />
-<img style={{ width: "33px", cursor: "pointer" }} src={linkedinFooterImg} alt="Icono Red Social 2" />
-
+           <a href="https://www.facebook.com/profile.php?id=100093530245392"> 
+<img style={{width:"27px", marginTop:"0px", cursor:"pointer"}} src={icono2}></img></a>
+<a href="https://www.instagram.com/techx_mx/?hl=es"> <img style={{width:"33px", marginTop:"0px", cursor:"pointer"}} src={linkedinFooterImg}></img></a>
+ 
+ 
 </Box>
 
 
@@ -71,10 +73,7 @@ return (
         width: "220px",
         margin: "auto",  // Centrar horizontalmente
         marginTop: "10px",  // Agregar espacio en la parte superior
-        '&:hover': {
-            backgroundColor: "darkblue",
-            borderColor: "white",
-        }
+       
     }}>
         Etiquetanos en tu historia
     </Button>
@@ -176,7 +175,7 @@ return (
       background: 'black',
       width:"220px",
       '&:hover': {
-        backgroundColor: "darkblue",
+        backgroundColor: "black",
         borderColor: "white",
       } 
     }}>

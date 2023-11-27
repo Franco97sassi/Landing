@@ -57,9 +57,9 @@ return (
               style={{ textAlign: 'justify', fontFamily: "'Oswald', sans-serif" }}
               sx={{ fontSize: "15px", color: "white", paddingTop: "100px" }}
             > Boost your product and service's credibility by
-              adding testimonials from your clients. People
-              love recommendations so feedback from
-              others who've tried it is invaluable.</Typography> </Item>
+            adding testimonials from your clients. People
+            love recommendations so feedback from
+            others who've tried it is invaluable.</Typography> </Item>
           </Grid>
           <Grid item xs={4}>
             <Item><Typography

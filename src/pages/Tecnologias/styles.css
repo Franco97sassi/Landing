@@ -1,0 +1,23 @@
+.ticker-wrap {
+  overflow: hidden;
+  background-color: #333333; /* O el color que prefieras */
+  white-space: nowrap;
+  height:100vh ; padding-top: 200px; 
+}
+
+.ticker {
+  display: inline-block;
+  animation: tickerMove 25s linear infinite;
+}
+
+@keyframes tickerMove {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.ticker-item {
+  display: inline-block;
+  padding: 0; /* Elimina cualquier relleno */
+  margin: 0; /* Elimina cualquier margen */
+  margin-right: 50px;
+}
