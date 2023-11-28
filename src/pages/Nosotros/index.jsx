@@ -54,81 +54,79 @@ import Servicios from '../Servicios';
   }, []);
 
   return (
-     
-          <div id="nosotros">
+    <div id="nosotros">
+      <Box sx={{ background: 'white' }}>
+        <Slide direction="left" triggerOnce={false} in={inView}>
+          <Typography variant="h2" sx={{ display: "flex", justifyContent: "center", paddingTop: "62px", paddingBottom: "62px", fontWeight: 700, fontFamily: "'Oswald', sans-serif", color: 'black' }}>
+            Nuestro Equipo
+          </Typography>
+        </Slide>
 
-      {/* <Servicios/>  */}
-      
-      <Box  sx={{  background: 'white' }} >
-       
-      <Slide direction="left" triggerOnce={false} in={inView}> 
-
-        <Typography  style={{fontWeight: 700,color: 'black', fontFamily: "'Oswald', sans-serif" }} variant="h2" sx={{ display: "flex", justifyContent: "center", paddingTop: "62px",paddingBottom: "62px" }}>
-          Nuestro Equipo
-        </Typography></Slide>
-       
         <Carousel
-  autoPlay={true}
-  interval={3000}
-  animation="slide"
-  indicators={false}
-  navButtonsAlwaysVisible
-  navButtonsProps={{
-    style: {
-      backgroundColor: 'rgba(0, 0, 0, 0.3)',
-      borderRadius: '50%',
-      color: 'white',
-      marginTop: "-200px"
-    },
-  }}
-  NextIcon={<KeyboardArrowRightIcon />}
-  PrevIcon={<KeyboardArrowLeftIcon />}
-  index={currentChunk}
-  onChange={(index, active) => setCurrentChunk(index)}
->
+          autoPlay={true}
+          interval={3000}
+          animation="slide"
+          indicators={false}
+          navButtonsAlwaysVisible
+          navButtonsProps={{
+            style: {
+              backgroundColor: 'rgba(0, 0, 0, 0.3)',
+              borderRadius: '50%',
+              color: 'white',
+              // Ajusta estos márgenes para cambiar la distancia de las flechas a las imágenes
+              marginRight: '30px',
+              marginLeft: '30px',
+            },
+          }}
+          NextIcon={<KeyboardArrowRightIcon />}
+          PrevIcon={<KeyboardArrowLeftIcon />}
+          index={currentChunk}
+          onChange={(index, active) => setCurrentChunk(index)}
+        >
           {chunkedImages.map((chunk, index) => (
- <Grid
- container
- key={index}
- justifyContent="center"
- spacing={10}
- sx={{ background: 'transparent', padding: '20px' }}  
->              {chunk.map((image, subIndex) => (
+            <Grid
+              container
+              key={index}
+              justifyContent="center"
+              alignItems="center"
+              spacing={10}
+              sx={{ padding: '20px' }}
+            >
+              {chunk.map((item, subIndex) => (
                 <Grid item key={subIndex}>
                   <Box
                     sx={{
                       display: 'flex',
                       flexDirection: 'column',
                       alignItems: 'center',
-                      textAlign: 'center',marginTop:"50px",
-                      width: "300px",
-                      height: "300px",
-                      borderRadius: "50%",
+                      justifyContent: 'center',
+                      width: 300,
+                      height: 300,
+                      borderRadius: '50%',
                       transition: 'transform 0.3s',
                       '&:hover': {
                         opacity: [0.9, 0.8, 0.7],
                         transform: 'scale(1.1)',
                       },
-                      marginLeft: '10px',
                     }}
                   >
-<img
-  src={image.imageUrl}
-  alt={`Miembro ${index * chunkSize + subIndex + 1}`}
-  style={{ width: '152.8px', height: '156.99px', borderRadius: '50%' }}
-/>
-                    <Typography fontSize="18px" sx={{ fontFamily: "'Oswald', sans-serif" ,color: 'black', marginTop: '10px' }}>
-                      {image.profesion}
+                    <img
+                      src={item.imageUrl}
+                      alt={`Miembro ${index * chunkSize + subIndex + 1}`}
+                      style={{ width: '152.8px', height: '156.99px', borderRadius: '50%' }}
+                    />
+                    <Typography fontSize="18px" sx={{ fontFamily: "'Oswald', sans-serif", color: 'black', marginTop: '10px' }}>
+                      {item.profesion}
                     </Typography>
-                    <Typography fontSize="18px" sx={{fontFamily: "'Oswald', sans-serif" , color: 'black'  }}>
-                      {image.nombre}
+                    <Typography fontSize="18px" sx={{ fontFamily: "'Oswald', sans-serif", color: 'black' }}>
+                      {item.nombre}
                     </Typography>
                   </Box>
                 </Grid>
               ))}
             </Grid>
           ))}
-        </Carousel>  
+        </Carousel>
       </Box>
     </div>
   );

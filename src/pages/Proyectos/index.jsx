@@ -43,7 +43,9 @@ const Proyectos = () => {
       "Nuestra página de doctores es un espacio dedicado a brindar servicios de salud de la más alta calidad, conectando a pacientes con un amplio espectro de especialistas médicos en México. Aquí, podrás encontrar profesionales altamente calificados en diversas ramas de la medicina, desde medicina general hasta especialidades más específicas. Nos comprometemos a ofrecer una atención personalizada y centrada en el paciente, garantizando un seguimiento detallado de cada caso. Nuestro objetivo es facilitar el acceso a consultas, diagnósticos y tratamientos efectivos, utilizando tecnología de punta para asegurar la mejor experiencia de atención médica. Confiabilidad, profesionalismo y cuidado humano son los pilares de nuestra plataforma, diseñada para cuidar de tu salud y la de tu familia."
     },
     { imageUrl: proveedora, url: "https://provartesgraficas.vercel.app/", 
-    nombre: "Proveedora de las artes graficas"
+    nombre: "Proveedora de las artes graficas",
+    description:  
+    "En nuestra empresa, nos especializamos en desarrollar sistemas avanzados de gestión de datos y cotización de productos, perfectamente adaptados para el dinámico mercado mexicano. Nuestro software, diseñado con la más alta tecnología, permite a los negocios organizar y administrar eficientemente sus bases de datos, garantizando la seguridad y accesibilidad de la información clave. Además, ofrecemos una herramienta integral para la cotización de productos, que agiliza la creación de listas de precios y la generación de facturas detalladas y precisas. Nuestro objetivo es simplificar los procesos administrativos, asegurando que nuestros clientes puedan enfocarse en lo que realmente importa: hacer crecer su negocio." 
    },
     {
       imageUrl: pixie, url: "https://pixiebr.com/", nombre: "Pixie Inmobiliaria",

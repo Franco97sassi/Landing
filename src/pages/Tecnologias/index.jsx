@@ -45,14 +45,13 @@ import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
     { imageUrl: tecno15, nombre: "UNITY" },
     
    ];
-   const tecnologiasDuplicadas = [...tecnologias, ...tecnologias];
 
   return (
     <Box id="servicios" className="ticker-wrap "  >
     <div className="ticker"  >
         {tecnologias.map((tec, index) => (
             <div key={index} className="ticker-item">
-                <img src={tec.imageUrl} alt={tec.nombre} style={{ height: '175px' }} />
+                <img src={tec.imageUrl} alt={tec.nombre} style={{ height: '150px' }} />
                 {/* Puedes agregar más elementos aquí si lo deseas */}
             </div>
         ))}

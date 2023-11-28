@@ -5,62 +5,100 @@ import { useInView } from 'react-intersection-observer';
 // Importaciones de tus imágenes...
 import empresa1 from '../../assets/empresa1.jpg';
 import empresa2 from '../../assets/logoCruzRoja.png';
-import empresa3 from '../../assets/ewq.jpg';
+import empresa5 from '../../assets/ewq.jpg';
 import empresa4 from '../../assets/parkea.jpeg';
- import empresa5 from '../../assets/cryptoLogo.png';
+ import empresa3 from '../../assets/cryptoLogo.png';
 import empresa6 from '../../assets/qwe.jpg';
-import empresa7 from '../../assets/gardenLogo.png';
+import empresa10 from '../../assets/gardenLogo.png';
 import empresa8 from '../../assets/borderLogo.png';
 import empresa9 from '../../assets/e.jpeg';
-import empresa10 from '../../assets/wqe.jpg';
-
+import empresa7 from '../../assets/wqe.jpg';
+import React from "react";
+import Slider from "react-slick";
+ import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "./styles.css"
 const Clientes = () => {
-  const { ref, inView } = useInView({
-    threshold: 0.1,
-    triggerOnce: true
-  });
+  // Configuraciones para el carrusel
+  const settings = {
+    
+    // dots: true, // Muestra puntos de navegación en la parte inferior
+    infinite: true, // Infinito loop
+    speed: 500, // Velocidad de transición
+    slidesToShow: 3, // Muestra 3 slides a la vez
+    slidesToScroll: 3, // Desplaza 3 slides a la vez
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1, // Muestra 1 slide en pantallas muy pequeñas
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
 
-  const images = [empresa2,empresa3,empresa4,empresa6,empresa5,empresa7,empresa8,empresa10,empresa9 ];
+  const images = [empresa1, empresa2, empresa3, empresa4, empresa5, empresa6, empresa10, empresa8, empresa9, empresa7];
 
   return (
-    <div>  
-      {/* Clientes */}
-      <Box
-        sx={{
-          width: '100%',
-          display: 'flex',
-          height:"150vh",
-          flexDirection: 'column',
-          alignItems: 'center',
-          paddingTop: "300px",
-          background: '#333333',
-          px: { xs: 2, sm: 13, md: 14, lg: 5 }, // Esto establece el padding horizontal dependiendo del tamaño de la pantalla
-          py: 10, // Esto establece el padding vertical
-          mx: 'auto', // Esto centra el Box en la pantalla con margenes automáticos
-        }}
-      >
-        <Slide direction="left" triggerOnce={false} in={inView}>
-          <Typography variant="h2" paddingBottom="100px" paddingTop="0px" fontWeight="700" style={{ fontFamily: 'Oswald, sans-serif', color: "white" }}>
-            Nuestros Clientes
-          </Typography>
-        </Slide>
+    <div>
+      <Box sx={{
+        width: '100%',
+        py: 8,
+        background: '#333333',
+        color: 'white',
+        textAlign: 'center'
+      }}>
+         <Slide direction="left" triggerOnce={false}>  
+        <Typography variant="h2" mb={5} fontWeight="700" fontFamily="Oswald, sans-serif">
+          Nuestros Clientes
+        </Typography></Slide>
 
-        <Grid container spacing={2} alignContent="center" justifyContent="center">
-          {images.map((image, index) => (
-            <Grid item xs={12} sm={6} md={3} key={index}>
-              <Slide direction="up" in={inView} delay={index * 100}>
-                <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%' }}>
-                  <img
-                    ref={ref}
-                    src={image}
-                    style={{ width: '75%', borderRadius: "20px" }}
-                    alt={`Empresa ${index + 1}`}
-                  />
-                </div>
-              </Slide>
-            </Grid>
-          ))}
-        </Grid>
+        <Box sx={{
+          width: '75%',
+          py: 8,
+          px: { xs: 2, sm: 10 }, // Responsivo: más padding en pantallas más grandes
+          mx: 'auto' // Asegura que el Box esté centrado
+        }}>
+          <Slider {...settings}>
+            {images.map((image, index) => (
+              <Box key={index} sx={{
+                padding: 2, // Consistente espaciado interno
+                display: 'flex',
+                justifyContent: 'center', // Asegura centrado horizontal
+                alignItems: 'center', // Asegura centrado vertical
+                height: '300px', // Define la altura para permitir la alineación vertical
+              }}>
+                <img src={image} alt={`Empresa ${index + 1}`} style={{
+                  maxWidth: '100%', // Asegura que la imagen no exceda el ancho del contenedor
+                  maxHeight: '100%', // Asegura que la imagen no exceda la altura del contenedor
+                  borderRadius: "20px",
+                  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', // Sombra suave
+                  transition: 'transform 0.3s ease-in-out', // Transición suave
+                  ':hover': {
+                    transform: 'scale(1.05)' // Efecto al pasar el mouse
+                  }
+                }} />
+              </Box>
+            ))}
+          </Slider>
+        </Box>
       </Box>
     </div>
   );
