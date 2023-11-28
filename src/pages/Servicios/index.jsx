@@ -122,11 +122,11 @@ const Servicios = () => {
     <div id="servicios">
               <Slide direction="left" triggerOnce={false} in={inView}> 
 
-    <Typography style={{fontWeight: 700, fontFamily: "'Oswald', sans-serif"  }}  sx={{paddingTop:"80px" ,color:"white", display: "flex", justifyContent: "center", paddingBottom: '50px', fontSize:"44px" }}>
+    <Typography style={{fontWeight: 700, fontFamily: "'Oswald', sans-serif"  }}  sx={{paddingTop:"40px" ,color:"white", display: "flex", justifyContent: "center", paddingBottom: '80px', fontSize:"44px" }}>
       ¿Qué podemos hacer por ti?
     </Typography> </Slide>
 
-    <Grid sx={{background: 'black'  }} marginTop={-25}  container justifyContent="center"  columnSpacing={0} rowSpacing={30} paddingBottom='200px' paddingRight={20} paddingLeft={25} columns={{ xs: 15, sm: 8, md: 10, lg: 14.9 }}>
+    <Grid sx={{background: 'black'  }} marginTop={-25}  container justifyContent="center"  columnSpacing={0} rowSpacing={20} paddingBottom='200px' paddingRight={20} paddingLeft={25} columns={{ xs: 15, sm: 8, md: 10, lg: 14.9 }}>
       {projectImages.map((image, index) => (
         <Grid item xs={2} sm={6} md={4} lg={2.5} key={index}  >
           <Box 
@@ -173,47 +173,7 @@ const Servicios = () => {
 
 
 
-   {/* <Box sx={{ background: '#333333' , height:"75vh"}}>
-  <div className="scrolling-wrapper">
-    <div className="scrolling-content">
-      {chunkedImages2.map((chunk, index) => (
-        <Grid container key={index} justifyContent="center" spacing={10} className="scrolling-item">
-          {chunk.map((image, subIndex) => (
-            <Grid item key={subIndex} sx={{marginTop:"100px"}}>
-              <Box
-                sx={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  textAlign: 'center',
-                  width: "300px",
-                  height: "300px",    
-                  borderRadius: "50%",
-                  transition: 'transform 0.3s',
-                  '&:hover': {
-                    opacity: [0.9, 0.8, 0.7],
-                    transform: 'scale(1.1)',
-                  },
-                  marginLeft: '10px',
-                }}
-              >
-                <img
-                  src={image.imageUrl}
-                  alt={`Miembro ${index * chunkSize + subIndex + 1}`}
-                  style={{ width: '45%', height: '45%', borderRadius:"50%" }}
-                />
-                <Typography style={{ fontFamily: "'Oswald', sans-serif" }} fontSize="18px" sx={{ color: 'white', fontWeight: 'bold' }}>
-                  {image.nombre}
-                </Typography>
-              </Box>
-            </Grid>
-          ))}
-        </Grid>
-      ))}
-    </div>
-  </div>
-</Box> */}
-
+ 
  
 
 
