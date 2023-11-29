@@ -173,7 +173,7 @@ const Proyectos = () => {
                   </Grid>
                   <Grid item xs={12} sm={4} md={6} lg={7.5} xl={9}>
                     <Box sx={{
-                      p: 15,
+                      p: 5,
                       display: 'flex',
                       flexDirection: 'column',
                       justifyContent: 'center',

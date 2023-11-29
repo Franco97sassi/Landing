@@ -54,7 +54,7 @@ const Clientes = () => {
     ]
   };
 
-  const images = [empresa1, empresa2, empresa3, empresa4, empresa5, empresa6, empresa10, empresa8, empresa9, empresa7];
+  const images = [ empresa2, empresa3, empresa4, empresa5, empresa6, empresa10, empresa8, empresa9, empresa7];
 
   return (
     <div>
@@ -77,25 +77,27 @@ const Clientes = () => {
           mx: 'auto', // Asegura que el Box esté centrado
         }}>
           <Slider {...settings}>
-            {images.map((image, index) => (
-              <Box key={index} sx={{
-                padding: 2, // Consistente espaciado interno
-                display: 'flex',
-                justifyContent: 'center', // Asegura centrado horizontal
-                alignItems: 'center', // Asegura centrado vertical                
-                transition: 'transform 0.3s ease-in-out', // Transición suave
-                ':hover': {
-                  transform: 'scale(1.05)' // Efecto al pasar el mouse
-                }
-              }}>
-                <img src={image} alt={`Empresa ${index + 1}`} style={{
-                  maxWidth: '100%', // Asegura que la imagen no exceda el ancho del contenedor
-                  maxHeight: '200px', // Asegura que la imagen no exceda la altura del contenedor
-                  borderRadius: "20px",
-                  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', // Sombra suave                  
-                }} />
-              </Box>
-            ))}
+          {images.map((image, index) => (
+  <Box key={index} sx={{
+    padding: 2, // Espaciado interno
+    display: 'flex',
+    justifyContent: 'center', // Centrado horizontal
+    alignItems: 'center', // Centrado vertical
+    transition: 'transform 0.3s ease-in-out', // Transición suave
+    marginTop: '20px', // Margen superior
+    ':hover': {
+      transform: 'scale(1.05)' // Efecto al pasar el mouse
+    }
+  }}>
+    <img src={image} alt={`Empresa ${index + 1}`} style={{
+      height: '150px', // Altura fija para todas las imágenes
+      width: '100%', // El ancho se ajusta automáticamente para mantener las proporciones
+      objectFit: 'contain', // Mantiene las proporciones de la imagen sin recortarla
+      borderRadius: "25px",
+      boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', // Sombra suave                  
+    }} />
+  </Box>
+))}
           </Slider>
         </Box>
       </Box>

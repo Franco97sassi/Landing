@@ -1,0 +1,8 @@
+slick-prev, .slick-next {
+    font-size: 54px; /* Aumenta el tamaño de la flecha */
+    z-index: 1;
+}
+
+.slick-prev:before, .slick-next:before {
+    font-size: 30px; /* Aumenta el tamaño del icono de la flecha, ajusta según sea necesario */
+}
