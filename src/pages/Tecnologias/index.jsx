@@ -46,21 +46,20 @@ import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
     
    ];
 
-  return (
-    <Box id="servicios" className="ticker-wrap "  >
-    <div className="ticker"  >
-        {tecnologias.map((tec, index) => (
-            <div key={index} className="ticker-item">
-                <img src={tec.imageUrl} alt={tec.nombre} style={{ height: '150px' }} />
-                {/* Puedes agregar más elementos aquí si lo deseas */}
-            </div>
+   return (
+    <Box id="servicios" className="ticker-wrap">
+      <div className="ticker">
+        {tecnologias.concat(tecnologias).map((tec, index) => (
+          <div key={index} className="ticker-item">
+<img src={tec.imageUrl} alt={tec.nombre} style={{ height: '150px', width: 'auto' }} />
+          </div>
         ))}
-    </div>
-</Box>
+      </div>
+    </Box>
   );
-  };
-  
-  export default Tecnologias;
+};
+
+export default Tecnologias;
   // const [inView, setInView] = useState(false);
 
 

@@ -2,7 +2,7 @@
   overflow: hidden;
   background-color: #333333; /* O el color que prefieras */
   white-space: nowrap;
-  height:100vh ; padding-top: 250px; 
+  height:70vh ; padding-top: 150px; 
 }
 
 .ticker {
@@ -11,8 +11,8 @@
 }
 
 @keyframes tickerMove {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 .ticker-item {

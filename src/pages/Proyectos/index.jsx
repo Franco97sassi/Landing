@@ -128,7 +128,7 @@ const Proyectos = () => {
 
   return (
     <div id="proyectos">
-      <Box sx={{ background: '#333333', height: "100vh" }}  >
+      <Box sx={{ background: '#333333', height: "100%", px: 12, pb: 10, }}  >
         <Slide direction="left" triggerOnce={false}>
           <Typography variant="h2" style={{ color: "white", fontWeight: 700, fontFamily: "'Oswald', sans-serif" }} sx={{ display: "flex", paddingTop: "50px", justifyContent: "center", paddingBottom: "50px" }}>
             Proyectos
@@ -151,8 +151,8 @@ const Proyectos = () => {
                 <React.Fragment key={subIndex}>
                   <Grid item xs={12} sm={6} md={6} lg={4.5} xl={3}>
                     <Box sx={{
-                      width: "125%", // Asegúrate de que la imagen ocupa todo el ancho del Grid item
-                      height: "125%",
+                      width: "100%", // Asegúrate de que la imagen ocupa todo el ancho del Grid item
+                      height: "100%",
                       borderRadius: "10px",
                       marginTop: "20px",
                       backgroundColor: 'rgba(30, 30, 30, 0.56)',
@@ -173,7 +173,7 @@ const Proyectos = () => {
                   </Grid>
                   <Grid item xs={12} sm={4} md={6} lg={7.5} xl={9}>
                     <Box sx={{
-                      p: 15,
+                      p: 5,
                       display: 'flex',
                       flexDirection: 'column',
                       justifyContent: 'center',
@@ -188,6 +188,7 @@ const Proyectos = () => {
                       <Typography style={{
                         color: "white",
                         fontFamily: 'Oswald, sans-serif',
+                        textAlign: 'justify'                    
                       }} gutterBottom>
                         {project.description}
                       </Typography>

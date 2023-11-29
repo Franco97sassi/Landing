@@ -1,5 +1,5 @@
 import { Box, Button, Grid, Link, Stack, TextField, Typography } from '@mui/material';
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Carousel from 'react-material-ui-carousel';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
@@ -16,8 +16,9 @@ import EmailIcon from '@mui/icons-material/Email';
 import icono2 from "../../assets/icono2.png"
 import whatsapp from "../../assets/whatsapp.png"
 import linkedinFooterImg from "../../assets/logo4.svg"
+import emailjs from '@emailjs/browser';
 const Contacto = () => {
-
+  const form = useRef();
 
   const Item = styled("div")(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#red',
@@ -28,6 +29,17 @@ const Contacto = () => {
   }));
   const [inView, setInView] = useState(false);
 
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm("service_6fxw7cd", "template_3w7v272", form.current, "m4gMqZXADix1JcttU")
+      .then((result) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
+  };
+
   return (
 
     <div>
@@ -36,7 +48,7 @@ const Contacto = () => {
       <Box sx={{ width: '100%', height: "110vh", background: 'black' }}>
         <Slide direction="left" triggerOnce={false}>
           <Typography variant="h2" style={{ color: "white", fontFamily: "'Oswald', sans-serif", fontWeight: "700" }} sx={{ display: "flex", justifyContent: "center", paddingTop: "50px" }}>
-            Contactanos
+            Contáctanos
           </Typography>
         </Slide>
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} justifyContent="flexStart" alignItems="flexStart" marginTop="25px" style={{ height: '100%' }}>
@@ -63,7 +75,6 @@ const Contacto = () => {
               }}>
                 <Button sx={{
                   fontFamily: "'Oswald', sans-serif",
-                  color: "black",
                   borderColor: "white",
                   borderWidth: "2px",
                   borderStyle: "solid",
@@ -82,107 +93,113 @@ const Contacto = () => {
 
 
             </Box>
-
             <Box style={{ border: "5px solid white", padding: "10px", width: "300px" }}>
               <Typography sx={{ fontSize: "25px", color: "white", mb: 2, fontFamily: "'Oswald', sans-serif" }}>
                 TechX
               </Typography>
-              <Typography sx={{ color: "white", mb: 2, fontFamily: "'Oswald', sans-serif" }}>     <LocationOnIcon sx={{ mr: 1 }} />
-
-                México
-              </Typography>
-              <Typography sx={{ color: "white", mb: 2, fontFamily: "'Oswald', sans-serif" }}> <PhoneIcon sx={{ mr: 1 }} />
-                +52 662 2297062
-              </Typography>
-              <Typography sx={{ color: "white", mb: 2, fontFamily: "'Oswald', sans-serif" }}> <EmailIcon sx={{ mr: 1 }} />
-                desarollotechx@gmail.com
-              </Typography>
+              <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', }}>
+                <Typography sx={{ color: "white", mb: 2, fontFamily: "'Oswald', sans-serif" }}>
+                  <LocationOnIcon sx={{ mr: 1, position: 'relative', top: '5px', }} />
+                  México
+                </Typography>
+                <Typography sx={{ color: "white", mb: 2, fontFamily: "'Oswald', sans-serif" }}>
+                  <PhoneIcon sx={{ mr: 1, position: 'relative', top: '5px', }} />
+                  +52 662 2297062
+                </Typography>
+                <Typography sx={{ color: "white", mb: 2, fontFamily: "'Oswald', sans-serif" }}>
+                  <EmailIcon sx={{ mr: 1, position: 'relative', top: '5px', }} />
+                  desarollotechx@gmail.com
+                </Typography>
+              </Box>
 
             </Box>
           </Grid>
-          <Grid item xs={6} style={{ display: 'flex', flexDirection: 'column', justifyItems: "center", alignItems: 'center' }}>
-
-
-            <Box style={{ height: "425px", position: 'relative', background: "#CCCCCC", borderRadius: '50px', border: "1px solid white", padding: "10px", marginBottom: "10px", width: "300px" }}>
-              <AccountCircleIcon sx={{ position: 'absolute', top: '-0px', left: '50%', transform: 'translateX(-50%)', fontSize: 50, color: '#333333' }} />
+          <Grid item xs={6} sx={{ display: 'flex', flexDirection: 'column', justifyItems: "center", alignItems: 'center', }}>
+            <Box sx={{ display: 'flex', alignItems: 'center', flexDirection: 'column', height: "425px", position: 'relative', background: "#CCCCCC", borderRadius: '50px', border: "1px solid white", padding: "10px", marginBottom: "10px", width: "300px" }}>
+              <AccountCircleIcon sx={{ fontSize: 50, color: '#333333', mt: 2, }} />
               <Stack spacing={2} sx={{ width: '100%', marginTop: "50px" }}>
-                <TextField
-                  sx={{
-
-                    background: "#D3D3D3",
-                    borderRadius: "15px",
-                    '& .MuiOutlinedInput-root': {
-                      '& fieldset': {
-                        border: 'none',
+                <form ref={form} onSubmit={sendEmail}>
+                  <TextField
+                    sx={{
+                      background: "#D3D3D3",
+                      borderRadius: "15px",
+                      '& .MuiOutlinedInput-root': {
+                        '& fieldset': {
+                          border: 'none',
+                        },
                       },
-                    },
-                    '& label.Mui-focused': {
-                      color: 'black',
-                    },
-                  }}
-                  id="outlined-basic"
-                  label="Nombre"
-                  variant="outlined"
-                />
-
-                <TextField
-                  sx={{
-                    background: "#D3D3D3",
-                    borderRadius: "15px",
-                    '& .MuiOutlinedInput-root': {
-                      '& fieldset': {
-                        border: 'none',
+                      '& label.Mui-focused': {
+                        color: 'black',
                       },
-                    },
-                    '& label.Mui-focused': {
-                      color: 'black',
-                    },
-                  }}
-                  id="outlined-basic"
-                  label="Email"
-                  variant="outlined"
-                />
+                    }}
+                    id="outlined-basic"
+                    label="Nombre"
+                    name="user_name"
+                    variant="outlined"
+                  />
 
-                <TextField
-                  sx={{
-                    background: "#D3D3D3",
-                    borderRadius: "15px",
-                    height: "100px",
-                    '& .MuiOutlinedInput-root': {
-                      '& fieldset': {
-                        border: 'none',
+                  <TextField
+                    sx={{
+                      background: "#D3D3D3",
+                      borderRadius: "15px",
+                      '& .MuiOutlinedInput-root': {
+                        '& fieldset': {
+                          border: 'none',
+                        },
                       },
-                    },
-                    '& label.Mui-focused': {
-                      color: 'black',
-                    },
-                  }}
-                  id="outlined-basic"
-                  label="Comentarios"
-                  variant="outlined"
-                />
-                <Box sx={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center"
-                }}>
-                  <Button sx={{
-                    fontFamily: "'Oswald', sans-serif",
-                    color: "black",
-                    borderColor: "white",
-                    borderWidth: "2px",
-                    borderStyle: "solid",
-                    borderRadius: "15px",
-                    color: "white",
-                    background: 'black',
-                    width: "220px",
-                    '&:hover': {
-                      backgroundColor: "black",
-                      borderColor: "white",
-                    }
+                      '& label.Mui-focused': {
+                        color: 'black',
+                      },
+                    }}
+                    id="outlined-basic"
+                    label="Email"
+                    name="user_email"
+                    variant="outlined"
+                  />
+
+                  <TextField
+                    sx={{
+                      background: "#D3D3D3",
+                      borderRadius: "15px",
+                      height: "100px",
+                      '& .MuiOutlinedInput-root': {
+                        '& fieldset': {
+                          border: 'none',
+                        },
+                      },
+                      '& label.Mui-focused': {
+                        color: 'black',
+                      },
+                    }}
+                    id="outlined-basic"
+                    label="Comentarios"
+                    name="message"
+                    variant="outlined"
+                  />
+                  <Box sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center"
                   }}>
-                    Enviar
-                  </Button></Box>
+                    <Button
+                      type='submit'
+                      sx={{
+                        fontFamily: "'Oswald', sans-serif",
+                        borderColor: "white",
+                        borderWidth: "2px",
+                        borderStyle: "solid",
+                        borderRadius: "15px",
+                        color: "white",
+                        background: 'black',
+                        width: "220px",
+                        '&:hover': {
+                          backgroundColor: "black",
+                          borderColor: "white",
+                        }
+                      }}>
+                      Enviar
+                    </Button></Box>
+                </form>
               </Stack>
             </Box>
           </Grid>
