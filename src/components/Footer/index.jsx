@@ -34,12 +34,44 @@ const is450 = useMediaQuery('(max-width:450px)');
     
     <>
 
-    <Box sx={{display:"flex", justifyContent:"center",  maxHeight:"600px", width:"100%", background:"#150F24"}}>
-    <Box sx={{display:"flex", flexDirection:"column",}}>
-    <Box sx={{display:"flex", flexDirection:"column", width:"100%"}}>
+<Box sx={{ display: "flex", justifyContent: "center", height: "100%", maxHeight: "593px", background: "#282828"}}>
+  <Box sx={{ width: "100%", maxWidth: "1440px", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", height: "100%" }}>
+    <Grid container spacing={0} justifyContent="center">
+      <Grid item xs={12} md={5} sx={{ display: 'flex', justifyContent: 'center' }}>
+        <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", height: "293px" }}>
+
+    <Box sx={{display:"flex", flexDirection:"column",alignItems:"center",   width:"100%"}}>
     
-<Box sx={{display:"flex", justifyContent:"center"}}>
-    <Box sx={{width:"100%",maxWidth:"227px", display:"flex", flexDirection:"column"}}>
+
+    <Typography
+      variant="h6"
+      style={{
+        textAlign:"center",
+        fontFamily: 'Rubik',
+        fontSize: '18px',
+        fontStyle: 'normal',
+        fontWeight: 400,
+        lineHeight: '26px',
+        position: 'relative',
+        marginTop:"40px",
+        color:"#FFF",
+        fontFamily: "'Oswald', sans-serif",
+      }}
+    >
+      Contáctanos a través del   correo   desarollotechx@gmail.com
+    </Typography>
+
+    <img style={{ width:"100px", marginTop:"30px", cursor:"pointer"}} src={logo}></img>
+ 
+    </Box>
+        </Box>
+      </Grid>
+
+      
+    
+      <Grid item xs={12} md={4} sx={{ display: 'flex', justifyContent: 'center' }}>
+        <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", height: "293px", maxWidth: "204px" }}>
+    <Box sx={{display:"flex", flexDirection:"column", width:"100%", maxWidth:"204px", background:"", }}>
     <Typography
       variant="h6"
       style={{
@@ -49,86 +81,47 @@ const is450 = useMediaQuery('(max-width:450px)');
         fontWeight: 400,
         lineHeight: '26px',
         position: 'relative',
-        marginTop:"50px",
-        color:"#FFF"
+        marginTop:"17px",
+        color:"#FFF",
+        fontFamily: "'Oswald', sans-serif",
       }}
     >
-      Follow us
+      Seguinos en:
       <span
         style={{
           position: 'absolute',
-          bottom: '-16px',
+          bottom: '-10px',
           left: '0',
           width: '100%',
-          maxWidth: '227px',
+          maxWidth: '206px',
           height: '3px',
-          backgroundColor: 'var(--morado, #6252A3)',
+          backgroundColor: 'var(--morado, #912327)',
         }}
       />
     </Typography>
 
-    <Box sx={{display:"flex", alignItems:"center", width:"100%", maxWidth:"227px", justifyContent:"space-between"}}>
-<img style={{width:"27px", marginTop:"27px", marginTop:"30px", cursor:"pointer"}} src={instagramFooterImg}></img>
-<img style={{width:"33px", marginTop:"33px", cursor:"pointer"}} src={facebookFooterImg}></img>
-<img style={{width:"33px", marginTop:"33px", cursor:"pointer"}} src={linkedinFooterImg}></img>
-
-    </Box>
-
-    
-    {/* <Typography
-      variant="h6"
-      style={{
-        fontFamily: 'Rubik',
-        fontSize: '18px',
-        fontStyle: 'normal',
-        fontWeight: 400,
-        lineHeight: '26px',
-        position: 'relative',
-        marginTop:"58px",
-        color:"#FFF"
-      }}
-    >
-      MD GLOBAL TRADE SERVICES
-      <span
-        style={{
-          position: 'absolute',
-          bottom: '-16px',
-          left: '0',
-          width: '100%',
-          maxWidth: '227px',
-          height: '3px',
-          backgroundColor: 'var(--morado, #6252A3)',
-        }}
-      />
-    </Typography> */}
-    </Box>
-    </Box>
-    <Box sx={{display:"flex", justifyContent:"center", width:"100%", marginTop:"16px"}}>
-    <img style={{width:"29px", marginTop:"29px", cursor:"pointer"}} src={GroupGoogleImg}></img>
-    </Box>
-
-    <Typography sx={{textAlign:"center", marginTop:"28px",color:"#FFF", fontFamily:"Plus Jakarta Sans", fontSize:"12px", fontWeight:"600", textTransform:"capitalize"}}> 
-    2601 SW 37th Ave, Suite 503
-    </Typography>
-
     
 
-    
-    
-    </Box>
-    
-    <Box >
-        <img style={{paddingInline:is450?"6%":0,height:"auto", width:"100%", maxWidth:"373px", marginTop:"38px"}} src={LogosImg} alt="LogoGenFooterImg" />
+    <Box sx={{display:"flex", alignItems:"center", width:"100%", justifyContent:"space-between"}}>
+    <a href="https://www.facebook.com/profile.php?id=100093530245392"> 
+<img style={{width:"27px", marginTop:"27px", marginTop:"30px", cursor:"pointer"}} src={icono2}></img></a>
+<a href="https://api.whatsapp.com/send?phone=526622297062" target="_blank">
+    <img style={{ width: "33px", marginTop: "33px", cursor: "pointer" }} src={whatsapp}></img>
+  </a>
+<a href="https://www.instagram.com/techx_mx/?hl=es"> <img style={{width:"33px", marginTop:"33px", cursor:"pointer"}} src={linkedinFooterImg}></img></a>
+
     </Box>
 
-    <Typography sx={{width:"100%", paddingBottom:"14px", textAlign:"center", color:"#FFF", fontFamily:"Montserrat", fontSize:"10px", marginTop:"10px"}}>
-            Made with magic by <span> </span>
-            <span style={{cursor:"pointer", textDecoration:"underline"}}>
-            PlannerTeam
-            </span>
-    </Typography>
+     
+<Typography variant="h7" style={{fontFamily: 'Rubik',fontSize: '14px',fontStyle: 'normal',fontWeight: 400, lineHeight: '26px',position: 'relative', color:"#FFF", marginTop:"32px",fontFamily: "'Oswald', sans-serif",}}>
+Todos los Derechos Reservados © 2023
+        </Typography>
     </Box>
+        </Box>
+      </Grid>
+    </Grid>
     </Box>
+</Box>
     </>
     
     :
@@ -137,42 +130,44 @@ const is450 = useMediaQuery('(max-width:450px)');
 
     <>
     
-    <Box sx={{display:"flex", justifyContent:"center", height:"100%", maxHeight:"293px",background:"#150F24"}}>
-<Box sx={{width:"1440px", display:"flex", alignItems:"center", height:"100%"}}>
-    <Grid container spacing={0}>
-      <Grid item xs={4}>
-        <Box sx={{background:"", display:"flex",  alignItems:"center", height:"293px"}}>
-    <Box sx={{display:"flex", flexDirection:"column", marginLeft:"13%", width:"100%"}}>
-    {/* <Typography
+    <Box sx={{ display: "flex", justifyContent: "center", height: "100%", maxHeight: "593px", background: "#282828"}}>
+  <Box sx={{ width: "100%", maxWidth: "1440px", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", height: "100%" }}>
+    <Grid container spacing={0} justifyContent="center">
+      <Grid item xs={12} md={5} sx={{ display: 'flex', justifyContent: 'center' }}>
+        <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", height: "293px" }}>
+
+    <Box sx={{display:"flex", flexDirection:"column",alignItems:"center",   width:"100%"}}>
+    
+
+    <Typography
       variant="h6"
       style={{
+        textAlign:"center",
         fontFamily: 'Rubik',
         fontSize: '18px',
         fontStyle: 'normal',
         fontWeight: 400,
         lineHeight: '26px',
         position: 'relative',
-        marginTop:"20px",
-        color:"#FFF"
+        marginTop:"40px",
+        color:"#FFF",
+        fontFamily: "'Oswald', sans-serif",
       }}
     >
-      MD GLOBAL TRADE SERVICES
-      <span
-        style={{
-          position: 'absolute',
-          bottom: '-16px',
-          left: '0',
-          width: '100%',
-          maxWidth: '206px',
-          height: '3px',
-          backgroundColor: 'var(--morado, #6252A3)',
-        }}
-      />
-    </Typography> */}
+      Contáctanos a través del   correo   desarollotechx@gmail.com
+    </Typography>
 
-    <img style={{width:"48px", marginTop:"30px", cursor:"pointer"}} src={GroupGoogleImg}></img>
+    <img style={{ width:"100px", marginTop:"30px", cursor:"pointer"}} src={logo}></img>
+ 
+    </Box>
+        </Box>
+      </Grid>
 
-
+      
+    
+      <Grid item xs={12} md={4} sx={{ display: 'flex', justifyContent: 'center' }}>
+        <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", height: "293px", maxWidth: "204px" }}>
+    <Box sx={{display:"flex", flexDirection:"column", width:"100%", maxWidth:"204px", background:"", }}>
     <Typography
       variant="h6"
       style={{
@@ -182,56 +177,41 @@ const is450 = useMediaQuery('(max-width:450px)');
         fontWeight: 400,
         lineHeight: '26px',
         position: 'relative',
-        marginTop:"34px",
-        color:"#FFF"
+        marginTop:"17px",
+        color:"#FFF",
+        fontFamily: "'Oswald', sans-serif",
       }}
     >
-      Follow us
+      Seguinos en:
       <span
         style={{
           position: 'absolute',
-          bottom: '-16px',
+          bottom: '-10px',
           left: '0',
           width: '100%',
           maxWidth: '206px',
           height: '3px',
-          backgroundColor: 'var(--morado, #6252A3)',
+          backgroundColor: 'var(--morado, #912327)',
         }}
       />
     </Typography>
 
-    <Box sx={{display:"flex", alignItems:"center", width:"100%", maxWidth:"206px", justifyContent:"space-between"}}>
-<img style={{width:"27px", marginTop:"27px", marginTop:"30px", cursor:"pointer"}} src={instagramFooterImg}></img>
-<img style={{width:"33px", marginTop:"33px", cursor:"pointer"}} src={facebookFooterImg}></img>
-<img style={{width:"33px", marginTop:"33px", cursor:"pointer"}} src={linkedinFooterImg}></img>
+    
+
+    <Box sx={{display:"flex", alignItems:"center", width:"100%", justifyContent:"space-between"}}>
+    <a href="https://www.facebook.com/profile.php?id=100093530245392"> 
+<img style={{width:"27px", marginTop:"27px", marginTop:"30px", cursor:"pointer"}} src={icono2}></img></a>
+<a href="https://api.whatsapp.com/send?phone=526622297062" target="_blank">
+    <img style={{ width: "33px", marginTop: "33px", cursor: "pointer" }} src={whatsapp}></img>
+  </a>
+<a href="https://www.instagram.com/techx_mx/?hl=es"> <img style={{width:"33px", marginTop:"33px", cursor:"pointer"}} src={linkedinFooterImg}></img></a>
 
     </Box>
-    </Box>
-        </Box>
-      </Grid>
 
-      <Grid item xs={4}>
-        <Box sx={{background:"", display:"flex", flexDirection:"column", height:"293px"}}>
-            <Box sx={{display:"flex", justifyContent:"center", width:"100%", marginTop:"22px"}}>
-            <img style={{height:"53px", width:"158px"}} src={LogoGenFooterImg} alt="LogoGenFooterImg" />
-            </Box>
-
-            
-
-            <Typography sx={{width:"100%", textAlign:"center", color:"#FFF", fontFamily:"Montserrat", fontSize:"10px", marginTop:"185px"}}>
-            Made with magic by <span> </span>
-            <span style={{cursor:"pointer", textDecoration:"underline"}}>
-            PlannerTeam
-            </span>
-            </Typography>
-        </Box>
-      </Grid>
-      <Grid item xs={4}>
-      <Box sx={{background:"", display:"flex",  alignItems:"center", height:"293px", background:"",justifyContent:"end", marginRight:"13%"}}>
-    <Box sx={{display:"flex", width:"100%", maxWidth:"204px", background:"", alignItems:"center", justifyContent:"end"}}>
-        
-        <img src={LogosFooterTabletImg} alt="LogosTablet" />
-
+     
+<Typography variant="h7" style={{fontFamily: 'Rubik',fontSize: '14px',fontStyle: 'normal',fontWeight: 400, lineHeight: '26px',position: 'relative', color:"#FFF", marginTop:"32px",fontFamily: "'Oswald', sans-serif",}}>
+Todos los Derechos Reservados © 2023
+        </Typography>
     </Box>
         </Box>
       </Grid>
@@ -249,32 +229,7 @@ const is450 = useMediaQuery('(max-width:450px)');
       <Grid item xs={5}>
         <Box sx={{background:"", display:"flex",  alignItems:"center", height:"293px"}}>
     <Box sx={{display:"flex", flexDirection:"column", marginLeft:"13%", width:"100%"}}>
-    {/* <Typography
-      variant="h6"
-      style={{
-        fontFamily: 'Rubik',
-        fontSize: '18px',
-        fontStyle: 'normal',
-        fontWeight: 400,
-        lineHeight: '26px',
-        position: 'relative',
-        
-        color:"#FFF"
-      }}
-    >
-      MD GLOBAL TRADE SERVICES
-      <span
-        style={{
-          position: 'absolute',
-          bottom: '-10px',
-          left: '0',
-          width: '100%',
-          maxWidth: '250px',
-          height: '3px',
-          backgroundColor: 'var(--morado, #912327)',
-        }}
-      />
-    </Typography> */}
+    
 
     <Typography
       variant="h6"
@@ -379,16 +334,7 @@ const is450 = useMediaQuery('(max-width:450px)');
 
     </Box>
 
-    {/* <Typography variant="h6" style={{fontFamily: 'Rubik',fontSize: '14px',fontStyle: 'normal',fontWeight: 400, lineHeight: '26px',position: 'relative', color:"#FFF", marginTop:"32px",fontFamily: "'Oswald', sans-serif",}}>
-        QUIENES SOMOS 
-        </Typography>
-        <Typography variant="h6" style={{fontFamily: 'Rubik',fontSize: '14px',fontStyle: 'normal',fontWeight: 400, lineHeight: '26px',position: 'relative', color:"#FFF",fontFamily: "'Oswald', sans-serif",}}>
-        SOFTWARE 
-        </Typography>
-        <Typography variant="h6" style={{fontFamily: 'Rubik',fontSize: '14px',fontStyle: 'normal',fontWeight: 400, lineHeight: '26px',position: 'relative', color:"#FFF",fontFamily: "'Oswald', sans-serif",}}>
-        CONSULTA EL AVISO DE PRIVACIDAD 
-        </Typography>
-     */}
+     
 <Typography variant="h7" style={{fontFamily: 'Rubik',fontSize: '14px',fontStyle: 'normal',fontWeight: 400, lineHeight: '26px',position: 'relative', color:"#FFF", marginTop:"32px",fontFamily: "'Oswald', sans-serif",}}>
 Todos los Derechos Reservados © 2023
         </Typography>

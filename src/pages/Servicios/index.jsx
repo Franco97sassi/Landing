@@ -1,4 +1,4 @@
-import { Box,  Divider,  Grid, List, Typography } from '@mui/material';
+import { Box,  Divider,  Grid, List, Typography, useMediaQuery } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import gif1 from "../../assets/gif1.gif";
 import gif2 from "../../assets/gif2.gif";
@@ -36,6 +36,8 @@ import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import "./styles.css"
 const Servicios = () => {
+  const isNonMobileScreens = useMediaQuery('(min-width: 1000px)');
+
   const projectImages = [
     { imageUrl: gif10, nombre: "Páginas Web" },
     { imageUrl: gif1, nombre: "Aplicaciones Móviles" },
@@ -126,7 +128,9 @@ const Servicios = () => {
       ¿Qué podemos hacer por ti?
     </Typography> </Slide>
 
-    <Grid sx={{background: 'black'  }} marginTop={-25}  container justifyContent="center"  columnSpacing={0} rowSpacing={20} paddingBottom='200px' paddingRight={20} paddingLeft={25} columns={{ xs: 15, sm: 8, md: 10, lg: 14.9 }}>
+    <Grid sx={{background: 'black'  }} marginTop={-25} 
+     container justifyContent={isNonMobileScreens ? "center" : "center"}  columnSpacing={0} rowSpacing={20} 
+     paddingBottom='200px' paddingRight={20} paddingLeft={25} columns={{ xs: 0, sm: 8, md: 10, lg: 14.9 }}>
       {projectImages.map((image, index) => (
         <Grid item xs={2} sm={6} md={4} lg={2.5} key={index}  >
           <Box 
