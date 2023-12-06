@@ -55,8 +55,8 @@ const Contacto = () => {
         <Grid container 
         rowSpacing={1} 
         columnSpacing={{ xs: 60, sm: 2, md: 3 }} 
-        justifyContent={isNonMobileScreens ? "center" : "flexStart"} 
-        alignItems={isNonMobileScreens ? "center" : "flexStart"} 
+        justifyContent={isNonMobileScreens ? "center" : "center"} 
+        alignItems={isNonMobileScreens ? "center" : "center"} 
         style={{ 
           height: '100%', 
           flexDirection: isNonMobileScreens ? 'column' : 'row' 

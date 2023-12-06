@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Box, Fade, Grid, Typography } from "@mui/material";
+import { Box, Fade, Grid, Typography, useMediaQuery } from "@mui/material";
 import { Slide, Fade as AwesomeFade } from "react-awesome-reveal";
 import { styled } from '@mui/material/styles';
 import sinFondo from '../../assets/sinFondo.png';
@@ -15,6 +15,7 @@ const Estadisticas = () => {
 
   // Estado para controlar la visibilidad de las tipografías.
   const [inView, setInView] = useState(false);
+  const isNonMobileScreens = useMediaQuery('(min-width: 1000px)');
 
   // Controlar el evento de scroll
   useEffect(() => {
@@ -66,7 +67,7 @@ const Estadisticas = () => {
           >
             Transformando tu negocio,<br />una solución tecnológica a la vez
           </Typography>
-                    {/* Titulo */}
+          {/* Titulo */}
 
         </Slide>
       </Box>
@@ -80,25 +81,32 @@ const Estadisticas = () => {
         alignItems: 'center',
         background: 'black',
         marginX: 'auto', // Esto centra el Box en el medio horizontalmente, manteniendo el mismo espacio en los lados
-        paddingX: '16px', // Añade el mismo padding a los lados derecho e izquierdo, ajusta según sea necesario
+        paddingX: '0px', // Añade el mismo padding a los lados derecho e izquierdo, ajusta según sea necesario
 
       }}>
 
-<div style={{ width: '100%', maxWidth: '1200px', margin: '0 auto' }}>
-<Grid container paddingTop="-100px" rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-            <Grid item xs={4}>
-                            <AwesomeFade cascade triggerOnce={false} direction="up" in={inView} delay={150}>
 
-              <Item>
-                 
+
+        <div style={{ width: '100%', maxWidth: '1200px', margin: '0 auto' }}>
+
+          <Grid container paddingTop="-100px" rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+            {/* <Grid item xs={4}>
+              <AwesomeFade cascade triggerOnce={false} direction="up" in={inView} delay={150}>
+
+                <Item>
+
                   <Typography sx={{ fontWeight: 900, paddingTop: "00px", fontWeight: 800, fontSize: "80px", color: "white", fontFamily: 'Oswald, sans-serif' }}>   <span style={{ fontSize: "60px" }}>+</span>20</Typography>
-                 
-              </Item></AwesomeFade>
-            </Grid>
 
-            <Grid item xs={4}><AwesomeFade cascade triggerOnce={false} direction="up" in={inView} delay={150}>
-              <Item>
-                
+                </Item></AwesomeFade>
+            </Grid> */}
+
+
+
+
+            <Grid item xs={4}>
+              <AwesomeFade cascade triggerOnce={false} direction="up" in={inView} delay={150}>
+                <Item>
+
                   <Typography sx={{ fontWeight: 900, paddingTop: "00px", fontSize: "80px", color: "white", fontFamily: 'Oswald, sans-serif', position: 'relative' }}>
                     14
                     <span style={{
@@ -108,42 +116,51 @@ const Estadisticas = () => {
                       top: '52.5%', // Posiciona a la mitad de la altura del elemento padre
                       transform: 'translateY(-50%)', // Desplaza el elemento hacia arriba a la mitad de su altura
                     }}>%</span>
-                  </Typography>  
-              </Item></AwesomeFade>
+                  </Typography>
+                </Item></AwesomeFade>
             </Grid>
             <Grid item xs={4}>
-            <AwesomeFade cascade triggerOnce={false} direction="up" in={inView} delay={150}>
-              <Item>
-                
+              <AwesomeFade cascade triggerOnce={false} direction="up" in={inView} delay={150}>
+                <Item>
+
                   <Typography sx={{ fontWeight: 900, paddingTop: "00px", fontSize: "80px", color: "white", fontFamily: 'Oswald, sans-serif' }}>180
                     <span style={{
                       position: 'relative', // Se usa para posicionar el grado relativo a su posición normal
                       top: '-0.2em', // Mueve el grado hacia arriba, ajusta según sea necesario
                       fontSize: "60px", // Tamaño del grado, puede ser diferente del número
                     }}>º</span></Typography>
-                 
+
+                </Item></AwesomeFade>
+            </Grid>
+
+
+
+
+            <Grid item xs={4}><AwesomeFade cascade triggerOnce={false} direction="up" in={inView} delay={600}>
+              <Item>
+
+                <Typography sx={{ fontSize: "20px", color: "white", fontFamily: 'Oswald, sans-serif' }}>Empresas trabajadas con soluciones innovadoras y eficientes</Typography>
               </Item></AwesomeFade>
             </Grid>
             <Grid item xs={4}><AwesomeFade cascade triggerOnce={false} direction="up" in={inView} delay={600}>
               <Item>
-                
-                  <Typography sx={{ fontSize: "20px", color: "white", fontFamily: 'Oswald, sans-serif' }}>Empresas trabajadas con soluciones innovadoras y eficientes</Typography>
-               </Item></AwesomeFade>
+
+                <Typography sx={{ fontSize: "20px", color: "white", fontFamily: 'Oswald, sans-serif' }}>Creció el comercio electrónico en México en 2023</Typography> </Item></AwesomeFade>
             </Grid>
             <Grid item xs={4}><AwesomeFade cascade triggerOnce={false} direction="up" in={inView} delay={600}>
               <Item>
-                
-                  <Typography sx={{ fontSize: "20px", color: "white", fontFamily: 'Oswald, sans-serif' }}>Creció el comercio electrónico en México en 2023</Typography> </Item></AwesomeFade>
-            </Grid>
-            <Grid item xs={4}><AwesomeFade cascade triggerOnce={false} direction="up" in={inView} delay={600}>
-              <Item> 
                 <Typography sx={{ fontSize: "20px", color: "white", fontFamily: 'Oswald, sans-serif' }}>Es el giro   que puede dar tu negocio</Typography> </Item></AwesomeFade>
             </Grid>
           </Grid>
+
+
+
+
+
         </div>
 
       </Box>
     </div>
-    )
+  )
 }
 export default Estadisticas;

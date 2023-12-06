@@ -21,19 +21,25 @@ const Inicio = () => {
     }}>
 
       <Landing />
-      <Sobre />
+       <Sobre />
        <Estadisticas />  
-      <Clientes />
-      {/* <div id="proyectos"> */}
-               <Testimonios/>
+     {/* <Clientes />   */}
 
+      
+      {/* <div id="proyectos"> */}
+             
+             
+                {/* <Testimonios/> */}
         <Proyectos />  
-        <Contacto/>
+        {/* <Contacto/>   */}
+
+
+
          {/* </div> */}
       {/* <div id="servicios">  */}
-        {/* <Servicios />   */}
+          {/* <Servicios />    */}
         {/* </div> */}
-         {/* <Contacto/>  */}
+           {/* <Contacto/>  */}
     </Box>
     </div>
   )
