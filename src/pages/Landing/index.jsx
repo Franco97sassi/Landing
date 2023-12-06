@@ -1,29 +1,26 @@
 import React, { useEffect, useState,useRef } from 'react';
- 
-import { Box, Button, Grid, Typography, Fade } from '@mui/material';
+import { Box, Button, Grid, Typography, Fade, useMediaQuery } from '@mui/material';
 import './styles.css';
 import {   Slide } from "react-awesome-reveal";
  import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
- 
- 
 import fondoNuevo from "../../assets/fondoNuevo.jpg"
 import fondo2 from "../../assets/fondo2.jpg"
- 
 import sinFondo from '../../assets/sinFondo.png';
  
 
 
 const Landing = () => {
   const [inView, setInView] = useState(false);
+  const isNonMobileScreens = useMediaQuery('(min-width: 1000px)');
 
-  const onEnterViewport = () => {
-    setInView(true);
-  };
+  // const onEnterViewport = () => {
+  //   setInView(true);
+  // };
 
-  const onExitViewport = () => {
-    setInView(false);
-  };
+  // const onExitViewport = () => {
+  //   setInView(false);
+  // };
 
   const Item = styled("div")(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#red',
@@ -127,37 +124,31 @@ const Landing = () => {
         flexDirection: "column",  // Alineamos los elementos en columna
         justifyContent: "center",  // Centramos verticalmente
         alignItems: "center"  // Centramos horizontalmente
+        
       }}
         sx={{
           minHeight: '100vh',
           // paddingLeft:"500px",
 
         }}>
-        {/* <Fade in={showBienvenido} timeout={500}>
-        <Typography sx={{
-          fontSize: "40px",
-          color: 'white',
-          fontFamily: "'Oswald', sans-serif",
-          letterSpacing: "5px"
-        }}>
-          Bienvenido
-        </Typography>
-      </Fade> */}
+         
         <Fade in={showTechX} timeout={500}>
-          <Typography sx={{
-            letterSpacing: "5px",
-            fontSize: "40px",
-            paddingTop: "50px",
-            color: 'white',
-            fontFamily: "'Oswald', sans-serif",
-            fontWeight: "1000"
-          }}>
+        <Typography sx={{
+    letterSpacing: "5px",
+    fontSize: "40px",
+    paddingTop: "50px",
+    color: 'white',
+    fontFamily: "'Oswald', sans-serif",
+    fontWeight: "1000",
+     width: "100%", // Asegúrate de que Typography ocupe todo el ancho disponible,
+     textAlign: isNonMobileScreens ? "center" : "center",
+  }}>
             TechX
           </Typography>
         </Fade>
         <Slide direction="left" triggerOnce={false} in={inView}>
           <Typography style={{
-            paddingTop: "0px",
+            paddingTop: "0px",textAlign: isNonMobileScreens ? "center" : "center",
             textDecoration: 'none', color: 'white', fontSize: "75px", fontFamily: "'Oswald', sans-serif", fontWeight: "700"
           }} sx={{ fontWeight: 700, fontSize: "100px", color: "black" }}>
             Creamos Soluciones Digitales
@@ -165,13 +156,7 @@ const Landing = () => {
 
         {/* <Button sx={{ marginTop: "20px", backgroundColor: "black", borderRadius: "100px", height: "50px", width: "150px" }} variant='contained'>Contactanos</Button> */}
       </Box>
- 
-
-      
- 
-       
-    
- 
+  
     </div>
   );
 };

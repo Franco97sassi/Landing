@@ -1,4 +1,4 @@
-import { Box, Typography, Grid } from "@mui/material";
+import { Box, Typography, Grid, useMediaQuery } from "@mui/material";
 import { Slide } from "react-awesome-reveal";
 import { useState } from "react";
 import { useInView } from 'react-intersection-observer';
@@ -55,6 +55,7 @@ const Clientes = () => {
   };
 
   const images = [ empresa2, empresa3, empresa4, empresa5, empresa6, empresa10, empresa8, empresa9, empresa7];
+  const isNonMobileScreens = useMediaQuery('(min-width: 1000px)');
 
   return (
     <div>

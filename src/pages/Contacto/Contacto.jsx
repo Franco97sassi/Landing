@@ -1,4 +1,4 @@
-import { Box, Button, Grid, Link, Stack, TextField, Typography } from '@mui/material';
+import { Box, Button, Grid, Link, Stack, TextField, Typography, useMediaQuery } from '@mui/material';
 import React, { useState, useRef } from 'react';
 import Carousel from 'react-material-ui-carousel';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
@@ -19,6 +19,7 @@ import linkedinFooterImg from "../../assets/logo4.svg"
 import emailjs from '@emailjs/browser';
 const Contacto = () => {
   const form = useRef();
+  const isNonMobileScreens = useMediaQuery('(min-width: 1000px)');
 
   const Item = styled("div")(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#red',
@@ -51,7 +52,15 @@ const Contacto = () => {
             Contáctanos
           </Typography>
         </Slide>
-        <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} justifyContent="flexStart" alignItems="flexStart" marginTop="25px" style={{ height: '100%' }}>
+        <Grid container 
+        rowSpacing={1} 
+        columnSpacing={{ xs: 60, sm: 2, md: 3 }} 
+        justifyContent={isNonMobileScreens ? "center" : "flexStart"} 
+        alignItems={isNonMobileScreens ? "center" : "flexStart"} 
+        style={{ 
+          height: '100%', 
+          flexDirection: isNonMobileScreens ? 'column' : 'row' 
+        }}>
           <Grid item xs={6} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <Box style={{ border: "5px solid white", padding: "10px", marginBottom: "10px", width: "300px" }}>
               <Typography sx={{ fontSize: "25px", color: "white", mb: 3, fontFamily: "'Oswald', sans-serif" }} >

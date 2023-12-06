@@ -1,4 +1,4 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography, useMediaQuery } from "@mui/material";
 import {   Slide } from "react-awesome-reveal";
 import { styled } from '@mui/material/styles';
 import sinFondo from '../../assets/sinFondo.png';
@@ -22,6 +22,7 @@ const Item = styled("div")(({ theme }) => ({
     color: theme.palette.text.secondary,
   }));
     const [inView, setInView] = useState(false);
+    const isNonMobileScreens = useMediaQuery('(min-width: 1000px)');
 
 return (
 
@@ -51,7 +52,7 @@ return (
           }} sx={{ fontWeight: 700, fontSize: "100px", color: "white" }}>
             Testimonios de nuestros clientes
           </Typography></Slide>
-        <Grid container rowSpacing={1} padding={5} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+        <Grid container  rowSpacing={1} padding={5} columnSpacing={{ xs: 10, sm: 10, md: 10 }}>
           <Grid item xs={4} >
             <Item><Typography
               style={{ textAlign: 'justify', fontFamily: "'Oswald', sans-serif" }}
