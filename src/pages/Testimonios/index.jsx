@@ -30,7 +30,7 @@ return (
 {/*Testimonios */}
 <Box
         style={{
-          height: isNonMobileScreens?"100vh":"100vh",
+          height: isNonMobileScreens?"100vh":"200vh",
           display: "flex", // Añadido para activar flexbox
           flexDirection: "column", // Establece la dirección principal como vertical
           justifyContent: "flex-start", // Centra el contenido en el eje vertical
@@ -52,8 +52,8 @@ return (
           }} sx={{ fontWeight: 700, fontSize: "100px", color: "white" }}>
             Testimonios de nuestros clientes
           </Typography></Slide>
-        <Grid container  rowSpacing={1} padding={5} columnSpacing={{ xs: 10, sm: 10, md: 10 }}>
-          <Grid item xs={4} >
+        <Grid container  rowSpacing={1} padding={5} columnSpacing={{ xs: 6, sm: 10, md: 10 }}>
+          <Grid item xs={3} >
             <Item><Typography
               style={{ textAlign: 'justify', fontFamily: "'Oswald', sans-serif" }}
               sx={{ fontSize: "15px", color: "white", paddingTop: "100px" }}
@@ -62,7 +62,7 @@ return (
             love recommendations so feedback from
             others who've tried it is invaluable.</Typography> </Item>
           </Grid>
-          <Grid item xs={4}>
+          <Grid item xs={3}>
             <Item><Typography
               style={{ textAlign: 'justify', fontFamily: "'Oswald', sans-serif" }} // Añadido para justificar el texto
               sx={{ fontSize: "15px", color: "white", paddingTop: "100px" }}
@@ -71,7 +71,7 @@ return (
               love recommendations so feedback from
               others who've tried it is invaluable.</Typography></Item>
           </Grid>
-          <Grid item xs={4}>
+          <Grid item xs={3}>
             <Item><Typography
               style={{ textAlign: 'justify', fontFamily: "'Oswald', sans-serif" }}// Añadido para justificar el texto
               sx={{ fontSize: "15px", color: "white", paddingTop: "100px" }}
@@ -80,13 +80,13 @@ return (
               love recommendations so feedback from
               others who've tried it is invaluable.</Typography></Item>
           </Grid>
-          <Grid item xs={4}>
+          <Grid item xs={6}>
             <Item><Typography sx={{ fontSize: "20px", color: "white" }} >Santa Solana Post</Typography></Item>
           </Grid>
-          <Grid item xs={4}>
+          <Grid item xs={3}>
             <Item><Typography sx={{ fontSize: "20px", color: "white" }}>Mariana's Luxe Travels</Typography></Item>
           </Grid>
-          <Grid item xs={4}>
+          <Grid item xs={3}>
             <Item><Typography sx={{ fontSize: "20px", color: "white" }}>Fairhill Journal</Typography></Item>
           </Grid>
         </Grid>

@@ -46,7 +46,7 @@ const Contacto = () => {
     <div>
       {/* email */}
 
-      <Box sx={{ width: '100%', height: "110vh", background: 'black' }}>
+      <Box sx={{ width: '100%', height: isNonMobileScreens?"110vh":"200vh", background: 'black' }}>
         <Slide direction="left" triggerOnce={false}>
           <Typography variant="h2" style={{ color: "white", fontFamily: "'Oswald', sans-serif", fontWeight: "700" }} sx={{ display: "flex", justifyContent: "center", paddingTop: "50px" }}>
             Contáctanos

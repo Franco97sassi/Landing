@@ -20,10 +20,10 @@ const Inicio = () => {
       backgroundColor: "white"
     }}>
 
-      <Landing />
+      {/* <Landing />
        <Sobre />
        <Estadisticas />  
-      <Clientes />   
+      <Clientes />    */}
       
       {/* <div id="proyectos"> */}
              

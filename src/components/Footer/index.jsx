@@ -38,8 +38,8 @@ const is450 = useMediaQuery('(max-width:450px)');
   <Box sx={{ width: "100%", maxWidth: "1440px", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", height: "100%" }}>
     <Grid container spacing={0} justifyContent="center">
       <Grid item xs={12} md={5} sx={{ display: 'flex', justifyContent: 'center' }}>
-        <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", height: "293px" }}>
-
+        <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", height: "93px" }}>
+{/* 
     <Box sx={{display:"flex", flexDirection:"column",alignItems:"center",   width:"100%"}}>
     
 
@@ -63,7 +63,7 @@ const is450 = useMediaQuery('(max-width:450px)');
 
     <img style={{ width:"100px", marginTop:"30px", cursor:"pointer"}} src={logo}></img>
  
-    </Box>
+    </Box> */}
         </Box>
       </Grid>
 

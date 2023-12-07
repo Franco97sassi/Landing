@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
-import { NavLink, useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -49,7 +49,13 @@ function Navbar() {
     handleCloseNavMenu();
   };
 
-  console.log("PATHNAME", window.location.pathname)
+  const handleProjectsClick = () => {
+    const section = document.getElementById('proyectos');
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+    handleCloseNavMenu();
+  };
 
   const handleAboutUsClick = () => {
     if (window.location.pathname !== '/nosotros') {
@@ -62,13 +68,6 @@ function Navbar() {
     }
     handleCloseNavMenu();
   };
-  const handleProjectsClick = () => {
-    const section = document.getElementById('proyectos');
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-    }
-    handleCloseNavMenu();
-  };
 
   const linkTextStyle = {
     textDecoration: 'none',
@@ -78,7 +77,6 @@ function Navbar() {
     fontSize: "1rem",
     fontWeight: 600,
   };
-
 
   return (
     <AppBar
@@ -129,7 +127,15 @@ function Navbar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={page === 'Proyectos' ? handleProjectsClick : handleCloseNavMenu}>
+                <MenuItem key={page} onClick={
+                  page === 'Servicios' 
+                  ? handleServicesClick 
+                  : page === 'Proyectos' 
+                  ? handleProjectsClick 
+                  : page === 'Sobre Nosotros' 
+                  ? handleAboutUsClick 
+                  : handleCloseNavMenu
+                }>
                   <Typography textAlign="center" style={linkTextStyle}>
                     {page}
                   </Typography>
@@ -142,7 +148,13 @@ function Navbar() {
             {pages.map((page) => (
               <Button
                 key={page}
-                onClick={page === 'Servicios' ? handleServicesClick : page === 'Sobre Nosotros' ? handleAboutUsClick : handleCloseNavMenu}
+                onClick={
+                  page === 'Servicios' 
+                  ? handleServicesClick 
+                  : page === 'Sobre Nosotros' 
+                  ? handleAboutUsClick 
+                  : handleCloseNavMenu
+                }
                 sx={{
                   my: 2,
                   color: scrolled ? 'black' : 'white',
