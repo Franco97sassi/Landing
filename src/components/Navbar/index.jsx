@@ -22,7 +22,6 @@ const pages = ['Inicio', 'Proyectos', 'Servicios', 'Sobre Nosotros'];
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [scrolled, setScrolled] = useState(false);
-  const location = useLocation();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -41,25 +40,8 @@ function Navbar() {
     };
   }, []);
 
-  useEffect(() => {
-    if (location.pathname === '/nosotros' && location.state?.shouldScroll) {
-      const section = document.getElementById('nosotros');
-      if (section) {
-        section.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  }, [location]);
-
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
-    if (location.pathname === '/nosotros') {
-      navigate('/');
-    }
-  };
-
-  const handleInicioClick = () => {
-    navigate('/');
-    handleCloseNavMenu();
   };
 
   const handleServicesClick = () => {
@@ -67,15 +49,25 @@ function Navbar() {
     handleCloseNavMenu();
   };
 
+  console.log("PATHNAME", window.location.pathname)
+
   const handleAboutUsClick = () => {
-    if (location.pathname === '/nosotros') {
+    if (window.location.pathname !== '/nosotros') {
+      navigate('/nosotros');
+    } else {
       const section = document.getElementById('nosotros');
       if (section) {
         section.scrollIntoView({ behavior: 'smooth' });
       }
-    } else {
-      navigate('/nosotros', { state: { shouldScroll: true } });
     }
+    handleCloseNavMenu();
+  };
+  const handleProjectsClick = () => {
+    const section = document.getElementById('proyectos');
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+    handleCloseNavMenu();
   };
 
   const linkTextStyle = {
@@ -86,6 +78,7 @@ function Navbar() {
     fontSize: "1rem",
     fontWeight: 600,
   };
+
 
   return (
     <AppBar
@@ -116,6 +109,7 @@ function Navbar() {
             >
               <MenuIcon />
             </IconButton>
+
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
@@ -135,7 +129,7 @@ function Navbar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={page === 'Sobre Nosotros' ? handleAboutUsClick : handleCloseNavMenu}>
+                <MenuItem key={page} onClick={page === 'Proyectos' ? handleProjectsClick : handleCloseNavMenu}>
                   <Typography textAlign="center" style={linkTextStyle}>
                     {page}
                   </Typography>
@@ -148,7 +142,7 @@ function Navbar() {
             {pages.map((page) => (
               <Button
                 key={page}
-                onClick={page === 'Servicios' ? handleServicesClick : handleCloseNavMenu}
+                onClick={page === 'Servicios' ? handleServicesClick : page === 'Sobre Nosotros' ? handleAboutUsClick : handleCloseNavMenu}
                 sx={{
                   my: 2,
                   color: scrolled ? 'black' : 'white',
@@ -168,14 +162,6 @@ function Navbar() {
                 </ScrollLink>
               </Button>
             ))}
-            <Button
-              onClick={handleAboutUsClick}
-              sx={{ my: 2, color: scrolled ? 'black' : 'white', display: 'block', textTransform: 'none' }}
-            >
-              {/* <Typography paddingTop="5px" style={linkTextStyle} gutterBottom>
-                Sobre Nosotros
-              </Typography> */}
-            </Button>
           </Box>
         </Toolbar>
       </Container>

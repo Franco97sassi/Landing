@@ -90,7 +90,7 @@ const Estadisticas = () => {
         <div style={{ width: '100%', maxWidth: '1200px', margin: '0 auto' }}>
 
           <Grid container paddingTop="-100px" rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-            {/* <Grid item xs={4}>
+            <Grid item xs={4}>
               <AwesomeFade cascade triggerOnce={false} direction="up" in={inView} delay={150}>
 
                 <Item>
@@ -98,8 +98,7 @@ const Estadisticas = () => {
                   <Typography sx={{ fontWeight: 900, paddingTop: "00px", fontWeight: 800, fontSize: "80px", color: "white", fontFamily: 'Oswald, sans-serif' }}>   <span style={{ fontSize: "60px" }}>+</span>20</Typography>
 
                 </Item></AwesomeFade>
-            </Grid> */}
-
+            </Grid>  
 
 
 
