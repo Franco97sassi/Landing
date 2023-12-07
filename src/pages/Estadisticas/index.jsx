@@ -90,7 +90,7 @@ const Estadisticas = () => {
         <div style={{ width: '100%', maxWidth: '1200px', margin: '0 auto' }}>
 
           <Grid container paddingTop="-100px" rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-            <Grid item xs={4}>
+            <Grid item xs={3}>
               <AwesomeFade cascade triggerOnce={false} direction="up" in={inView} delay={150}>
 
                 <Item>

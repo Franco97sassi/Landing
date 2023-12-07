@@ -124,7 +124,7 @@ const Servicios = () => {
     <div id="servicios">
               <Slide direction="left" triggerOnce={false} in={inView}> 
 
-    <Typography style={{fontWeight: 700, fontFamily: "'Oswald', sans-serif"  }}  sx={{paddingTop:"40px" ,color:"white", display: "flex", justifyContent: "center", paddingBottom: '80px', fontSize:"44px" }}>
+    <Typography style={{fontWeight: 700, fontFamily: "'Oswald', sans-serif"  }}  sx={{paddingTop:isNonMobileScreens?"40px":"0px" ,color:"white", display: "flex", justifyContent: "center", paddingBottom: isNonMobileScreens?"80px":"60px" , fontSize:"44px" }}>
       ¿Qué podemos hacer por ti?
     </Typography> </Slide>
 

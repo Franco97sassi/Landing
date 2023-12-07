@@ -74,7 +74,7 @@ const Clientes = () => {
         <Box sx={{
           width: '75%',
           py: 8,
-          px: { xs: 2, sm: 10 }, // Responsivo: más padding en pantallas más grandes
+          px: { xs: 10, sm: 10 }, // Responsivo: más padding en pantallas más grandes
           mx: 'auto', // Asegura que el Box esté centrado
         }}>
           <Slider {...settings}>

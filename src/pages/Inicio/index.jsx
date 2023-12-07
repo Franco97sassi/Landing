@@ -22,8 +22,8 @@ const Inicio = () => {
 
       <Landing />
        <Sobre />
-       <Estadisticas />  
-      <Clientes />    
+        <Estadisticas />   
+        <Clientes />  
       
       {/* <div id="proyectos"> */}
              
