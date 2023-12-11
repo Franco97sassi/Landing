@@ -52,8 +52,7 @@ const Clientes = () => {
         }
       }
     ]
-  };
-
+  }; 
   const images = [ empresa2, empresa3, empresa4, empresa5, empresa6, empresa10, empresa8, empresa9, empresa7];
   const isNonMobileScreens = useMediaQuery('(min-width: 1000px)');
 
@@ -67,14 +66,14 @@ const Clientes = () => {
         textAlign: 'center'
       }}>
         <Slide direction="left" triggerOnce={false}>
-          <Typography variant="h2" mb={5} fontWeight="700" fontFamily="Oswald, sans-serif">
+          <Typography  variant={isNonMobileScreens?"h2":"h3"} mb={5} fontWeight="700" fontFamily="Oswald, sans-serif">
             Nuestros Clientes
           </Typography></Slide>
 
         <Box sx={{
-          width: '75%',
-          py: 8,
-          px: { xs: 10, sm: 10 }, // Responsivo: más padding en pantallas más grandes
+          width:isNonMobileScreens? '75%':"100%",
+          py: 12,
+          px: { xs: 12, sm: 10 }, // Responsivo: más padding en pantallas más grandes
           mx: 'auto', // Asegura que el Box esté centrado
         }}>
           <Slider {...settings}>
@@ -91,7 +90,7 @@ const Clientes = () => {
     }
   }}>
     <img src={image} alt={`Empresa ${index + 1}`} style={{
-      height: '150px', // Altura fija para todas las imágenes
+      height: '250px', // Altura fija para todas las imágenes
       width: '100%', // El ancho se ajusta automáticamente para mantener las proporciones
       objectFit: 'contain', // Mantiene las proporciones de la imagen sin recortarla
       borderRadius: "25px",

@@ -145,16 +145,16 @@ const Proyectos = () => {
           indicators={false}
           navButtonsAlwaysVisible={false}
           index={currentChunk}
-          sx={{ padding: '0 16px' }}
+          sx={{ padding: '0 0px' }}
         >
           {chunkedProjects.map((chunk, index) => (
-            <Grid container key={index} spacing={2} alignItems="center" justifyContent="center">
+            <Grid container key={index} spacing={12} alignItems="center" justifyContent="center">
               {chunk.map((project, subIndex) => (
                 <React.Fragment key={subIndex}>
-        <Grid item xs={12} sm={isNonMobileScreens ? 4 : 12} md={6} lg={4.5} xl={3}>
+        <Grid item xs={20} sm={isNonMobileScreens ? 4 : 20} md={6} lg={4.5} xl={3}>
                     <Box sx={{
                       width: "100%", // Asegúrate de que la imagen ocupa todo el ancho del Grid item
-                      height: isNonMobileScreens ? "100%" : "larger",                     borderRadius: "10px",
+                      height: isNonMobileScreens ? "100%" : "100%",                     borderRadius: "10px",
                       marginTop: "20px",
                       backgroundColor: 'rgba(30, 30, 30, 0.56)',
                       position: 'relative',
@@ -165,11 +165,17 @@ const Proyectos = () => {
                     >
                       <Link href={project.url} underline="none" target="_blank" rel="noopener">
 
-                        <img
-                          src={project.imageUrl}
-                          alt={`Proyecto ${index * chunkSize + subIndex + 1}`}
-                          style={{ width: '100%', height: isNonMobileScreens ? '100%' : '600%', objectFit: "cover", borderRadius: "10px",  }}
-                        />  </Link>
+                      <img
+        src={project.imageUrl}
+        alt={`Proyecto ${index * chunkSize + subIndex + 1}`}
+        style={{ 
+          width: '100%',
+          height: isNonMobileScreens ? '200%' : 'auto', // Ajusta la altura para móviles
+          objectFit: isNonMobileScreens ? "contain" : "cover", // Cambia el objectFit para móviles
+          borderRadius: "10px"
+        }} 
+      />
+                         </Link>
                     </Box>
                   </Grid>
                   

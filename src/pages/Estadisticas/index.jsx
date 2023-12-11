@@ -38,11 +38,10 @@ const Estadisticas = () => {
   }, []);
 
   return (
-
-    <div>
+     <div>
+      
       {/*Estadisticas */}
-
-      <Box
+       <Box
         sx={{
           width: '100%',
           display: 'flex',
@@ -57,7 +56,7 @@ const Estadisticas = () => {
         <Slide direction="left" triggerOnce={false} in={inView}>
           {/* Titulo */}
           <Typography
-            variant="h2"
+            variant={isNonMobileScreens?"h2":"h3"}
             fontWeight="700"
             style={{
               fontFamily: 'Oswald, sans-serif',
@@ -71,6 +70,7 @@ const Estadisticas = () => {
 
         </Slide>
       </Box>
+      
       <Box sx={{
         paddingBottom: "300px",
         width: '100%',
@@ -90,12 +90,12 @@ const Estadisticas = () => {
         <div style={{ width: '100%', maxWidth: '1200px', margin: '0 auto' }}>
 
           <Grid container paddingTop="-100px" rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-            <Grid item xs={3}>
+            <Grid item xs={4}>
               <AwesomeFade cascade triggerOnce={false} direction="up" in={inView} delay={150}>
 
                 <Item>
 
-                  <Typography sx={{ fontWeight: 900, paddingTop: "00px", fontWeight: 800, fontSize: "80px", color: "white", fontFamily: 'Oswald, sans-serif' }}>   <span style={{ fontSize: "60px" }}>+</span>20</Typography>
+                  <Typography sx={{ fontWeight: 900, paddingTop: "00px", fontWeight: 800, fontSize: isNonMobileScreens ?"80px":"60px", color: "white", fontFamily: 'Oswald, sans-serif' }}>   <span style={{ fontSize: "0px" }}>+</span>20</Typography>
 
                 </Item></AwesomeFade>
             </Grid>  
@@ -106,11 +106,11 @@ const Estadisticas = () => {
               <AwesomeFade cascade triggerOnce={false} direction="up" in={inView} delay={150}>
                 <Item>
 
-                  <Typography sx={{ fontWeight: 900, paddingTop: "00px", fontSize: "80px", color: "white", fontFamily: 'Oswald, sans-serif', position: 'relative' }}>
+                  <Typography sx={{ fontWeight: 900, paddingTop: "00px", fontSize: isNonMobileScreens ?"80px":"60px", color: "white", fontFamily: 'Oswald, sans-serif', position: 'relative' }}>
                     14
                     <span style={{
                       position: 'absolute',
-                      fontSize: "60px",
+                      fontSize:isNonMobileScreens ? "60px":"40px",
                       lineHeight: '0', // Quita espacio extra de la línea
                       top: '52.5%', // Posiciona a la mitad de la altura del elemento padre
                       transform: 'translateY(-50%)', // Desplaza el elemento hacia arriba a la mitad de su altura
@@ -122,11 +122,11 @@ const Estadisticas = () => {
               <AwesomeFade cascade triggerOnce={false} direction="up" in={inView} delay={150}>
                 <Item>
 
-                  <Typography sx={{ fontWeight: 900, paddingTop: "00px", fontSize: "80px", color: "white", fontFamily: 'Oswald, sans-serif' }}>180
+                  <Typography sx={{ fontWeight: 900, paddingTop: "00px", fontSize: isNonMobileScreens ?"80px":"60px", color: "white", fontFamily: 'Oswald, sans-serif' }}>180
                     <span style={{
                       position: 'relative', // Se usa para posicionar el grado relativo a su posición normal
                       top: '-0.2em', // Mueve el grado hacia arriba, ajusta según sea necesario
-                      fontSize: "60px", // Tamaño del grado, puede ser diferente del número
+                      fontSize:isNonMobileScreens ? "60px":"40px", // Tamaño del grado, puede ser diferente del número
                     }}>º</span></Typography>
 
                 </Item></AwesomeFade>

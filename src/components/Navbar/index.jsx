@@ -16,6 +16,7 @@ import logo from '../../assets/fondopnga.png';
 import "./index.css";
 import 'typeface-roboto';
 import 'typeface-mulish';
+import { useMediaQuery } from '@mui/material';
 
 const pages = ['Inicio', 'Proyectos', 'Servicios', 'Sobre Nosotros'];
 
@@ -23,6 +24,7 @@ function Navbar() {
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [scrolled, setScrolled] = useState(false);
   const navigate = useNavigate();
+  const isNonMobileScreens = useMediaQuery('(min-width: 1000px)');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -71,7 +73,7 @@ function Navbar() {
 
   const linkTextStyle = {
     textDecoration: 'none',
-    color: scrolled ? 'black' : 'white',
+    color: scrolled ? 'black' :isNonMobileScreens? 'white':"black",
     fontFamily: "'Poppins', sans-serif",
     textTransform: "none",
     fontSize: "1rem",
