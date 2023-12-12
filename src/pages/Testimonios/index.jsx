@@ -95,6 +95,7 @@ return (
         {/* <Button sx={{ marginTop: "20px", backgroundColor: "black", borderRadius: "100px", height: "50px", width: "150px" }} variant='contained'>Contactanos</Button> */}
       </Box>
      ):(
+      <div>  
       <Box
       style={{
         height: isNonMobileScreens?"100vh":"200vh",
@@ -162,7 +163,9 @@ return (
 
       {/* <Button sx={{ marginTop: "20px", backgroundColor: "black", borderRadius: "100px", height: "50px", width: "150px" }} variant='contained'>Contactanos</Button> */}
     </Box>  
-     )  
+   
+    </div>
+     )
     }
 </div>)}
 export default Testimonios;

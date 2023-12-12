@@ -130,7 +130,7 @@ const Proyectos = () => {
 
   return (
     <div id="proyectos">
-      <Box sx={{ background: '#333333', height: isNonMobileScreens?"100%":"100vh", px: 12, pb: 10, }}  >
+      <Box sx={{ background: '#333333', height: isNonMobileScreens?"100%":"100vh",  px:isNonMobileScreens ? 12:5, pb: 10 }}  >
         <Slide direction="left" triggerOnce={false}>
           <Typography variant="h2" style={{ color: "white", fontWeight: 700, fontFamily: "'Oswald', sans-serif" }} sx={{ display: "flex", paddingTop: "50px", justifyContent: "center", paddingBottom: "50px" }}>
             Proyectos
@@ -148,7 +148,7 @@ const Proyectos = () => {
           sx={{ padding: '0 0px' }}
         >
           {chunkedProjects.map((chunk, index) => (
-            <Grid container key={index} spacing={12} alignItems="center" justifyContent="center">
+            <Grid container key={index} spacing={12} alignItems={isNonMobileScreens ? "center" : "flex-start"}  justifyContent={isNonMobileScreens ? "center" : "flex-start"}>
               {chunk.map((project, subIndex) => (
                 <React.Fragment key={subIndex}>
         <Grid item xs={20} sm={isNonMobileScreens ? 4 : 20} md={6} lg={4.5} xl={3}>
@@ -165,9 +165,7 @@ const Proyectos = () => {
                     >
                       <Link href={project.url} underline="none" target="_blank" rel="noopener">
 
-                      <img
-        src={project.imageUrl}
-        alt={`Proyecto ${index * chunkSize + subIndex + 1}`}
+                      <img src={project.imageUrl} alt={`Proyecto ${index * chunkSize + subIndex + 1}`}
         style={{ 
           width: '100%',
           height: isNonMobileScreens ? '200%' : 'auto', // Ajusta la altura para móviles
@@ -179,8 +177,8 @@ const Proyectos = () => {
                     </Box>
                   </Grid>
                   
-                  <Grid item xs={12} sm={ 4} md={6} lg={7.5} xl={9}>
-                                        <Box sx={{
+                  <Grid item xs={12} sm={4} md={6} lg={7.5} xl={9}>
+   <Box sx={{
                       p: 5, 
                       display: 'flex',
                       flexDirection: 'column',

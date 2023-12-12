@@ -1,4 +1,4 @@
-import { Box,  Divider,  Grid, List, Typography } from '@mui/material';
+import { Box,  Divider,  Grid, List, Typography, useMediaQuery } from '@mui/material';
 import React, { useEffect, useState } from 'react';
  
 import tecno1 from "../../assets/html-5.png";
@@ -26,7 +26,8 @@ import Carousel from 'react-material-ui-carousel';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
  const Tecnologias = () => {
- 
+  const isNonMobileScreens = useMediaQuery('(min-width: 1000px)');
+
   const tecnologias = [
     { imageUrl: tecno1, nombre: "HTML" },
     { imageUrl: tecno2, nombre: "CSS" },
@@ -51,7 +52,7 @@ import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
       <div className="ticker">
         {tecnologias.concat(tecnologias).map((tec, index) => (
           <div key={index} className="ticker-item">
-<img src={tec.imageUrl} alt={tec.nombre} style={{ height: '150px', width: 'auto' }} />
+<img src={tec.imageUrl} alt={tec.nombre} style={{ height:isNonMobileScreens? '150px':"75px", width: 'auto' }} />
           </div>
         ))}
       </div>

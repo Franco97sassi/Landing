@@ -73,7 +73,7 @@ const Clientes = () => {
         <Box sx={{
           width:isNonMobileScreens? '75%':"100%",
           py: 12,
-          px: { xs: 12, sm: 10 }, // Responsivo: más padding en pantallas más grandes
+          px: { xs: 6, sm: 10 }, // Responsivo: más padding en pantallas más grandes
           mx: 'auto', // Asegura que el Box esté centrado
         }}>
           <Slider {...settings}>
@@ -90,7 +90,7 @@ const Clientes = () => {
     }
   }}>
     <img src={image} alt={`Empresa ${index + 1}`} style={{
-      height: '250px', // Altura fija para todas las imágenes
+      height: '100%', // Altura fija para todas las imágenes
       width: '100%', // El ancho se ajusta automáticamente para mantener las proporciones
       objectFit: 'contain', // Mantiene las proporciones de la imagen sin recortarla
       borderRadius: "25px",

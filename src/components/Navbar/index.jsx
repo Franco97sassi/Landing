@@ -92,11 +92,7 @@ function Navbar() {
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <a href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
-            <Box sx={{ paddingLeft: '28px' }}>
-              <img src={logo} alt="Logo" style={{ width: '110px', height: '100px', cursor: 'pointer' }} />
-            </Box>
-          </a>
+           
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -145,7 +141,11 @@ function Navbar() {
               ))}
             </Menu>
           </Box>
-
+          <a href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <Box sx={{ paddingLeft: '28px' }}>
+              <img src={logo} alt="Logo" style={{ width: '110px', height: '100px', cursor: 'pointer' }} />
+            </Box>
+          </a>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end' }}>
             {pages.map((page) => (
               <Button

@@ -119,8 +119,7 @@ const Servicios = () => {
    };
 
    const [isHovered, setIsHovered] = useState(null);
-
-  return (
+   return (
     <div id="servicios">
               <Slide direction="left" triggerOnce={false} in={inView}> 
 
@@ -130,7 +129,7 @@ const Servicios = () => {
 
     <Grid sx={{background: 'black'  }} marginTop={-25} 
      container justifyContent={isNonMobileScreens ? "center" : "center"}  columnSpacing={0} rowSpacing={20} 
-     paddingBottom='200px' paddingRight={20} paddingLeft={25} columns={{ xs: 0, sm: 8, md: 10, lg: 14.9 }}>
+     paddingBottom='200px' paddingRight={isNonMobileScreens?"20":"0"} paddingLeft={isNonMobileScreens?"25":"0"} columns={{ xs: 0, sm: 8, md: 10, lg: 14.9 }}>
       {projectImages.map((image, index) => (
         <Grid item xs={2} sm={6} md={4} lg={2.5} key={index}  >
           <Box 
