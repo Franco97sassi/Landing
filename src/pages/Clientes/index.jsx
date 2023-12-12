@@ -75,8 +75,8 @@ const Clientes = () => {
           py: 12,
           px: { xs: 6, sm: 10 }, // Responsivo: más padding en pantallas más grandes
           mx: 'auto', // Asegura que el Box esté centrado
-        }}>
-          <Slider {...settings}>
+        } }>
+         <Slider {...settings}>
           {images.map((image, index) => (
   <Box key={index} sx={{
     padding: 2, // Espaciado interno
