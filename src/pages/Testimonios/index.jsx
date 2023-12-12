@@ -115,9 +115,9 @@ return (
       <Slide direction="left" triggerOnce={false} in={inView}>
 
         <Typography variant="h2" style={{
-          paddingTop: "50px",
-          textDecoration: 'none', color: 'white', fontSize: "75px", fontFamily: "'Oswald', sans-serif", fontWeight: "700"
-        }} sx={{ fontWeight: 700, fontSize: "100px", color: "white" }}>
+          paddingTop: "50px", textAlign:"center",
+          textDecoration: 'none', color: 'white', fontSize: "4rem", fontFamily: "'Oswald', sans-serif", fontWeight: "700"
+        }} sx={{ fontWeight: 700, fontSize: "5rem", color: "white" }}>
           Testimonios de nuestros clientes
         </Typography></Slide>
       <Grid container  rowSpacing={1} padding={5} columnSpacing={{ xs: 6, sm: 10, md: 10 }}>
