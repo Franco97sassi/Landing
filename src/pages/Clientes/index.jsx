@@ -57,7 +57,7 @@ const Clientes = () => {
   const isNonMobileScreens = useMediaQuery('(min-width: 1000px)');
 
   return (
-    <div>
+    <div style={{ overflowX: 'hidden' }}>
       <Box sx={{
         width: '100%',
         py: 8,
@@ -72,7 +72,7 @@ const Clientes = () => {
 
         <Box sx={{
           width:isNonMobileScreens? '75%':"100%",
-          py: 12,
+          py: 12, 
           px: { xs: 6, sm: 10 }, // Responsivo: más padding en pantallas más grandes
           mx: 'auto', // Asegura que el Box esté centrado
         } }>
