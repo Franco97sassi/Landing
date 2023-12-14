@@ -157,7 +157,7 @@ function Navbar() {
               <img src={logo} alt="Logo" style={{ width: '110px', height: '100px', cursor: 'pointer' }} />
             </Box>
           </a>
-{/* Mobile */}
+
           {/* Desktop */}
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end' }}>
             {pages.map((page) => (
@@ -212,40 +212,4 @@ export default Navbar;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
 
