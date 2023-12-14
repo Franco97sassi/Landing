@@ -71,7 +71,8 @@ const Servicios = () => {
       // Agrega las URL de las imágenes restantes aquí
     ];
  
- 
+    const marginSize = isNonMobileScreens ? "20px" : "0px";
+
    
   const [inView, setInView] = useState(false);
 
@@ -128,8 +129,10 @@ const Servicios = () => {
     </Typography> </Slide>
 
     <Grid sx={{background: 'black'  }} marginTop={-25} 
-     container justifyContent={isNonMobileScreens ? "center" : "center"}  columnSpacing={0} rowSpacing={20} 
+     container justifyContent={isNonMobileScreens ? "center" : "center"}  columnSpacing={15} rowSpacing={20} 
      paddingBottom='200px' paddingRight={isNonMobileScreens?"20":"0"} paddingLeft={isNonMobileScreens?"25":"0"} columns={{ xs: 0, sm: 8, md: 10, lg: 14.9 }}>
+     
+     
       {projectImages.map((image, index) => (
         <Grid item xs={2} sm={6} md={4} lg={2.5} key={index}  >
           <Box 

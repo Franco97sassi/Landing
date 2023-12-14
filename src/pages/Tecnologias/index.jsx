@@ -1,21 +1,21 @@
 import { Box,  Divider,  Grid, List, Typography, useMediaQuery } from '@mui/material';
 import React, { useEffect, useState } from 'react';
  
-import tecno1 from "../../assets/html-5.png";
-import tecno2 from "../../assets/css-3.png";
-import tecno3 from "../../assets/reactIcono.png";
-import tecno4 from "../../assets/nodo-js.png";
-import tecno5 from "../../assets/tecno5.png";
-import tecno6 from "../../assets/tecno6.png";
-import tecno7 from "../../assets/selenium.png";
+import tecno1 from "../../assets/t1.png";
+import tecno2 from "../../assets/t2.png";
+import tecno3 from "../../assets/t3.png";
+import tecno4 from "../../assets/t4.png";
+import tecno5 from "../../assets/t5.png";
+import tecno6 from "../../assets/t6.png";
+import tecno7 from "../../assets/t7.png";
 import tecno8 from "../../assets/flask.png";
-import tecno9 from "../../assets/django.png";
-import tecno10 from "../../assets/opencv.png";
-import tecno11 from "../../assets/postgres.png";
-import tecno12 from "../../assets/mongo.png";
-import tecno13 from "../../assets/tensorflow.png";
-import tecno14 from "../../assets/github.png";
-import tecno15 from "../../assets/unity.png";
+import tecno9 from "../../assets/t8.png";
+import tecno10 from "../../assets/t9.png";
+import tecno11 from "../../assets/t11.png";
+import tecno12 from "../../assets/t12.png";
+import tecno13 from "../../assets/t13.png";
+import tecno14 from "../../assets/t14.png";
+// import tecno15 from "../../assets/t15.png";
 import "./styles.css"
  import { styled } from '@mui/material/styles';
  import {   Slide } from "react-awesome-reveal";
@@ -43,16 +43,30 @@ import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
     { imageUrl: tecno12, nombre: "MONGO" },
     { imageUrl: tecno13, nombre: "TENSORFLOW" },
     { imageUrl: tecno14, nombre: "GITHUB" },
-    { imageUrl: tecno15, nombre: "UNITY" },
+    // { imageUrl: tecno15, nombre: "UNITY" },
     
    ];
+   const paddingVertical = isNonMobileScreens ? '50px' : '25px';
 
    return (
-    <Box id="servicios" className="ticker-wrap">
+    <Box  id="servicios" className="ticker-wrap" sx={{
+      display: "flex",  height:isNonMobileScreens ?"100vh":"50vh" ,
+      flexDirection: "row",
+      justifyContent: "center",
+      alignItems: "center" // Asegura el centrado vertical
+    }}>
       <div className="ticker">
         {tecnologias.concat(tecnologias).map((tec, index) => (
-          <div key={index} className="ticker-item">
-<img src={tec.imageUrl} alt={tec.nombre} style={{ height:isNonMobileScreens? '150px':"75px", width: 'auto' }} />
+          <div key={index} className="ticker-item" sx={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+            alignContent: "center"
+          }}>
+            <img src={tec.imageUrl} alt={tec.nombre} style={{
+              height: isNonMobileScreens ? '150px' : "75px",
+              width: 'auto'
+            }} />
           </div>
         ))}
       </div>

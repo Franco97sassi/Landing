@@ -93,6 +93,7 @@ function Navbar() {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
            
+          {/* Mobile */}
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -134,9 +135,19 @@ function Navbar() {
                   ? handleAboutUsClick 
                   : handleCloseNavMenu
                 }>
-                  <Typography textAlign="center" style={linkTextStyle}>
+                  {/* <Typography textAlign="center" style={linkTextStyle}>
                     {page}
-                  </Typography>
+                  </Typography> */}
+                  <ScrollLink
+                  to={page.toLowerCase()}
+                  spy={true}
+                  smooth={true}
+                  offset={0}
+                  duration={10}
+                  style={linkTextStyle}
+                >
+                  {page}
+                </ScrollLink>
                 </MenuItem>
               ))}
             </Menu>
@@ -146,6 +157,8 @@ function Navbar() {
               <img src={logo} alt="Logo" style={{ width: '110px', height: '100px', cursor: 'pointer' }} />
             </Box>
           </a>
+{/* Mobile */}
+          {/* Desktop */}
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end' }}>
             {pages.map((page) => (
               <Button
@@ -153,6 +166,8 @@ function Navbar() {
                 onClick={
                   page === 'Servicios' 
                   ? handleServicesClick 
+                  : page === 'Proyectos' 
+                  ? handleProjectsClick 
                   : page === 'Sobre Nosotros' 
                   ? handleAboutUsClick 
                   : handleCloseNavMenu
@@ -177,6 +192,7 @@ function Navbar() {
               </Button>
             ))}
           </Box>
+          {/* Desktop */}
         </Toolbar>
       </Container>
     </AppBar>
@@ -196,4 +212,40 @@ export default Navbar;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
 

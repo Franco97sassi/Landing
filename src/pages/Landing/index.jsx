@@ -114,7 +114,7 @@ const Landing = () => {
   }, []);
  
   return (
-    <div  >
+    <div id="landing"  >
       {/* Imagen de fondo */}
 
       <Box style={{

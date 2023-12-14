@@ -5,7 +5,7 @@ import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import {   Slide } from "react-awesome-reveal";
 
-import miembro1 from "../../assets/miembro1.png";
+import miembro1 from "../../assets/ba.png";
 import miembro2 from "../../assets/miembro2.png";
 import miembro3 from "../../assets/miembro3.png";
 import miembro4 from "../../assets/miembro4.png";
@@ -90,7 +90,7 @@ import Servicios from '../Servicios';
               key={index}
               justifyContent="center"
               alignItems="center"
-              spacing={10}
+              spacing={isNonMobileScreens?"10":"0"}
               sx={{ padding: '20px' }}
             >
               {chunk.map((item, subIndex) => (

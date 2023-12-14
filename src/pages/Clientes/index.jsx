@@ -3,16 +3,16 @@ import { Slide } from "react-awesome-reveal";
 import { useState } from "react";
 import { useInView } from 'react-intersection-observer';
 // Importaciones de tus imágenes...
-import empresa1 from '../../assets/empresa1.jpg';
-import empresa2 from '../../assets/logoCruzRoja.png';
-import empresa5 from '../../assets/ewq.jpg';
-import empresa4 from '../../assets/parkea.jpeg';
-import empresa3 from '../../assets/cryptoLogo.png';
-import empresa6 from '../../assets/qwe.jpg';
-import empresa10 from '../../assets/gardenLogo.png';
-import empresa8 from '../../assets/borderLogo.png';
-import empresa9 from '../../assets/e.jpeg';
-import empresa7 from '../../assets/wqe.jpg';
+import empresa1 from '../../assets/1.png';
+import empresa2 from '../../assets/2.png';
+import empresa5 from '../../assets/3.png';
+import empresa4 from '../../assets/4.png';
+import empresa3 from '../../assets/5.png';
+import empresa6 from '../../assets/6.png';
+import empresa10 from '../../assets/7.png';
+// import empresa8 from '../../assets/client9.png';
+// import empresa9 from '../../assets/client1.png';
+// import empresa7 from '../../assets/client1.png';
 import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -53,51 +53,52 @@ const Clientes = () => {
       }
     ]
   }; 
-  const images = [ empresa2, empresa3, empresa4, empresa5, empresa6, empresa10, empresa8, empresa9, empresa7];
+  const images = [ empresa2, empresa3, empresa4, empresa5, empresa6, empresa10];
   const isNonMobileScreens = useMediaQuery('(min-width: 1000px)');
-
-  return (
+ return (
     <div style={{ overflowX: 'hidden' }}>
       <Box sx={{
         width: '100%',
         py: 8,
         background: '#333333',
         color: 'white',
-        textAlign: 'center'
+        textAlign: 'center',
+         
       }}>
         <Slide direction="left" triggerOnce={false}>
-          <Typography  variant={isNonMobileScreens?"h2":"h3"} mb={5} fontWeight="700" fontFamily="Oswald, sans-serif">
+          <Typography variant={isNonMobileScreens ? "h2" : "h3"} mb={5} fontWeight="700" fontFamily="Oswald, sans-serif">
             Nuestros Clientes
-          </Typography></Slide>
+          </Typography>
+        </Slide>
 
         <Box sx={{
-          width:isNonMobileScreens? '75%':"100%",
-          py: 12, 
-          px: { xs: 6, sm: 10 }, // Responsivo: más padding en pantallas más grandes
-          mx: 'auto', // Asegura que el Box esté centrado
-        } }>
-         <Slider {...settings}>
-          {images.map((image, index) => (
-  <Box key={index} sx={{
-    padding: 2, // Espaciado interno
-    display: 'flex',
-    justifyContent: 'center', // Centrado horizontal
-    alignItems: 'center', // Centrado vertical
-    transition: 'transform 0.3s ease-in-out', // Transición suave
-    marginTop: '20px', // Margen superior
-    ':hover': {
-      transform: 'scale(1.05)' // Efecto al pasar el mouse
-    }
-  }}>
-    <img src={image} alt={`Empresa ${index + 1}`} style={{
-      height: '100%', // Altura fija para todas las imágenes
-      width: '100%', // El ancho se ajusta automáticamente para mantener las proporciones
-      objectFit: 'contain', // Mantiene las proporciones de la imagen sin recortarla
-      borderRadius: "25px",
-      boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', // Sombra suave                  
-    }} />
-  </Box>
-))}
+          width: isNonMobileScreens ? '75%' : "100%",
+          py: 12,
+          px: { xs: 6, sm: 10 },
+          mx: 'auto'
+        }}>
+          <Slider {...settings}>
+            {images.map((image, index) => (
+              <Box key={index} sx={{
+                padding:2,
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                transition: 'transform 0.3s ease-in-out',
+                marginTop: '20px',
+                ':hover': {
+                  transform: 'scale(1.05)'
+                }
+              }}>
+                <img src={image} alt={`Empresa ${index + 1}`} style={{
+                  maxWidth: '100%',
+                  maxHeight: '200px', // Ajusta este valor según sea necesario
+                  objectFit: 'contain',
+                  borderRadius: "25px",
+                  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)'                 
+                }} />
+              </Box>
+            ))}
           </Slider>
         </Box>
       </Box>
