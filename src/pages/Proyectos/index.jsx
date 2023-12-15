@@ -130,7 +130,7 @@ const Proyectos = () => {
 
   return (
     <div id="proyectos">
-      <Box sx={{ background: '#333333', height: isNonMobileScreens?"100%":"70vh",  px:isNonMobileScreens ? 12:5, pb: 10 }}  >
+      <Box sx={{ background: '#333333', height: isNonMobileScreens?"100%":"70vh",  px:isNonMobileScreens ? 1:5, pb: 10 }}  >
         <Slide direction="left" triggerOnce={false}>
           <Typography variant={isNonMobileScreens?"h2":"h4"} style={{ color: "white", fontWeight: 700, fontFamily: "'Oswald', sans-serif" }} sx={{ display: "flex", paddingTop: "50px", justifyContent: "center", paddingBottom: "50px" }}>
             Proyectos
@@ -149,12 +149,12 @@ const Proyectos = () => {
           NavButton={({ onClick, className, style, next, prev }) => null} 
          >
           {chunkedProjects.map((chunk, index) => (
-            <Grid container key={index} spacing={12} alignItems={isNonMobileScreens ? "center" : "flex-start"}  justifyContent={isNonMobileScreens ? "center" : "flex-start"}>
+            <Grid container key={index} spacing={20} alignItems={isNonMobileScreens ? "center" : "flex-start"}  justifyContent={isNonMobileScreens ? "center" : "flex-start"}>
               {chunk.map((project, subIndex) => (
                 <React.Fragment key={subIndex}>
-        <Grid item xs={20} sm={isNonMobileScreens ? 4 : 20} md={6} lg={4.5} xl={3}>
+        <Grid item xs={20} sm={isNonMobileScreens ? 4 : 20} md={6} lg={4.2} xl={3}>
                     <Box sx={{
-                      width: "100%", // Asegúrate de que la imagen ocupa todo el ancho del Grid item
+                      width: "150%", // Asegúrate de que la imagen ocupa todo el ancho del Grid item
                       height: isNonMobileScreens ? "100%" : "100%",                     borderRadius: "10px",
                       marginTop: "20px",
                       backgroundColor: 'rgba(30, 30, 30, 0.56)',
@@ -169,7 +169,7 @@ const Proyectos = () => {
                       <img src={project.imageUrl} alt={`Proyecto ${index * chunkSize + subIndex + 1}`}
         style={{ 
           width: '100%',
-          height: isNonMobileScreens ? '200%' : '100%', // Ajusta la altura para móviles
+          height: isNonMobileScreens ? '100%' : '100%', // Ajusta la altura para móviles
           objectFit: isNonMobileScreens ? "contain" : "cover", // Cambia el objectFit para móviles
           borderRadius: "10px"
         }} 
@@ -178,7 +178,7 @@ const Proyectos = () => {
                     </Box>
                   </Grid>
                   
-                  <Grid item xs={12} sm={4} md={6} lg={7.5} xl={9}>
+                  <Grid item xs={2} sm={4} md={6} lg={7} xl={9}>
    <Box sx={{
                       p: 5, 
                       display: 'flex',

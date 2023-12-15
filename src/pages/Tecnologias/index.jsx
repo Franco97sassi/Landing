@@ -46,23 +46,18 @@ import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
     // { imageUrl: tecno15, nombre: "UNITY" },
     
    ];
-   const paddingVertical = isNonMobileScreens ? '50px' : '25px';
+   const tecnologiasDuplicadas = Array(5).fill(tecnologias).flat();
 
-   return (
-    <Box  id="servicios" className="ticker-wrap" sx={{
-      display: "flex",  height:isNonMobileScreens ?"70vh":"50vh" ,
+  return (
+    <Box id="servicios" className="ticker-wrap" sx={{
+      display: "flex", height: isNonMobileScreens ? "70vh" : "50vh",
       flexDirection: "row",
       justifyContent: "center",
-      alignItems: "center" // Asegura el centrado vertical
+      alignItems: "center"
     }}>
       <div className="ticker">
-        {tecnologias.concat(tecnologias).map((tec, index) => (
-          <div key={index} className="ticker-item" sx={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "center",
-            alignContent: "center"
-          }}>
+        {tecnologiasDuplicadas.map((tec, index) => (
+          <div key={index} className="ticker-item">
             <img src={tec.imageUrl} alt={tec.nombre} style={{
               height: isNonMobileScreens ? '200px' : "75px",
               width: 'auto'
@@ -75,90 +70,3 @@ import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 };
 
 export default Tecnologias;
-  // const [inView, setInView] = useState(false);
-
-
-  // const chunkSize =8;
-  // const chunkedImages2 = projectImages2.reduce((resultArray, item, index) => {
-  //   const chunkIndex2 = Math.floor(index / chunkSize);
-
-  //   if (!resultArray[chunkIndex2]) {
-  //     resultArray[chunkIndex2] = [];
-  //   }
-
-  //   resultArray[chunkIndex2].push(item);
-
-  //   return resultArray;
-  // }, []);
-  // const [currentChunk, setCurrentChunk] = useState(0);
-
- 
-  //  const [isHovered, setIsHovered] = useState(null);
- 
-//   return (
-//     <div id="servicios">
-           
-    
-
-     
-
-
- 
-
-
-
-//    <Box sx={{ background: '#333333' , height:"120vh"}}>
-//    <Slide direction="left" triggerOnce={false} in={inView}> 
-
-// <Typography style={{fontWeight: 700, fontFamily: "'Oswald', sans-serif"  }} variant="h2" sx={{ paddingTop:"50px",color:"white", display: "flex", justifyContent: "center", paddingBottom: '50px' }}>
-//  Nuestras Tecnologías
-// </Typography> </Slide>
-//   <div className="scrolling-wrapper">
-//     <div className="scrolling-content">
-//       {chunkedImages2.map((chunk, index) => (
-//         <Grid container key={index}    className="scrolling-item">
-//           {chunk.map((image, subIndex) => (
-//             <Grid item key={subIndex} sx={{marginTop:"30px"}}>
-//               <Box
-//                 sx={{
-//                   display: 'flex',
-//                   flexDirection: 'column',
-//                   alignItems: 'center',
-//                   textAlign: 'center',
-//                   width: "300px",
-//                   height: "300px",    
-//                   borderRadius: "50%",
-//                   transition: 'transform 0.3s',
-//                   '&:hover': {
-//                     opacity: [0.9, 0.8, 0.7],
-//                     transform: 'scale(1.1)',
-//                   },
-//                   marginLeft: '10px',
-//                 }}
-//               >
-//                 <img
-//                   src={image.imageUrl}
-//                   // alt={`Miembro ${index * chunkSize + subIndex + 1}`}
-//                   style={{ width: '45%', height: '45%', borderRadius:"50%" }}
-//                 />
-//                 <Typography style={{ fontFamily: "'Oswald', sans-serif" }} fontSize="18px" sx={{ color: 'white', fontWeight: 'bold' }}>
-//                   {image.nombre}
-//                 </Typography>
-//               </Box>
-//             </Grid>
-//           ))}
-//         </Grid>
-//       ))}
-//     </div>
-//   </div>
-// </Box>
-
- 
-
-
-
-//     </div>
-//   );
-// }
-
-// export default Tecnologias;

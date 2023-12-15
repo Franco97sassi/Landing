@@ -13,14 +13,7 @@ import sinFondo from '../../assets/sinFondo.png';
 const Landing = () => {
   const [inView, setInView] = useState(false);
   const isNonMobileScreens = useMediaQuery('(min-width: 1000px)');
-
-  // const onEnterViewport = () => {
-  //   setInView(true);
-  // };
-
-  // const onExitViewport = () => {
-  //   setInView(false);
-  // };
+ 
 
   const Item = styled("div")(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#red',
@@ -126,16 +119,17 @@ const Landing = () => {
         alignItems: "center"  // Centramos horizontalmente
         
       }}
-        sx={{
-          minHeight: '100vh',
-          // paddingLeft:"500px",
+        // sx={{
+        //   minHeight: '100vh',
+        //   // paddingLeft:"500px",
 
-        }}>
+        // }}
+        >
          
         <Fade in={showTechX} timeout={500}>
         <Typography sx={{
     letterSpacing: "5px",
-    fontSize: "40px",
+    fontSize: isNonMobileScreens?"2.5rem":"2rem",
     paddingTop: isNonMobileScreens?"2.5rem":"0rem",
     color: 'white',
     fontFamily: "'Oswald', sans-serif",
@@ -145,16 +139,17 @@ const Landing = () => {
   }}>
             TechX
           </Typography>
+          
         </Fade>
         <Slide direction="left" triggerOnce={false} in={inView}>
           <Typography  style={{
             paddingTop: "0px",textAlign: isNonMobileScreens ? "center" : "center",
-            textDecoration: 'none', color: 'white', fontSize: "4.5rem", fontFamily: "'Oswald', sans-serif", fontWeight: "700"
-          }} sx={{ fontWeight: 700, fontSize: "100px", color: "black" }}>
+            textDecoration: 'none', color: 'white', fontSize: isNonMobileScreens ?"4.5rem":"3.5rem", fontFamily: "'Oswald', sans-serif", fontWeight: "700"
+          }} >
             Creamos Soluciones Digitales
-          </Typography></Slide>
+          </Typography>
+          </Slide>
 
-        {/* <Button sx={{ marginTop: "20px", backgroundColor: "black", borderRadius: "100px", height: "50px", width: "150px" }} variant='contained'>Contactanos</Button> */}
       </Box>
   
     </div>

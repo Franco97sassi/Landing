@@ -410,7 +410,7 @@ function Navbar() {
           </a>
 
           {/* Enlaces para Desktop */}
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end',gap:"10px" }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end',gap:"1.5rem" }}>
             <NavLink style={linkTextStyle} to="/" onClick={(e) => handleNavigateAndScroll(e, '/', 'landing')}>Inicio</NavLink>
             <NavLink style={linkTextStyle} to="/" onClick={(e) => handleNavigateAndScroll(e, '/', 'proyectos')}>Proyectos</NavLink>
             <NavLink style={linkTextStyle} to="/nosotros" onClick={(e) => handleNavigateAndScroll(e, '/nosotros', 'servicios')}>Servicios</NavLink>
