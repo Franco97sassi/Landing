@@ -47,6 +47,7 @@ const Sobre = () => {
     <Box sx={{
       zIndex: 1,
       marginTop:isNonMobileScreens?"0px":"-10rem",
+       
       position: 'relative',
       display: 'flex',
       justifyContent: 'center', // Centra horizontalmente en el contenedor Box
@@ -56,7 +57,7 @@ const Sobre = () => {
       <img 
         src={imcel} 
         alt="Imagen" 
-        style={{ 
+        style={{  marginLeft:isNonMobileScreens?"0px":"2rem",
           width: '100%', // La imagen ocupa todo el ancho del Box
           height: 'auto', // La altura de la imagen se ajusta automáticamente
           objectFit: 'cover', // La imagen cubrirá todo el espacio disponible, recortándose según sea necesario
