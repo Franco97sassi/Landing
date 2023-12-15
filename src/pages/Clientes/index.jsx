@@ -66,7 +66,7 @@ const Clientes = () => {
          
       }}>
         <Slide direction="left" triggerOnce={false}>
-          <Typography variant={isNonMobileScreens ? "h2" : "h3"} mb={5} fontWeight="700" fontFamily="Oswald, sans-serif">
+          <Typography variant={isNonMobileScreens ? "h2" : "h4"} mb={5} fontWeight="700" fontFamily="Oswald, sans-serif">
             Nuestros Clientes
           </Typography>
         </Slide>

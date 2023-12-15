@@ -46,6 +46,7 @@ const Sobre = () => {
   <Item>
     <Box sx={{
       zIndex: 1,
+      marginTop:isNonMobileScreens?"0px":"-10rem",
       position: 'relative',
       display: 'flex',
       justifyContent: 'center', // Centra horizontalmente en el contenedor Box

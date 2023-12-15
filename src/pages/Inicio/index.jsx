@@ -20,8 +20,7 @@ const Inicio = () => {
       backgroundColor: "white"
     }}> 
                  <section id="landing">   <Landing />  </section> 
-                 <Proyectos /> 
-        
+         
       <Sobre />
            <Estadisticas />     
         <Clientes />   

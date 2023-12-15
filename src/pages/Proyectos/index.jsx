@@ -130,9 +130,9 @@ const Proyectos = () => {
 
   return (
     <div id="proyectos">
-      <Box sx={{ background: '#333333', height: isNonMobileScreens?"100%":"100vh",  px:isNonMobileScreens ? 12:5, pb: 10 }}  >
+      <Box sx={{ background: '#333333', height: isNonMobileScreens?"100%":"70vh",  px:isNonMobileScreens ? 12:5, pb: 10 }}  >
         <Slide direction="left" triggerOnce={false}>
-          <Typography variant="h2" style={{ color: "white", fontWeight: 700, fontFamily: "'Oswald', sans-serif" }} sx={{ display: "flex", paddingTop: "50px", justifyContent: "center", paddingBottom: "50px" }}>
+          <Typography variant={isNonMobileScreens?"h2":"h4"} style={{ color: "white", fontWeight: 700, fontFamily: "'Oswald', sans-serif" }} sx={{ display: "flex", paddingTop: "50px", justifyContent: "center", paddingBottom: "50px" }}>
             Proyectos
           </Typography></Slide>
 
@@ -146,7 +146,8 @@ const Proyectos = () => {
           navButtonsAlwaysVisible={false}
           index={currentChunk}
           sx={{ padding: '0 0px' }}
-        >
+          NavButton={({ onClick, className, style, next, prev }) => null} 
+         >
           {chunkedProjects.map((chunk, index) => (
             <Grid container key={index} spacing={12} alignItems={isNonMobileScreens ? "center" : "flex-start"}  justifyContent={isNonMobileScreens ? "center" : "flex-start"}>
               {chunk.map((project, subIndex) => (
@@ -168,7 +169,7 @@ const Proyectos = () => {
                       <img src={project.imageUrl} alt={`Proyecto ${index * chunkSize + subIndex + 1}`}
         style={{ 
           width: '100%',
-          height: isNonMobileScreens ? '200%' : 'auto', // Ajusta la altura para móviles
+          height: isNonMobileScreens ? '200%' : '100%', // Ajusta la altura para móviles
           objectFit: isNonMobileScreens ? "contain" : "cover", // Cambia el objectFit para móviles
           borderRadius: "10px"
         }} 

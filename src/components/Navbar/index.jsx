@@ -367,19 +367,39 @@ function Navbar() {
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: 'block', md: 'none' },
+                display: { xs: 'block', md: 'none' }, width: '100%',
               }}
             >
-               <Box sx={{ flexGrow: 1, display: "flex", flexDirection:"column",alignContent:"center" }}> 
-              {/* <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end' }}>   */}
+               
+               <Box
+    sx={{
+      width: '100%', // Asegura que el Box interior también tenga el ancho completo
+      backgroundColor: "white",
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      gap: '3rem',
+      padding: '1rem', // Añade algo de relleno si es necesario
+    }}
+  >
+ 
+ <Box
+                    display='flex'
+                    flexDirection='column'
+                    justifyContent='space-between'
+                    gap='3rem'
+
+                    alignItems='center'>              {/* <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end' }}>   */}
             <NavLink style={linkTextStyle1} to="/" onClick={(e) => handleNavigateAndScroll(e, '/', 'landing')}>Inicio</NavLink>
             <NavLink style={linkTextStyle1} to="/" onClick={(e) => handleNavigateAndScroll(e, '/', 'proyectos')}>Proyectos</NavLink>
             <NavLink style={linkTextStyle1} to="/nosotros" onClick={(e) => handleNavigateAndScroll(e, '/nosotros', 'servicios')}>Servicios</NavLink>
             <NavLink  style={linkTextStyle1} to="/nosotros" onClick={(e) => handleNavigateAndScroll(e, '/nosotros', 'nosotros')}>Sobre Nosotros</NavLink>
             </Box>  
-                  
+            </Box> 
             </Menu> 
           </Box>
+          {/* ... Código para la versión móvil ... */}
           
           {/* ... Código para la versión móvil ... */}
 

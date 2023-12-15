@@ -48,7 +48,7 @@ const Contacto = () => {
 
       <Box sx={{ width: '100%', height: isNonMobileScreens?"125vh":"200vh", background: 'black' }}>
         <Slide direction="left" triggerOnce={false}>
-          <Typography variant="h2" style={{ color: "white", fontFamily: "'Oswald', sans-serif", fontWeight: "700" }} sx={{ display: "flex", justifyContent: "center", paddingTop: "50px" }}>
+          <Typography variant={isNonMobileScreens?"h2":"h4"}  style={{ color: "white", fontFamily: "'Oswald', sans-serif", fontWeight: "700" }} sx={{ display: "flex", justifyContent: "center", paddingTop: "50px" }}>
             Contáctanos
           </Typography>
         </Slide>

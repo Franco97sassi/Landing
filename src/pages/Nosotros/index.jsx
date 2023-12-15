@@ -58,7 +58,7 @@ import Servicios from '../Servicios';
     <div id="nosotros">
       <Box sx={{ background: 'white' }}>
         <Slide direction="left" triggerOnce={false} in={inView}>
-          <Typography variant="h2" sx={{ display: "flex", justifyContent: "center", paddingTop: "62px", paddingBottom: "62px", fontWeight: 700, fontFamily: "'Oswald', sans-serif", color: 'black' }}>
+          <Typography  variant={isNonMobileScreens?"h2":"h4"} sx={{ display: "flex", justifyContent: "center", paddingTop: "62px", paddingBottom: "62px", fontWeight: 700, fontFamily: "'Oswald', sans-serif", color: 'black' }}>
             Nuestro Equipo
           </Typography>
         </Slide>

@@ -136,7 +136,7 @@ const Landing = () => {
         <Typography sx={{
     letterSpacing: "5px",
     fontSize: "40px",
-    paddingTop: "2.5rem",
+    paddingTop: isNonMobileScreens?"2.5rem":"0rem",
     color: 'white',
     fontFamily: "'Oswald', sans-serif",
     fontWeight: "1000",
@@ -147,7 +147,7 @@ const Landing = () => {
           </Typography>
         </Fade>
         <Slide direction="left" triggerOnce={false} in={inView}>
-          <Typography style={{
+          <Typography  style={{
             paddingTop: "0px",textAlign: isNonMobileScreens ? "center" : "center",
             textDecoration: 'none', color: 'white', fontSize: "4.5rem", fontFamily: "'Oswald', sans-serif", fontWeight: "700"
           }} sx={{ fontWeight: 700, fontSize: "100px", color: "black" }}>

@@ -58,7 +58,7 @@ const Estadisticas = () => {
         <Slide direction="left" triggerOnce={false} in={inView}>
           {/* Titulo */}
           <Typography
-            variant={isNonMobileScreens?"h2":"h3"}
+            variant={isNonMobileScreens?"h2":"h4"}
             fontWeight="700"
             style={{
               fontFamily: 'Oswald, sans-serif',

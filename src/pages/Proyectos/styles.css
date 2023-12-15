@@ -31,4 +31,6 @@
     }
   }
   
-  
+  .CarouselButton {
+        display: none !important;
+      }
