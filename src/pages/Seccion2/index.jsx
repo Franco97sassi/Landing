@@ -22,10 +22,11 @@ const Seccion2 = () => {
       backgroundColor: "white"
     }}>
 
-      <Servicios/>
+     <section id="servicios">   <Servicios/></section>
        
 
-       <Nosotros/>
+     <section id="nosotros"> <Nosotros/></section>
+       
        <Tecnologias/>
      </Box>
     </div>

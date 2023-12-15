@@ -18,9 +18,10 @@ const Inicio = () => {
   return (
     <div id="inicio"> <Box sx={{
       backgroundColor: "white"
-    }}>
-
-       <Landing />
+    }}> 
+                 <section id="landing">   <Landing />  </section> 
+                 <Proyectos /> 
+        
       <Sobre />
            <Estadisticas />     
         <Clientes />   
@@ -28,7 +29,7 @@ const Inicio = () => {
       {/* <div id="proyectos"> */}
              
                  <Testimonios/>  
-        <Proyectos />  
+                 <section id="proyectos">  <Proyectos />  </section>
      <Contacto/>      
 
 

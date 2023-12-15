@@ -80,7 +80,7 @@ const Clientes = () => {
           <Slider {...settings}>
             {images.map((image, index) => (
               <Box key={index} sx={{
-                padding:2,
+                padding:5,
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',

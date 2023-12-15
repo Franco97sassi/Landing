@@ -50,7 +50,7 @@ import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
    return (
     <Box  id="servicios" className="ticker-wrap" sx={{
-      display: "flex",  height:isNonMobileScreens ?"100vh":"50vh" ,
+      display: "flex",  height:isNonMobileScreens ?"70vh":"50vh" ,
       flexDirection: "row",
       justifyContent: "center",
       alignItems: "center" // Asegura el centrado vertical
@@ -64,7 +64,7 @@ import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
             alignContent: "center"
           }}>
             <img src={tec.imageUrl} alt={tec.nombre} style={{
-              height: isNonMobileScreens ? '150px' : "75px",
+              height: isNonMobileScreens ? '200px' : "75px",
               width: 'auto'
             }} />
           </div>
