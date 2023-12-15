@@ -130,7 +130,7 @@ const Servicios = () => {
 
     <Grid sx={{background: 'black'  }} marginTop={-25} 
      container justifyContent={isNonMobileScreens ? "center" : "center"}  columnSpacing={17} rowSpacing={20} 
-     paddingBottom='200px' paddingRight={isNonMobileScreens?"30":"0"} paddingLeft={isNonMobileScreens?"30":"0"} columns={{ xs: 0, sm: 8, md: 10, lg: 14.9 }}>
+     paddingBottom='200px' paddingRight={isNonMobileScreens?"30":"50px"} paddingLeft={isNonMobileScreens?"30":"50px"} columns={{ xs: 0, sm: 8, md: 10, lg: 14.9 }}>
      
      
       {projectImages.map((image, index) => (
