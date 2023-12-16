@@ -7,12 +7,19 @@
 
 .ticker {
   display: inline-block;
-  animation: tickerMove 10s linear infinite;
+  -webkit-animation: tickerMove 5s linear infinite;
+  animation: tickerMove 5s linear infinite;
+}
+@-webkit-keyframes tickerMove { /* Animación con prefijo para Safari */
+  0% { -webkit-transform: translateX(0); /* Prefijo para Safari */
+       transform: translateX(0); }
+  100% { -webkit-transform: translateX(-20%); /* Prefijo para Safari */
+         transform: translateX(-20%); }
 }
 
 @keyframes tickerMove {
   0% { transform: translateX(0); }
-  100% { transform: translateX(calc(-100%/5)); } /* Ajustar según el número de duplicados */
+  100% { transform: translateX(-20%); } /* Ajustar según el número de duplicados */
 }
 
 .ticker-item {

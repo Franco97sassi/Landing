@@ -154,7 +154,7 @@ const Proyectos = () => {
                 <React.Fragment key={subIndex}>
         <Grid item xs={20} sm={isNonMobileScreens ? 4 : 20} md={6} lg={4.2} xl={3}>
                     <Box sx={{
-                      width: "150%", // Asegúrate de que la imagen ocupa todo el ancho del Grid item
+                      width: isNonMobileScreens ?"150%":"100%", // Asegúrate de que la imagen ocupa todo el ancho del Grid item
                       height: isNonMobileScreens ? "100%" : "100%",                     borderRadius: "10px",
                       marginTop: "20px",
                       backgroundColor: 'rgba(30, 30, 30, 0.56)',
@@ -169,8 +169,8 @@ const Proyectos = () => {
                       <img src={project.imageUrl} alt={`Proyecto ${index * chunkSize + subIndex + 1}`}
         style={{ 
           width: '100%',
-          height: isNonMobileScreens ? '100%' : '100%', // Ajusta la altura para móviles
-          objectFit: isNonMobileScreens ? "contain" : "cover", // Cambia el objectFit para móviles
+          height: isNonMobileScreens ? '100%' : '50%', // Ajusta la altura para móviles
+          objectFit: isNonMobileScreens ? "contain" : "contain", // Cambia el objectFit para móviles
           borderRadius: "10px"
         }} 
       />

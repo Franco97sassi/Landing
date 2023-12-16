@@ -174,7 +174,7 @@ const Estadisticas = () => {
          background: 'black',
          paddingTop: "50px",
          paddingBottom: "100px", // Puedes ajustar el paddingBottom para equilibrar con paddingTop si es necesario
-       }}
+         }}
      >
        <Slide direction="left" triggerOnce={false} in={inView}>
          {/* Titulo */}
@@ -197,7 +197,7 @@ const Estadisticas = () => {
      <Box sx={{
        paddingBottom: "300px",
        width: '100%',
-       height: "75vh",
+       height: "90vh",
        display: 'flex',
        flexDirection: 'column',
        
