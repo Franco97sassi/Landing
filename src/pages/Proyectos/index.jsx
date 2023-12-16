@@ -10,7 +10,7 @@ import docappoint from "../../assets/doca.png";
 import pixie from "../../assets/pixie.png";
 import cryptomc from "../../assets/crypto.png";
 import cruzRoja from "../../assets/cruzroja.png";
-import proveedora from "../../assets/q5.png";
+import proveedora from "../../assets/proveedora.png";
 import garden from "../../assets/garden.png";
 import rifas from "../../assets/rifa.png";
 import floral from "../../assets/floral1.png";

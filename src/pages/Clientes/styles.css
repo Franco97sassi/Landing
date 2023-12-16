@@ -1,8 +1,16 @@
-slick-prev, .slick-next {
-    font-size: 54px; /* Aumenta el tamaño de la flecha */
-    z-index: 1;
-}
+@media (min-width: 1920px) {
+  .custom-slider .slick-prev {
+    left: -45px; /* Ajusta según necesidad para pantallas XL */
+    margin-left: 30px; /* Espacio a la izquierda de la flecha */
+  }
 
-.slick-prev:before, .slick-next:before {
-    font-size: 30px; /* Aumenta el tamaño del icono de la flecha, ajusta según sea necesario */
+  .custom-slider .slick-next {
+    right: -45px; /* Ajusta según necesidad para pantallas XL */
+    margin-right: 30px; /* Espacio a la derecha de la flecha */
+  }
+
+  .custom-slider .slick-slide {
+    padding-right: 25px; /* Espacio a la derecha de cada slide */
+    padding-left: 25px; /* Espacio a la izquierda de cada slide */
+  }
 }

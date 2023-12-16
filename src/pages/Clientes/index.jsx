@@ -21,7 +21,7 @@ import "./styles.css"
 const Clientes = () => {
   // Configuraciones para el carrusel
   const settings = {
-
+    centerMode: false,
     // dots: true, // Muestra puntos de navegación en la parte inferior
     infinite: true, // Infinito loop
     speed: 500, // Velocidad de transición
@@ -29,9 +29,19 @@ const Clientes = () => {
     slidesToScroll: 3, // Desplaza 3 slides a la vez
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1920, // Para pantallas XL
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 4, // Ajusta según tus necesidades para pantallas XL
+          slidesToScroll: 4, // Ajusta según tus necesidades para pantallas XL
+          // Otros ajustes si son necesarios
+        }
+      },
+      {
+        breakpoint: 1024,
+        
+        settings: {
+ 
+           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
           dots: true
@@ -40,6 +50,7 @@ const Clientes = () => {
       {
         breakpoint: 600,
         settings: {
+          
           slidesToShow: 3,
           slidesToScroll: 3
         }
@@ -77,15 +88,17 @@ const Clientes = () => {
           px: { xs: 6, sm: 10 },
           mx: 'auto'
         }}>
-          <Slider {...settings}>
+          <Slider {...settings} className="custom-slider">
             {images.map((image, index) => (
               <Box key={index} sx={{
-                padding:5,
+                padding: 5,
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
                 transition: 'transform 0.3s ease-in-out',
                 marginTop: '20px',
+                paddingRight: '15px', // Agrega padding a la derecha de cada slide
+                paddingLeft: '15px', // Agrega padding a la izquierda de cada slide
                 ':hover': {
                   transform: 'scale(1.05)'
                 }
@@ -95,7 +108,8 @@ const Clientes = () => {
                   maxHeight: '200px', // Ajusta este valor según sea necesario
                   objectFit: 'contain',
                   borderRadius: "25px",
-                  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)'                 
+                  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)'      ,
+                  margin: '0 15px'           
                 }} />
               </Box>
             ))}

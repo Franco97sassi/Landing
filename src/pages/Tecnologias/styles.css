@@ -7,7 +7,7 @@
 
 .ticker {
   display: inline-block;
-  animation: tickerMove 25s linear infinite;
+  animation: tickerMove 10s linear infinite;
 }
 
 @keyframes tickerMove {
