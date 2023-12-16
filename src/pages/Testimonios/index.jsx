@@ -98,7 +98,7 @@ return (
       <div>  
       <Box
       style={{
-        height: isNonMobileScreens?"100vh":"150vh",
+        height: isNonMobileScreens?"100vh":"200vh",
         display: "flex", // Añadido para activar flexbox
         flexDirection: "column", // Establece la dirección principal como vertical
         justifyContent: "flex-start", // Centra el contenido en el eje vertical
