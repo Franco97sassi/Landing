@@ -6,10 +6,11 @@
 }
 
 .ticker {
-  display: inline-block;
   -webkit-animation: tickerMove 5s linear infinite;
   animation: tickerMove 5s linear infinite;
+  will-change: transform; /* Añade esta línea */
 }
+
 @-webkit-keyframes tickerMove { /* Animación con prefijo para Safari */
   0% { -webkit-transform: translateX(0); /* Prefijo para Safari */
        transform: translateX(0); }
