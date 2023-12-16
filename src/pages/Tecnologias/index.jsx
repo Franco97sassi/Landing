@@ -69,4 +69,4 @@ import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
   );
 };
 
-export default Tecnologias; 
+export default Tecnologias;

@@ -2,7 +2,7 @@ import { Box, Grid, Typography, useMediaQuery } from "@mui/material";
 import { Slide } from "react-awesome-reveal";
 import { styled } from '@mui/material/styles';
 import { useState } from "react";
-import imcel from '../../assets/imcel.png';
+import imcel from '../../assets/fondoSobre.png';
 import logo from '../../assets/logo.png';
 
 const Sobre = () => {
@@ -57,7 +57,7 @@ const Sobre = () => {
       <img 
         src={imcel} 
         alt="Imagen" 
-        style={{  marginLeft:isNonMobileScreens?"0px":"2rem",
+        style={{  marginLeft:isNonMobileScreens?"-4rem":"2rem",
           width: '100%', // La imagen ocupa todo el ancho del Box
           height: 'auto', // La altura de la imagen se ajusta automáticamente
           objectFit: 'cover', // La imagen cubrirá todo el espacio disponible, recortándose según sea necesario

@@ -31,8 +31,8 @@ const Clientes = () => {
       {
         breakpoint: 1920, // Para pantallas XL
         settings: {
-          slidesToShow: 4, // Ajusta según tus necesidades para pantallas XL
-          slidesToScroll: 4, // Ajusta según tus necesidades para pantallas XL
+          slidesToShow: 3, // Ajusta según tus necesidades para pantallas XL
+          slidesToScroll: 3, // Ajusta según tus necesidades para pantallas XL
           // Otros ajustes si son necesarios
         }
       },
@@ -51,8 +51,8 @@ const Clientes = () => {
         breakpoint: 600,
         settings: {
           
-          slidesToShow: 3,
-          slidesToScroll: 3
+          slidesToShow: 2,
+          slidesToScroll: 2
         }
       },
       {

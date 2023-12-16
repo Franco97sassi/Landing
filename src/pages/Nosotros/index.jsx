@@ -5,7 +5,7 @@ import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import {   Slide } from "react-awesome-reveal";
 
-import miembro1 from "../../assets/mario.png";
+import miembro1 from "../../assets/marioRecorte.png";
 import miembro2 from "../../assets/miembro2.png";
 import miembro3 from "../../assets/miembro3.png";
 import miembro4 from "../../assets/miembro4.png";
