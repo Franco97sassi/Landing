@@ -31,11 +31,11 @@ const Sobre = () => {
         </Slide>
         <Box sx={{ width: '100%', height: isNonMobileScreens ?"100vh":"125vh" }}>
           <Grid container spacing={20} sx={{ height: '100%' }}>
-            <Grid item xs={12} md={6}>
+            <Grid item xs={12}  md={6}>
               <Item>
                 <Slide direction="right" triggerOnce={false} in={inView}>
                   <Box sx={{ zIndex: 0, display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', paddingLeft:isNonMobileScreens? "100px":"0px", height: '100%' }}>
-                    <Typography sx={{ color: "black", fontSize: "18px", fontFamily: 'Oswald, sans-serif', maxWidth: "600px", paddingTop: "20px" }}>
+                    <Typography sx={{ color: "black", fontSize: "18px", fontFamily: 'Oswald, sans-serif',  paddingTop: "20px" }}>
                       Somos una empresa de desarrollo de software.<br /> Contamos con <span style={{ fontWeight: "bold" }}>desarrolladores capacitados en diversos requerimientos</span>.<br /> Nos enfocamos en <span style={{ fontWeight: "bold" }}>brindar soluciones tecnológicas a empresas que buscan innovación tecnológica, automatización y optimización en sus operaciones diarias</span>.
                     </Typography>
                   </Box>

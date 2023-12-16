@@ -63,7 +63,7 @@ return (
             love recommendations so feedback from
             others who've tried it is invaluable.</Typography> </Item>
           </Grid>
-          <Grid item xs={20} sm={4}>
+          <Grid item xs={20} sm={4} >
             <Item><Typography
               style={{ textAlign: 'justify', fontFamily: "'Oswald', sans-serif" }} // Añadido para justificar el texto
               sx={{ fontSize: "15px", color: "white", paddingTop: "100px" }}
@@ -98,7 +98,7 @@ return (
       <div>  
       <Box
       style={{
-        height: isNonMobileScreens?"100vh":"200vh",
+        height: isNonMobileScreens?"100vh":"150vh",
         display: "flex", // Añadido para activar flexbox
         flexDirection: "column", // Establece la dirección principal como vertical
         justifyContent: "flex-start", // Centra el contenido en el eje vertical
@@ -121,7 +121,7 @@ return (
           Testimonios de nuestros clientes
         </Typography></Slide>
       <Grid container  rowSpacing={1} padding={5} columnSpacing={{ xs: 6, sm: 10, md: 10 }}>
-        <Grid item xs={20} sm={4} >
+        <Grid item xs={20} sm={20} >
           <Item><Typography
             style={{ textAlign: 'justify', fontFamily: "'Oswald', sans-serif" }}
             sx={{ fontSize: "15px", color: "white", paddingTop: "100px" }}
@@ -130,10 +130,10 @@ return (
           love recommendations so feedback from
           others who've tried it is invaluable.</Typography> </Item>
         </Grid>
-        <Grid item xs={20} sm={4}>
+        <Grid item xs={20} sm={20}>
           <Item><Typography sx={{ fontSize: "20px", color: "white" }} >Santa Solana Post</Typography></Item>
         </Grid>
-        <Grid item xs={20} sm={4}>
+        <Grid item xs={20} sm={20}>
           <Item><Typography
             style={{ textAlign: 'justify', fontFamily: "'Oswald', sans-serif" }} // Añadido para justificar el texto
             sx={{ fontSize: "15px", color: "white", paddingTop: "100px" }}
@@ -142,10 +142,10 @@ return (
             love recommendations so feedback from
             others who've tried it is invaluable.</Typography></Item>
         </Grid>
-        <Grid item xs={20} sm={4}>
+        <Grid item xs={20} sm={20}>
           <Item><Typography sx={{ fontSize: "20px", color: "white" }}>Mariana's Luxe Travels</Typography></Item>
         </Grid>
-        <Grid item xs={20} sm={4}>
+        <Grid item xs={20} sm={20}>
           <Item><Typography
             style={{ textAlign: 'justify', fontFamily: "'Oswald', sans-serif" }}// Añadido para justificar el texto
             sx={{ fontSize: "15px", color: "white", paddingTop: "100px" }}
@@ -156,7 +156,7 @@ return (
         </Grid>
          
          
-        <Grid item xs={20} sm={4}>
+        <Grid item xs={20} sm={20}>
           <Item><Typography sx={{ fontSize: "20px", color: "white" }}>Fairhill Journal</Typography></Item>
         </Grid>
       </Grid>
