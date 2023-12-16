@@ -44,7 +44,9 @@ const Clientes = () => {
            slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          dots: true
+          dots: true,
+                    centerMode: true,
+
         }
       },
       {
@@ -52,14 +54,17 @@ const Clientes = () => {
         settings: {
           
           slidesToShow: 2,
-          slidesToScroll: 2
+          slidesToScroll: 2,
+          centerMode: true,
+
         }
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 1, // Muestra 1 slide en pantallas muy pequeñas
-          slidesToScroll: 1
+          slidesToScroll: 1,
+          centerMode: true,
         }
       }
     ]
@@ -85,20 +90,20 @@ const Clientes = () => {
         <Box sx={{
           width: isNonMobileScreens ? '75%' : "100%",
           py: 12,
-          px: { xs: 6, sm: 10 },
+          px: { xs: 6, sm: 10,md:20 },
           mx: 'auto'
         }}>
-          <Slider {...settings} className="custom-slider">
+          <Slider {...settings} className="custom-slider" sx={{}}>
             {images.map((image, index) => (
-              <Box key={index} sx={{
+              <Box  key={index} sx={{
                 padding: 5,
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
                 transition: 'transform 0.3s ease-in-out',
                 marginTop: '20px',
-                paddingRight: '15px', // Agrega padding a la derecha de cada slide
-                paddingLeft: '15px', // Agrega padding a la izquierda de cada slide
+                paddingRight: '0px', // Agrega padding a la derecha de cada slide
+                paddingLeft: '0px', // Agrega padding a la izquierda de cada slide
                 ':hover': {
                   transform: 'scale(1.05)'
                 }
