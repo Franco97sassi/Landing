@@ -8,7 +8,7 @@
 .ticker {
   -webkit-animation: tickerMove 5s linear infinite;
   animation: tickerMove 5s linear infinite;
-  will-change: transform;
+  /* will-change: transform; */
 }
 
 /* Revisa las animaciones para asegurarte de que los porcentajes de transformación son correctos */

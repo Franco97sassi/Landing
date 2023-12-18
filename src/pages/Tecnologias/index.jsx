@@ -1,4 +1,4 @@
-import { Box,   useMediaQuery } from '@mui/material';
+import { Box} from '@mui/material';
 import React from 'react';
  
 import tecno1 from "../../assets/t1.png";
@@ -19,7 +19,7 @@ import tecno14 from "../../assets/t14.png";
 import "./styles.css"
 
  const Tecnologias = () => {
-  const isNonMobileScreens = useMediaQuery('(min-width: 1000px)');
+  // const isNonMobileScreens = useMediaQuery('(min-width: 1000px)');
 
   const tecnologias = [
     { imageUrl: tecno1, nombre: "HTML" },
