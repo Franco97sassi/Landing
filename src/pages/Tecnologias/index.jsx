@@ -49,7 +49,7 @@ import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
    const tecnologiasDuplicadas = Array(5).fill(tecnologias).flat();
 
   return (
-    <Box id="servicios" className="ticker-wrap" sx={{
+    <Box   className="ticker-wrap" sx={{
       display: "flex", height: isNonMobileScreens ? "70vh" : "50vh",
       flexDirection: "row",
       justifyContent: "center",
