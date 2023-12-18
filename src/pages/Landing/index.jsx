@@ -1,34 +1,19 @@
-import React, { useEffect, useState,useRef } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { Box, Button, Grid, Typography, Fade, useMediaQuery } from '@mui/material';
 import './styles.css';
-import {   Slide } from "react-awesome-reveal";
- import { styled } from '@mui/material/styles';
+import { Slide } from "react-awesome-reveal";
+import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import fondoNuevo from "../../assets/fondoNuevo.jpg"
 import fondo2 from "../../assets/fondo2.jpg"
 import sinFondo from '../../assets/sinFondo.png';
- 
+
 
 
 const Landing = () => {
   const [inView, setInView] = useState(false);
   const isNonMobileScreens = useMediaQuery('(min-width: 1000px)');
  
-
-  const Item = styled("div")(({ theme }) => ({
-    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#red',
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-  }));
-  const Item2 = styled(Paper)(({ theme }) => ({
-    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-  }));
   const [showBienvenido, setShowBienvenido] = useState(false);
   const [showTechX, setShowTechX] = useState(false);
 
@@ -105,53 +90,55 @@ const Landing = () => {
       });
     };
   }, []);
- 
+
   return (
     <div id="landing"  >
       {/* Imagen de fondo */}
 
       <Box style={{
-        height: "100vh", backgroundImage: `url(${fondoNuevo})`,
-        backgroundRepeat: "no-repeat", backgroundSize: "cover",
+        height: "100vh",
+        backgroundImage: `url(${fondoNuevo})`,
+        backgroundRepeat: "no-repeat",
+         backgroundSize: "cover",
         display: "flex",  // Activamos Flexbox
         flexDirection: "column",  // Alineamos los elementos en columna
         justifyContent: "center",  // Centramos verticalmente
-        alignItems: "center"  // Centramos horizontalmente
-        
-      }}
-        // sx={{
-        //   minHeight: '100vh',
-        //   // paddingLeft:"500px",
+        // alignItems: "center"   // Centramos horizontalmente
 
-        // }}
-        >
-         
+      }}
+     
+      >
+
         <Fade in={showTechX} timeout={500}>
-        <Typography sx={{
-    letterSpacing: "5px",
-    fontSize: isNonMobileScreens?"2.5rem":"2rem",
-    paddingTop: isNonMobileScreens?"2.5rem":"0rem",
-    color: 'white',
-    fontFamily: "'Oswald', sans-serif",
-    fontWeight: "1000",
-     width: "100%", // Asegúrate de que Typography ocupe todo el ancho disponible,
-     textAlign: isNonMobileScreens ? "center" : "center",
-  }}>
+          <Typography sx={{
+            letterSpacing: "5px",
+            fontSize: isNonMobileScreens ? "2.5rem" : "2rem",
+            paddingTop: isNonMobileScreens ? "2.5rem" : "0rem",
+            color: 'white',
+            fontFamily: "'Oswald', sans-serif",
+            fontWeight: "1000",
+            // width: "100%", 
+             textAlign:    "center",
+          }}>
             TechX
           </Typography>
-          
+
         </Fade>
         <Slide direction="left" triggerOnce={false} in={inView}>
-          <Typography  style={{
-            paddingTop: "0px",textAlign: isNonMobileScreens ? "center" : "center",
-            textDecoration: 'none', color: 'white', fontSize: isNonMobileScreens ?"4.5rem":"3.5rem", fontFamily: "'Oswald', sans-serif", fontWeight: "700"
+          <Typography style={{
+             textAlign:   "center",
+            textDecoration: 'none', 
+            color: 'white',
+             fontSize: isNonMobileScreens ? "4.5rem" : "3.5rem", 
+             fontFamily: "'Oswald', sans-serif",
+              fontWeight: "700"
           }} >
             Creamos Soluciones Digitales
           </Typography>
-          </Slide>
+        </Slide>
 
       </Box>
-  
+
     </div>
   );
 };

@@ -25,18 +25,13 @@ const Inicio = () => {
            <Estadisticas />     
         <Clientes />   
        
-      {/* <div id="proyectos"> */}
+     
              
                  <Testimonios/>  
                  <section id="proyectos">  <Proyectos />  </section>
      <Contacto/>      
 
-
-         {/* </div> */}
-       {/* <div id="servicios">  
-          <Servicios />    
-         </div>  
-             <Contacto/>   */}
+ 
     </Box>
     </div>
   )
