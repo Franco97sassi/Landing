@@ -1,5 +1,5 @@
-import { Box,  Divider,  Grid, List, Typography, useMediaQuery } from '@mui/material';
-import React, { useEffect, useState } from 'react';
+import { Box,   useMediaQuery } from '@mui/material';
+import React from 'react';
  
 import tecno1 from "../../assets/t1.png";
 import tecno2 from "../../assets/t2.png";
@@ -17,14 +17,7 @@ import tecno13 from "../../assets/t13.png";
 import tecno14 from "../../assets/t14.png";
 // import tecno15 from "../../assets/t15.png";
 import "./styles.css"
- import { styled } from '@mui/material/styles';
- import {   Slide } from "react-awesome-reveal";
 
-import js2 from "../../assets/js3.png";
-import icono from "../../assets/icono.png";
-import Carousel from 'react-material-ui-carousel';
-import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
-import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
  const Tecnologias = () => {
   const isNonMobileScreens = useMediaQuery('(min-width: 1000px)');
 
@@ -50,7 +43,10 @@ import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
   return (
     <Box   className="ticker-wrap" sx={{
-      display: "flex", height: isNonMobileScreens ? "70vh" : "50vh",
+      display: "flex", 
+      height:   "50vh",
+
+      // height: isNonMobileScreens ? "70vh" : "50vh",
       flexDirection: "row",
       justifyContent: "center",
       alignItems: "center"
@@ -59,7 +55,9 @@ import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
         {tecnologiasDuplicadas.map((tec, index) => (
           <div key={index} className="ticker-item">
             <img src={tec.imageUrl} alt={tec.nombre} style={{
-              height: isNonMobileScreens ? '200px' : "75px",
+              // height: isNonMobileScreens ? '200px' : "75px",
+             height:  '200px'  ,
+
               width: 'auto'
             }} />
           </div>
