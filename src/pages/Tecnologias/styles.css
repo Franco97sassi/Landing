@@ -1,31 +1,29 @@
 .ticker-wrap {
-  /* overflow: hidden; */
-  background-color: #333333; /* O el color que prefieras */
+  background-color: #333333;
   white-space: nowrap;
- ; padding-top: 0px; 
+  overflow: hidden; /* Asegúrate de que esto esté activado */
+  padding-top: 0px;
 }
 
 .ticker {
   -webkit-animation: tickerMove 5s linear infinite;
   animation: tickerMove 5s linear infinite;
-  will-change: transform; /* Añade esta línea */
+  will-change: transform;
 }
 
-@-webkit-keyframes tickerMove { /* Animación con prefijo para Safari */
-  0% { -webkit-transform: translateX(0%); /* Prefijo para Safari */
-       transform: translateX(-20%); }
-  100% { -webkit-transform: translateX(0%); /* Prefijo para Safari */
-         transform: translateX(-20%); }
+/* Revisa las animaciones para asegurarte de que los porcentajes de transformación son correctos */
+@-webkit-keyframes tickerMove {
+  0% { -webkit-transform: translateX(0%); }
+  100% { -webkit-transform: translateX(-20%); }
 }
 
 @keyframes tickerMove {
   0% { transform: translateX(0%); }
-  100% { transform: translateX(-20%); } /* Ajustar según el número de duplicados */
+  100% { transform: translateX(-20%); }
 }
 
 .ticker-item {
   display: inline-block;
-  padding: 0; /* Elimina cualquier relleno */
-  margin: 0; /* Elimina cualquier margen */
-  /* margin-right: 50px; */
+  padding: 0;
+  margin: 0;
 }
