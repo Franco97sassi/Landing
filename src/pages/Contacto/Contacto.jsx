@@ -131,7 +131,7 @@ const Contacto = () => {
             </Box>
           </Grid>
           
-          <Grid item xs={7} xl={6} sx={{marginTop:"10px", display: 'flex', flexDirection: 'column', justifyItems: "center", alignItems: 'center',marginBottom:"20px" }}>
+          <Grid item xs={7} md={6} xl={6} sx={{marginTop:"10px", display: 'flex', flexDirection: 'column', justifyItems: "center", alignItems: 'center',marginBottom:"20px" }}>
             <Box sx={{ display: 'flex', alignItems: 'center' , flexDirection: 'column', height: "475px", position: 'relative', background: "#CCCCCC", borderRadius: '50px', border: "1px solid white", padding: "10px", marginBottom: "10px", width: "300px" }}>
               <AccountCircleIcon sx={{ fontSize: 50, color: '#333333', mt: 2, }} />
               <Stack spacing={2} sx={{ width: '100%', marginTop: "50px"  }}>

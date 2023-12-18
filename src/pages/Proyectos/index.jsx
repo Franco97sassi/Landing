@@ -152,7 +152,7 @@ const Proyectos = () => {
             <Grid container key={index} spacing={20} alignItems={isNonMobileScreens ? "center" : "flex-start"}  justifyContent={isNonMobileScreens ? "center" : "flex-start"}>
               {chunk.map((project, subIndex) => (
                 <React.Fragment key={subIndex}>
-        <Grid item xs={20} sm={isNonMobileScreens ? 4 : 20} md={6} lg={4.2} xl={3}>
+        <Grid item xs={20} sm={isNonMobileScreens ? 4 : 20} md={6} lg={3.9} xl={10}>
                     <Box sx={{
                       width: isNonMobileScreens ?"150%":"100%", // Asegúrate de que la imagen ocupa todo el ancho del Grid item
                       height: isNonMobileScreens ? "100%" : "100%",                     borderRadius: "10px",
