@@ -1,6 +1,7 @@
-import { Box} from '@mui/material';
+import { Box, useMediaQuery} from '@mui/material';
 import React from 'react';
- 
+import Carousel from 'react-material-ui-carousel';
+
 import tecno1 from "../../assets/t1.png";
 import tecno2 from "../../assets/t2.png";
 import tecno3 from "../../assets/t3.png";
@@ -19,7 +20,7 @@ import tecno14 from "../../assets/t14.png";
 import "./styles.css"
 
  const Tecnologias = () => {
-  // const isNonMobileScreens = useMediaQuery('(min-width: 1000px)');
+    const isNonMobileScreens = useMediaQuery('(min-width: 1000px)');
 
   const tecnologias = [
     { imageUrl: tecno1, nombre: "HTML" },
@@ -40,29 +41,35 @@ import "./styles.css"
     
    ];
    const tecnologiasDuplicadas = Array(5).fill(tecnologias).flat();
-
-  return (
-    <Box   className="ticker-wrap" sx={{
+   const renderCarouselItem = (item) => (
+    <Box key={item.nombre} sx={{ textAlign: 'center' }}>
+      <img src={item.imageUrl} alt={item.nombre} style={{ height: '75px', width: 'auto' }} />
+      
+    </Box>
+  );
+   return (
+    <Box className="ticker-wrap" sx={{
       display: "flex", 
-      height:   "50vh",
-
-      // height: isNonMobileScreens ? "70vh" : "50vh",
+      height: isNonMobileScreens ? "70vh" : "50vh",
       flexDirection: "row",
       justifyContent: "center",
       alignItems: "center"
     }}>
-      <div className="ticker">
-        {tecnologiasDuplicadas.map((tec, index) => (
-          <div key={index} className="ticker-item">
-            <img src={tec.imageUrl} alt={tec.nombre} style={{
-              // height: isNonMobileScreens ? '200px' : "75px",
-             height:  '200px'  ,
-
-              width: 'auto'
-            }} />
-          </div>
-        ))}
-      </div>
+      {isNonMobileScreens ? (
+        // Renderizar como ticker para pantallas no móviles
+        <div className="ticker">
+          {tecnologiasDuplicadas.map((tec, index) => (
+            <div key={index} className="ticker-item">
+              <img src={tec.imageUrl} alt={tec.nombre} style={{ height: '200px', width: 'auto' }} />
+            </div>
+          ))}
+        </div>
+      ) : (
+        // Renderizar como carrusel para pantallas móviles
+        <Carousel interval={2000}>
+          {tecnologias.map((item) => renderCarouselItem(item))}
+        </Carousel>
+      )}
     </Box>
   );
 };
