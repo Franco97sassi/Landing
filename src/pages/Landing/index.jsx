@@ -2,18 +2,17 @@ import React, { useEffect, useState, useRef } from 'react';
 import { Box, Button, Grid, Typography, Fade, useMediaQuery } from '@mui/material';
 import './styles.css';
 import { Slide } from "react-awesome-reveal";
-import { styled } from '@mui/material/styles';
-import Paper from '@mui/material/Paper';
+ 
 import fondoNuevo from "../../assets/fondoNuevo.jpg"
-import fondo2 from "../../assets/fondo2.jpg"
-import sinFondo from '../../assets/sinFondo.png';
+ 
 
 
 
 const Landing = () => {
   const [inView, setInView] = useState(false);
-  const isNonMobileScreens = useMediaQuery('(min-width: 1000px)');
- 
+  // const isNonMobileScreens = useMediaQuery('(min-width: 1000px)');
+  const xs = useMediaQuery('(max-width: 600px)');
+
   const [showBienvenido, setShowBienvenido] = useState(false);
   const [showTechX, setShowTechX] = useState(false);
 
@@ -104,16 +103,15 @@ const Landing = () => {
         flexDirection: "column",  // Alineamos los elementos en columna
         justifyContent: "center",  // Centramos verticalmente
         // alignItems: "center"   // Centramos horizontalmente
-
-      }}
+       }}
      
       >
 
         <Fade in={showTechX} timeout={500}>
           <Typography sx={{
             letterSpacing: "5px",
-            fontSize: isNonMobileScreens ? "2.5rem" : "2rem",
-            paddingTop: isNonMobileScreens ? "2.5rem" : "0rem",
+            fontSize: xs ? "2rem" : "2.5rem",
+            paddingTop: xs ? "0rem" : "0rem",
             color: 'white',
             fontFamily: "'Oswald', sans-serif",
             fontWeight: "1000",
@@ -129,7 +127,7 @@ const Landing = () => {
              textAlign:   "center",
             textDecoration: 'none', 
             color: 'white',
-             fontSize: isNonMobileScreens ? "4.5rem" : "3.5rem", 
+             fontSize: xs ? "3.5rem" : "4.5rem", 
              fontFamily: "'Oswald', sans-serif",
               fontWeight: "700"
           }} >

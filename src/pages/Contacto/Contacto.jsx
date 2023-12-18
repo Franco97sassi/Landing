@@ -40,7 +40,13 @@ const Contacto = () => {
         console.log(error.text);
       });
   };
-
+  const [commentRows, setCommentRows] = useState(4); // Comienza con 4 filas
+  const handleCommentChange = (event) => {
+    const text = event.target.value;
+    const lines = text.split('\n').length;
+    setCommentRows(Math.max(4, lines)); // Asegura un mínimo de 4 filas
+  };
+  
   return (
 
     <div>
@@ -168,25 +174,39 @@ const Contacto = () => {
                     variant="outlined"
                   />
 
-                  <TextField
-                    sx={{marginLeft:"30px",marginBottom:"1rem",
-                      background: "#D3D3D3",
-                      borderRadius: "15px",
-                      height: "100px",
-                      '& .MuiOutlinedInput-root': {
-                        '& fieldset': {
-                          border: 'none',
-                        },
-                      },
-                      '& label.Mui-focused': {
-                        color: 'black',
-                      },
-                    }}
-                    id="outlined-basic"
-                    label="Comentarios"
-                    name="message"
-                    variant="outlined"
-                  />
+<TextField
+   sx={{
+    width:"220px",
+    marginLeft:"30px",
+    marginBottom:"1rem",
+    background: "#D3D3D3",
+    borderRadius: "15px",
+    '& .MuiOutlinedInput-root': {
+      '& fieldset': {
+        border: 'none',
+      },
+    },
+    '& label.Mui-focused': {
+      color: 'black',
+    },
+  }}
+  id="outlined-basic"
+  label="Comentarios"
+  name="message"
+  variant="outlined"
+  multiline
+  rows={commentRows}
+  onChange={handleCommentChange}
+/>
+{/* <TextField
+  
+  id="outlined-basic"
+  label="Comentarios"
+  name="message"
+  variant="outlined"
+  multiline // Habilita el área de texto de varias líneas
+  rows={4} // Define el número de líneas visibles inicialmente
+/> */}
                   <Box sx={{
                     display: "flex",
                     justifyContent: "center",
