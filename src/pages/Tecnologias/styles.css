@@ -7,13 +7,7 @@
 
 .ticker {
   animation: tickerMove 5s linear infinite;
-  -webkit-animation: tickerMove 5s linear infinite; /* Prefijo para Safari */
   will-change: transform;
-}
-
-@-webkit-keyframes tickerMove {
-  0% { -webkit-transform: translateX(0); }
-  100% { -webkit-transform: translateX(-20%); }
 }
 
 @keyframes tickerMove {
