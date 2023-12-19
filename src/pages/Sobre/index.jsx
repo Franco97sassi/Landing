@@ -99,7 +99,7 @@ const Sobre = () => {
                 <Box >
                 <Slide direction="left" triggerOnce={false} in={inView}>
         <Box  >
-          <Typography variant="h3" sx={{ fontFamily: 'Oswald, sans-serif', fontWeight: "700", color: "black" }}>
+          <Typography variant="h3" sx={{ fontFamily: 'Oswald, sans-serif', fontWeight: "700", color: "black",paddingTop:isNonMobileScreens? "-50px":"0px",  }}>
             TechX
           </Typography>
           <Typography variant="h2" sx={{ fontFamily: 'Oswald, sans-serif', fontWeight: "700", color: "black" }}>
