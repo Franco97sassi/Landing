@@ -60,7 +60,7 @@ import "./styles.css"
         <div className="ticker">
           {tecnologiasDuplicadas.map((tec, index) => (
             <div key={index} className="ticker-item">
-              <img src={tec.imageUrl} alt={tec.nombre} style={{ height: '50rem', width: 'auto' }} />
+              <img src={tec.imageUrl} alt={tec.nombre} style={{ height:isNonMobileScreens ?  '10rem':"15rem", width: 'auto' }} />
             </div>
           ))}
         </div>
