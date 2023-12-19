@@ -124,7 +124,7 @@ const Servicios = () => {
     <div id="servicios">
               <Slide direction="left" triggerOnce={false} in={inView}> 
 
-    <Typography  variant={isNonMobileScreens?"h2":"h4"} style={{fontWeight: 700, fontFamily: "'Oswald', sans-serif",textAlign:"center"  }}  sx={{paddingTop:isNonMobileScreens?"40px":"0px" ,color:"white", display: "flex", justifyContent: "center", paddingBottom: isNonMobileScreens?"80px":"60px"  }}>
+    <Typography  variant={isNonMobileScreens?"h2":"h4"} style={{fontWeight: 700, fontFamily: "'Oswald', sans-serif",textAlign:"center"  }}  sx={{  color:"white", display: "flex", justifyContent: "center", paddingBottom: isNonMobileScreens?"80px":"60px"  }}>
       ¿Qué podemos hacer por ti?
     </Typography> </Slide>
 
@@ -144,7 +144,7 @@ const Servicios = () => {
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
-              transition: 'transform 0.3s',rowSpacing:"200px"
+              transition: 'transform 0.3s',rowSpacing:"200px",marginTop:"2rem"
             }}
           >
             <img

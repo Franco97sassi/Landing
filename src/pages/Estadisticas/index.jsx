@@ -43,6 +43,10 @@ const Estadisticas = () => {
       {/*Estadisticas */}
       {isNonMobileScreens? ( 
 <div>
+  <Box sx={{          height: isNonMobileScreens?"45vh":"125vh",
+}}>
+
+   
        <Box
         sx={{
           width: '100%',
@@ -53,6 +57,7 @@ const Estadisticas = () => {
           background: 'black',
           paddingTop: "50px",
           paddingBottom: "100px", // Puedes ajustar el paddingBottom para equilibrar con paddingTop si es necesario
+ 
         }}
       >
         <Slide direction="left" triggerOnce={false} in={inView}>
@@ -91,7 +96,7 @@ const Estadisticas = () => {
 
         <div style={{ width: '100%', maxWidth: '1200px', margin: '0 auto' }}>
 
-          <Grid container paddingTop="-100px" rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+          <Grid container  rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
             <Grid item xs={4}>
               <AwesomeFade cascade triggerOnce={false} direction="up" in={inView} delay={150}>
 
@@ -140,17 +145,17 @@ const Estadisticas = () => {
             <Grid item xs={4}><AwesomeFade cascade triggerOnce={false} direction="up" in={inView} delay={600}>
               <Item>
 
-                <Typography sx={{ fontSize: "20px", color: "white", fontFamily: 'Oswald, sans-serif' }}>Empresas trabajadas con soluciones innovadoras y eficientes</Typography>
+                <Typography sx={{ fontSize: "1.5rem", color: "white", fontFamily: 'Oswald, sans-serif' }}>Empresas trabajadas con soluciones innovadoras y eficientes</Typography>
               </Item></AwesomeFade>
             </Grid>
             <Grid item xs={4}><AwesomeFade cascade triggerOnce={false} direction="up" in={inView} delay={600}>
               <Item>
 
-                <Typography sx={{ fontSize: "20px", color: "white", fontFamily: 'Oswald, sans-serif' }}>Creció el comercio electrónico en México en 2023</Typography> </Item></AwesomeFade>
+                <Typography sx={{ fontSize: "1.5rem", color: "white", fontFamily: 'Oswald, sans-serif' }}>Creció el comercio electrónico en México en 2023</Typography> </Item></AwesomeFade>
             </Grid>
             <Grid item xs={4}><AwesomeFade cascade triggerOnce={false} direction="up" in={inView} delay={600}>
               <Item>
-                <Typography sx={{ fontSize: "20px", color: "white", fontFamily: 'Oswald, sans-serif' }}>Es el giro   que puede dar tu negocio</Typography> </Item></AwesomeFade>
+                <Typography sx={{ fontSize: "1.5rem", color: "white", fontFamily: 'Oswald, sans-serif' }}>Es el giro   que puede dar tu negocio</Typography> </Item></AwesomeFade>
             </Grid>
           </Grid>
 
@@ -161,13 +166,15 @@ const Estadisticas = () => {
         </div>
 
       </Box>
+      </Box>
       </div>
       ):( 
         <div>
+          <Box sx={{height:"100vh"}}> 
        <Box
        sx={{
          width: '100%',
-         display: 'flex',
+          display: 'flex',
          flexDirection: 'column',
          justifyContent: 'center', // Centrado verticalmente, teniendo en cuenta el padding
          alignItems: 'center', // Centrado horizontalmente
@@ -266,10 +273,12 @@ const Estadisticas = () => {
        </div>
 
      </Box>   
+     </Box>
+
      </div>
       )
                   }
-    </div>
+     </div>
   )
 }
 export default Estadisticas;

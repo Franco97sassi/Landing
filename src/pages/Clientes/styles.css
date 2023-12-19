@@ -1,21 +1,20 @@
-@media (min-width: 1920px) {
+/* @media (min-width: 1920px) {
   .custom-slider .slick-prev {
-    left: -45px; /* Ajusta según necesidad para pantallas XL */
-    margin-left: 30px; /* Espacio a la izquierda de la flecha */
+    left: -45px;  
+    margin-left: 30px;  
   }
 
   .custom-slider .slick-next {
-    right: -45px; /* Ajusta según necesidad para pantallas XL */
-    margin-right: 30px; /* Espacio a la derecha de la flecha */
+    right: -45px; 
+    margin-right: 30px;  
   }
 
   .custom-slider .slick-slide {
-    padding-right: 25px; /* Espacio a la derecha de cada slide */
-    padding-left: 25px; /* Espacio a la izquierda de cada slide */
+    padding-right: 25px;  
+    padding-left: 25px;  
   }
 }
 @media (max-width: 600px) {
   .tu-clase-de-imagen {
-    margin: 0 20px; /* Ajusta este valor según necesites */
-  }
-}
+    margin: 0 20px;  
+} */

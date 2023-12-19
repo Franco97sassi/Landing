@@ -21,19 +21,21 @@ import "./styles.css"
 const Clientes = () => {
   // Configuraciones para el carrusel
   const settings = {
-    centerMode: false,
-    // dots: true, // Muestra puntos de navegación en la parte inferior
+     dots: false, // Muestra puntos de navegación en la parte inferior
     infinite: true, // Infinito loop
     speed: 500, // Velocidad de transición
     slidesToShow: 3, // Muestra 3 slides a la vez
     slidesToScroll: 3, // Desplaza 3 slides a la vez
     responsive: [
       {
-        breakpoint: 1920, // Para pantallas XL
+        breakpoint: 1921, // Para pantallas XL
         settings: {
           slidesToShow: 3, // Ajusta según tus necesidades para pantallas XL
           slidesToScroll: 3, // Ajusta según tus necesidades para pantallas XL
-          // Otros ajustes si son necesarios
+          centerMode: false,
+          dots: true,
+          infinite: true,
+
         }
       },
       {
@@ -45,8 +47,7 @@ const Clientes = () => {
           slidesToScroll: 3,
           infinite: true,
           dots: true,
-                    centerMode: true,
-
+ 
         }
       },
       {
@@ -55,7 +56,6 @@ const Clientes = () => {
           
           slidesToShow: 1,
           slidesToScroll: 1,
-          centerMode: true, // Centra la imagen activa
  
 
         }
@@ -76,10 +76,11 @@ const Clientes = () => {
       <Box sx={{
         width: '100%',
         py: 8,
+          
         background: '#333333',
         color: 'white',
         textAlign: 'center',
-         
+         height:isNonMobileScreens?"100vh":"75vh"
       }}>
         <Slide direction="left" triggerOnce={false}>
           <Typography variant={isNonMobileScreens ? "h2" : "h4"} mb={5} fontWeight="700" fontFamily="Oswald, sans-serif">
@@ -88,33 +89,37 @@ const Clientes = () => {
         </Slide>
 
         <Box sx={{
-          width: isNonMobileScreens ? '75%' : "100%",
-          py: 12,
-          px: { xs: 10, sm: 10,md:20 },
-          mx: 'auto'
+          width: isNonMobileScreens ? '100%' : "100%",
+           
+          justifyContent:"center",
+          // py: 0, 
+            // px: { xs: 10, sm: 10,},
+          // padding:{ xs: 10, sm: 10,xl:30},
         }}>
           <Slider {...settings} className="custom-slider" sx={{}}>
             {images.map((image, index) => (
               <Box  key={index} sx={{
-                padding: 5,
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
+                
+                // margin: 15,
+                display:"flex",
+                flexDirection:"column",
                 transition: 'transform 0.3s ease-in-out',
                 marginTop: '20px',
-                paddingRight:isNonMobileScreens? "0px":'70px', // Agrega padding a la derecha de cada slide
-                paddingLeft:isNonMobileScreens? "0px":'70px', // Agrega padding a la izquierda de cada slide
+                // paddingRight:isNonMobileScreens? "0px":'70px',  
+                // paddingLeft:isNonMobileScreens? "0px":'70px',  
                 ':hover': {
                   transform: 'scale(1.05)'
                 }
               }}>
                 <img src={image} alt={`Empresa ${index + 1}`} style={{
-                  maxWidth: '100%',
-                  maxHeight: '200px', // Ajusta este valor según sea necesario
+                  // maxWidth: '50%',
+                  // maxHeight: '50%',  
+                  width: '50%',
+                  height: '50%',  
                   objectFit: 'contain',
                   borderRadius: "25px",
                   boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)'      ,
-                  margin: '0 15px' ,
+                  
                 }} />
               </Box>
             ))}
@@ -126,3 +131,7 @@ const Clientes = () => {
 };
 
 export default Clientes;
+
+
+    
+ 

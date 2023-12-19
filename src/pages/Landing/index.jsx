@@ -110,7 +110,7 @@ const Landing = () => {
         <Fade in={showTechX} timeout={500}>
           <Typography sx={{
             letterSpacing: "5px",
-            fontSize: xs ? "2rem" : "2.5rem",
+            fontSize: xs ? "3rem" : "3.5rem",
             paddingTop: xs ? "0rem" : "0rem",
             color: 'white',
             fontFamily: "'Oswald', sans-serif",
@@ -127,7 +127,7 @@ const Landing = () => {
              textAlign:   "center",
             textDecoration: 'none', 
             color: 'white',
-             fontSize: xs ? "3.5rem" : "4.5rem", 
+             fontSize: xs ? "4.5rem" : "5.5rem", 
              fontFamily: "'Oswald', sans-serif",
               fontWeight: "700"
           }} >

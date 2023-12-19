@@ -50,14 +50,14 @@ return (
           <Typography   style={{
             paddingTop: "50px",  
             textDecoration: 'none', color: 'white',   fontFamily: "'Oswald', sans-serif", fontWeight: "700"
-          }} sx={{ fontWeight: 700, fontSize: isNonMobileScreens?"70px":"10px", color: "white" }}>
+          }} sx={{ fontWeight: 700, fontSize: isNonMobileScreens?"3.75rem":"10px", color: "white" }}>
             Testimonios de nuestros clientes
           </Typography></Slide>
         <Grid container  rowSpacing={1} padding={5} columnSpacing={{ xs: 6, sm: 10, md: 10 }}>
           <Grid item xs={20} sm={4} >
             <Item><Typography
               style={{ textAlign: 'justify', fontFamily: "'Oswald', sans-serif" }}
-              sx={{ fontSize: "15px", color: "white", paddingTop: "100px" }}
+              sx={{ fontSize: "1.5rem", color: "white", paddingTop: "100px" }}
             > Boost your product and service's credibility by
             adding testimonials from your clients. People
             love recommendations so feedback from
@@ -66,7 +66,7 @@ return (
           <Grid item xs={20} sm={4} >
             <Item><Typography
               style={{ textAlign: 'justify', fontFamily: "'Oswald', sans-serif" }} // Añadido para justificar el texto
-              sx={{ fontSize: "15px", color: "white", paddingTop: "100px" }}
+              sx={{ fontSize: "1.5rem", color: "white", paddingTop: "100px" }}
             >Boost your product and service's credibility by
               adding testimonials from your clients. People
               love recommendations so feedback from
@@ -75,7 +75,7 @@ return (
           <Grid item xs={20} sm={4}>
             <Item><Typography
               style={{ textAlign: 'justify', fontFamily: "'Oswald', sans-serif" }}// Añadido para justificar el texto
-              sx={{ fontSize: "15px", color: "white", paddingTop: "100px" }}
+              sx={{ fontSize: "1.5rem", color: "white", paddingTop: "100px" }}
             >Boost your product and service's credibility by
               adding testimonials from your clients. People
               love recommendations so feedback from
@@ -98,7 +98,7 @@ return (
       <div>  
       <Box
       style={{
-        height: isNonMobileScreens?"100vh":"200vh",
+        height: isNonMobileScreens?"100vh":"150vh",
         display: "flex", // Añadido para activar flexbox
         flexDirection: "column", // Establece la dirección principal como vertical
         justifyContent: "flex-start", // Centra el contenido en el eje vertical
@@ -124,7 +124,7 @@ return (
         <Grid item xs={20} sm={20} >
           <Item><Typography
             style={{ textAlign: 'justify', fontFamily: "'Oswald', sans-serif" }}
-            sx={{ fontSize: "15px", color: "white", paddingTop: "100px" }}
+            sx={{ fontSize: "1.5rem", color: "white", paddingTop: "100px" }}
           > Boost your product and service's credibility by
           adding testimonials from your clients. People
           love recommendations so feedback from
@@ -136,7 +136,7 @@ return (
         <Grid item xs={20} sm={20}>
           <Item><Typography
             style={{ textAlign: 'justify', fontFamily: "'Oswald', sans-serif" }} // Añadido para justificar el texto
-            sx={{ fontSize: "15px", color: "white", paddingTop: "100px" }}
+            sx={{ fontSize: "1.5rem", color: "white", paddingTop: "100px" }}
           >Boost your product and service's credibility by
             adding testimonials from your clients. People
             love recommendations so feedback from
@@ -148,7 +148,7 @@ return (
         <Grid item xs={20} sm={20}>
           <Item><Typography
             style={{ textAlign: 'justify', fontFamily: "'Oswald', sans-serif" }}// Añadido para justificar el texto
-            sx={{ fontSize: "15px", color: "white", paddingTop: "100px" }}
+            sx={{ fontSize: "1.5rem", color: "white", paddingTop: "100px" }}
           >Boost your product and service's credibility by
             adding testimonials from your clients. People
             love recommendations so feedback from

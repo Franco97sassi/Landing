@@ -223,14 +223,13 @@ Todos los Derechos Reservados © 2023
     :
     // ------ Desktop ------
 
-    <Box sx={{display:"flex", justifyContent:"center", height:"100%", maxHeight:"293px", background:"#282828", paddingBottom:"320px"}}>
-<Box sx={{width:"1440px", display:"flex", alignItems:"center", height:"100%"}}>
-    <Grid container spacing={0}>
-      <Grid item xs={5}>
-        <Box sx={{background:"", display:"flex",  alignItems:"center", height:"293px"}}>
-    <Box sx={{display:"flex", flexDirection:"column", marginLeft:"13%", width:"100%"}}>
-    
+    <Box sx={{display:"flex",width:"100%",flexDirection:"row", justifyContent:"center", height:"100%", maxHeight:"293px", background:"#282828", paddingBottom:"0px"}}>
 
+
+    <Grid container spacing={2}>
+      <Grid item xs={4} >
+        <Box sx={{background:"", display:"flex",  alignItems:"center", height:"293px"}}>
+    <Box sx={{display:"flex", flexDirection:"column", marginLeft:"1rem", width:"100%"}}>
     <Typography
       variant="h6"
       style={{
@@ -247,50 +246,58 @@ Todos los Derechos Reservados © 2023
     >
       Contáctanos a través del   correo   desarollotechx@gmail.com
     </Typography>
-
-    <img style={{marginLeft:"83px",width:"200px", marginTop:"30px", cursor:"pointer"}} src={logo}></img>
- 
+    <img style={{marginLeft:"83px",width:"37%", marginTop:"30px", cursor:"pointer"}} src={logo}></img>
     </Box>
         </Box>
       </Grid>
 
-      <Grid item xs={3}>
-        <Box sx={{background:"", display:"flex", flexDirection:"column", height:"293px"}}>
-        <Typography variant="h6" style={{ marginLeft:"100px", fontStyle: 'normal',fontWeight: 400, lineHeight: '26px',fontSize: '14px',position: 'relative',marginTop:"40px", color:"#FFF",fontFamily: "'Oswald', sans-serif",}}>
+
+
+
+
+      <Grid item xs={2} >
+        <Box sx={{background:"",  display:"flex", flexDirection:"column",justifyContent:"center" ,alignContent:"center",textAlign:"right"  }}>
+        <Typography variant="h6" style={{  fontStyle: 'normal',fontWeight: 400, lineHeight: '26px',fontSize: '14px',position: 'relative',marginTop:"40px", color:"#FFF",fontFamily: "'Oswald', sans-serif",}}>
         Páginas Web
         </Typography>
-        <Typography variant="h6" style={{fontFamily: "'Oswald', sans-serif", marginLeft:"100px",fontFamily: 'Rubik',fontSize: '14px',fontStyle: 'normal',fontWeight: 400, lineHeight: '26px',position: 'relative', color:"#FFF",fontFamily: "'Oswald', sans-serif",}}>
+        <Typography variant="h6" style={{fontFamily: "'Oswald', sans-serif", fontFamily: 'Rubik',fontSize: '14px',fontStyle: 'normal',fontWeight: 400, lineHeight: '26px',position: 'relative', color:"#FFF",fontFamily: "'Oswald', sans-serif",}}>
         Aplicaciones Móviles
         </Typography>
          
-        <Typography variant="h6" style={{fontFamily: "'Oswald', sans-serif", marginLeft:"100px",fontFamily: 'Rubik',fontSize: '14px',fontStyle: 'normal',fontWeight: 400, lineHeight: '26px',position: 'relative', color:"#FFF",fontFamily: "'Oswald', sans-serif",}}>
+        <Typography variant="h6" style={{fontFamily: "'Oswald', sans-serif", fontFamily: 'Rubik',fontSize: '14px',fontStyle: 'normal',fontWeight: 400, lineHeight: '26px',position: 'relative', color:"#FFF",fontFamily: "'Oswald', sans-serif",}}>
         Inteligencia Artificial
         </Typography>
-        <Typography variant="h6" style={{fontFamily: "'Oswald', sans-serif",marginLeft:"100px",fontFamily: 'Rubik',fontSize: '14px',fontStyle: 'normal',fontWeight: 400, lineHeight: '26px',position: 'relative', color:"#FFF",fontFamily: "'Oswald', sans-serif",}}>
+        <Typography variant="h6" style={{fontFamily: "'Oswald', sans-serif",fontFamily: 'Rubik',fontSize: '14px',fontStyle: 'normal',fontWeight: 400, lineHeight: '26px',position: 'relative', color:"#FFF",fontFamily: "'Oswald', sans-serif",}}>
         Ecommerce 
         </Typography>
-        <Typography variant="h6" style={{fontFamily: "'Oswald', sans-serif",marginLeft:"100px",fontFamily: 'Rubik',fontSize: '14px',fontStyle: 'normal',fontWeight: 400, lineHeight: '26px',position: 'relative', color:"#FFF",fontFamily: "'Oswald', sans-serif",}}>
+        <Typography variant="h6" style={{fontFamily: "'Oswald', sans-serif",fontFamily: 'Rubik',fontSize: '14px',fontStyle: 'normal',fontWeight: 400, lineHeight: '26px',position: 'relative', color:"#FFF",fontFamily: "'Oswald', sans-serif",}}>
         Web Scraping 
         </Typography>
-        <Typography variant="h6" style={{fontFamily: "'Oswald', sans-serif",marginLeft:"100px",fontFamily: 'Rubik',fontSize: '14px',fontStyle: 'normal',fontWeight: 400, lineHeight: '26px',position: 'relative', color:"#FFF",fontFamily: "'Oswald', sans-serif",}}>
+         
+         </Box></Grid>
+        <Grid item xs={2} >       
+          <Box sx={{background:"",  display:"flex",alignContent:"center", flexDirection:"column",justifyContent:"center" ,pt:5}}>
+          <Typography variant="h6" style={{fontFamily: "'Oswald', sans-serif",fontFamily: 'Rubik',fontSize: '14px',fontStyle: 'normal',fontWeight: 400, lineHeight: '26px',position: 'relative', color:"#FFF",fontFamily: "'Oswald', sans-serif",}}>
         Control de Stock  
         </Typography>
-        <Typography variant="h6" style={{fontFamily: "'Oswald', sans-serif",marginLeft:"100px",fontFamily: 'Rubik',fontSize: '14px',fontStyle: 'normal',fontWeight: 400, lineHeight: '26px',position: 'relative', color:"#FFF",fontFamily: "'Oswald', sans-serif",}}>
+         
+        <Typography variant="h6" style={{fontFamily: "'Oswald', sans-serif",fontFamily: 'Rubik',fontSize: '14px',fontStyle: 'normal',fontWeight: 400, lineHeight: '26px',position: 'relative', color:"#FFF",fontFamily: "'Oswald', sans-serif",}}>
         Bots Personalizados
         </Typography>
-        <Typography variant="h6" style={{fontFamily: "'Oswald', sans-serif",marginLeft:"100px",fontFamily: 'Rubik',fontSize: '14px',fontStyle: 'normal',fontWeight: 400, lineHeight: '26px',position: 'relative', color:"#FFF",fontFamily: "'Oswald', sans-serif",}}>
+        <Typography variant="h6" style={{fontFamily: "'Oswald', sans-serif",fontFamily: 'Rubik',fontSize: '14px',fontStyle: 'normal',fontWeight: 400, lineHeight: '26px',position: 'relative', color:"#FFF",fontFamily: "'Oswald', sans-serif",}}>
         Mantenimiento 
         </Typography>
-        <Typography variant="h6" style={{fontFamily: "'Oswald', sans-serif",marginLeft:"100px",fontFamily: 'Rubik',fontSize: '14px',fontStyle: 'normal',fontWeight: 400, lineHeight: '26px',position: 'relative', color:"#FFF",fontFamily: "'Oswald', sans-serif",}}>
+        <Typography variant="h6" style={{fontFamily: "'Oswald', sans-serif",fontFamily: 'Rubik',fontSize: '14px',fontStyle: 'normal',fontWeight: 400, lineHeight: '26px',position: 'relative', color:"#FFF",fontFamily: "'Oswald', sans-serif",}}>
         Automatización de Procesos 
         </Typography>
-        <Typography variant="h6" style={{fontFamily: "'Oswald', sans-serif",marginLeft:"100px",fontFamily: 'Rubik',fontSize: '14px',fontStyle: 'normal',fontWeight: 400, lineHeight: '26px',position: 'relative', color:"#FFF",fontFamily: "'Oswald', sans-serif"}}  >
+        <Typography variant="h6" style={{fontFamily: "'Oswald', sans-serif",fontFamily: 'Rubik',fontSize: '14px',fontStyle: 'normal',fontWeight: 400, lineHeight: '26px',position: 'relative', color:"#FFF",fontFamily: "'Oswald', sans-serif"}}  >
         MarketPlace
         </Typography>
 
           
         </Box>
       </Grid>
+      
       <Grid item xs={4}>
       <Box sx={{background:"", display:"flex",  alignItems:"center", height:"293px", background:"",justifyContent:"end", marginRight:"13%"}}>
     <Box sx={{display:"flex", flexDirection:"column", width:"100%", maxWidth:"204px", background:"", }}>
@@ -342,7 +349,7 @@ Todos los Derechos Reservados © 2023
         </Box>
       </Grid>
     </Grid>
-    </Box>
+    
 </Box>
 }
 

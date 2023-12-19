@@ -67,9 +67,9 @@ const Contacto = () => {
           height: '100%', 
           flexDirection: isNonMobileScreens ? 'column' : 'row' 
         }}>
-          <Grid item xs={6} xl={6} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+          <Grid item xs={12} md={6} xl={6} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <Box style={{ border: "5px solid white", padding: "10px", marginBottom: "10px", width: "300px" }}>
-              <Typography sx={{ fontSize: "25px", color: "white", mb: 3, fontFamily: "'Oswald', sans-serif" }} >
+              <Typography sx={{ fontSize: "1.5rem", color: "white", mb: 3, fontFamily: "'Oswald', sans-serif" }} >
                 Redes Sociales
               </Typography>
               <Box sx={{ marginLeft: "65px", display: "flex", alignItems: "center", mb: 3, width: "100%", maxWidth: "126px", justifyContent: "space-evenly" }}>
@@ -114,15 +114,15 @@ const Contacto = () => {
                 TechX
               </Typography>
               <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', }}>
-                <Typography sx={{ color: "white", mb: 2, fontFamily: "'Oswald', sans-serif" }}>
+                <Typography sx={{ color: "white", mb: 2, fontFamily: "'Oswald', sans-serif",fontSize: "1rem" }}>
                   <LocationOnIcon sx={{ mr: 1, position: 'relative', top: '5px', }} />
                   México
                 </Typography>
-                <Typography sx={{ color: "white", mb: 2, fontFamily: "'Oswald', sans-serif" }}>
+                <Typography sx={{ color: "white", mb: 2, fontFamily: "'Oswald', sans-serif",fontSize: "1rem" }}>
                   <PhoneIcon sx={{ mr: 1, position: 'relative', top: '5px', }} />
                   +52 662 2297062
                 </Typography>
-                <Typography sx={{ color: "white", mb: 2, fontFamily: "'Oswald', sans-serif" }}>
+                <Typography sx={{ color: "white", mb: 2, fontFamily: "'Oswald', sans-serif",fontSize: "1rem" }}>
                   <EmailIcon sx={{ mr: 1, position: 'relative', top: '5px', }} />
                   desarollotechx@gmail.com
                 </Typography>
@@ -131,7 +131,7 @@ const Contacto = () => {
             </Box>
           </Grid>
           
-          <Grid item xs={7} md={6} xl={6} sx={{marginTop:"10px", display: 'flex', flexDirection: 'column', justifyItems: "center", alignItems: 'center',marginBottom:"20px" }}>
+          <Grid item xs={12} md={6} xl={6} sx={{marginTop:"10px", display: 'flex', flexDirection: 'column', justifyItems: "center", alignItems: 'center',marginBottom:"20px" }}>
             <Box sx={{ display: 'flex', alignItems: 'center' , flexDirection: 'column', height: "475px", position: 'relative', background: "#CCCCCC", borderRadius: '50px', border: "1px solid white", padding: "10px", marginBottom: "10px", width: "300px" }}>
               <AccountCircleIcon sx={{ fontSize: 50, color: '#333333', mt: 2, }} />
               <Stack spacing={2} sx={{ width: '100%', marginTop: "50px"  }}>
@@ -156,7 +156,7 @@ const Contacto = () => {
                   />
 
                   <TextField
-                    sx={{marginLeft:"30px",marginBottom:"1rem",
+                    sx={{marginLeft:"30px",marginBottom:"1rem", 
                       background: "#D3D3D3",
                       borderRadius: "15px",
                       '& .MuiOutlinedInput-root': {
