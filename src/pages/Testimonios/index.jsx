@@ -40,7 +40,7 @@ return (
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           backgroundSize: "cover",
-          paddingTop: "50px",
+          paddingTop: "0px",
           textAlign: 'justify',
         }}
       >
@@ -57,7 +57,7 @@ return (
           <Grid item xs={20} sm={4} >
             <Item><Typography
               style={{ textAlign: 'justify', fontFamily: "'Oswald', sans-serif" }}
-              sx={{ fontSize: "1.5rem", color: "white", paddingTop: "100px" }}
+              sx={{ fontSize: "1.5rem", color: "white", paddingTop: "50px" }}
             > Boost your product and service's credibility by
             adding testimonials from your clients. People
             love recommendations so feedback from
@@ -66,7 +66,7 @@ return (
           <Grid item xs={20} sm={4} >
             <Item><Typography
               style={{ textAlign: 'justify', fontFamily: "'Oswald', sans-serif" }} // Añadido para justificar el texto
-              sx={{ fontSize: "1.5rem", color: "white", paddingTop: "100px" }}
+              sx={{ fontSize: "1.5rem", color: "white", paddingTop: "50px" }}
             >Boost your product and service's credibility by
               adding testimonials from your clients. People
               love recommendations so feedback from
@@ -75,7 +75,7 @@ return (
           <Grid item xs={20} sm={4}>
             <Item><Typography
               style={{ textAlign: 'justify', fontFamily: "'Oswald', sans-serif" }}// Añadido para justificar el texto
-              sx={{ fontSize: "1.5rem", color: "white", paddingTop: "100px" }}
+              sx={{ fontSize: "1.5rem", color: "white", paddingTop: "50px" }}
             >Boost your product and service's credibility by
               adding testimonials from your clients. People
               love recommendations so feedback from
@@ -98,7 +98,7 @@ return (
       <div>  
       <Box
       style={{
-        height: isNonMobileScreens?"100vh":"150vh",
+        height: isNonMobileScreens?"100vh":"100%",
         display: "flex", // Añadido para activar flexbox
         flexDirection: "column", // Establece la dirección principal como vertical
         justifyContent: "flex-start", // Centra el contenido en el eje vertical

@@ -246,7 +246,7 @@ Todos los Derechos Reservados © 2023
     >
       Contáctanos a través del   correo   desarollotechx@gmail.com
     </Typography>
-    <img style={{marginLeft:"83px",width:"37%", marginTop:"30px", cursor:"pointer"}} src={logo}></img>
+    <img style={{marginLeft:"83px",width:"37%", marginTop:"10px", cursor:"pointer"}} src={logo}></img>
     </Box>
         </Box>
       </Grid>
@@ -255,7 +255,7 @@ Todos los Derechos Reservados © 2023
 
 
 
-      <Grid item xs={2} >
+      <Grid item xs={2} sx={{marginTop:"50px"}} >
         <Box sx={{background:"",  display:"flex", flexDirection:"column",justifyContent:"center" ,alignContent:"center",textAlign:"right"  }}>
         <Typography variant="h6" style={{  fontStyle: 'normal',fontWeight: 400, lineHeight: '26px',fontSize: '14px',position: 'relative',marginTop:"40px", color:"#FFF",fontFamily: "'Oswald', sans-serif",}}>
         Páginas Web
@@ -275,7 +275,7 @@ Todos los Derechos Reservados © 2023
         </Typography>
          
          </Box></Grid>
-        <Grid item xs={2} >       
+        <Grid item xs={2} sx={{marginTop:"50px"}} >       
           <Box sx={{background:"",  display:"flex",alignContent:"center", flexDirection:"column",justifyContent:"center" ,pt:5}}>
           <Typography variant="h6" style={{fontFamily: "'Oswald', sans-serif",fontFamily: 'Rubik',fontSize: '14px',fontStyle: 'normal',fontWeight: 400, lineHeight: '26px',position: 'relative', color:"#FFF",fontFamily: "'Oswald', sans-serif",}}>
         Control de Stock  

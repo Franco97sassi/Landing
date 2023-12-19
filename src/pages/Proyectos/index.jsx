@@ -130,7 +130,7 @@ const Proyectos = () => {
 
   return (
     <div id="proyectos">
-      <Box sx={{ background: '#333333', height: isNonMobileScreens?"100vh":"100vh",    }}  >
+      <Box sx={{ background: '#333333', height: isNonMobileScreens?"100%":"100%",    }}  >
         <Slide direction="left" triggerOnce={false}>
           <Typography variant={isNonMobileScreens?"h2":"h4"} style={{ color: "white", fontWeight: 700, fontFamily: "'Oswald', sans-serif" }} sx={{ display: "flex", paddingTop: "50px", justifyContent: "center", paddingBottom: "50px" }}>
             Proyectos
@@ -189,9 +189,9 @@ const Proyectos = () => {
                       height: '100%',
                      }}>
                       <Typography style={{
-                        color: "white",paddingTop:isNonMobileScreens ?"0px":"1000px",
-                        fontFamily: 'Oswald, sans-serif',
-                      }} variant="h4" gutterBottom>
+                        color: "white",paddingTop:isNonMobileScreens ?"0px":"000px",
+                        fontFamily: 'Oswald, sans-serif',textAlign:isNonMobileScreens ?"justify":"center"
+                      }} variant={isNonMobileScreens?"h4":"h6"}  gutterBottom>
                         {project.nombre}
                       </Typography>
                       <Typography style={{

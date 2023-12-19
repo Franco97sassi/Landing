@@ -43,7 +43,7 @@ const Estadisticas = () => {
       {/*Estadisticas */}
       {isNonMobileScreens? ( 
 <div>
-  <Box sx={{          height: isNonMobileScreens?"45vh":"125vh",
+  <Box sx={{          height:  "100%" 
 }}>
 
    
@@ -170,7 +170,7 @@ const Estadisticas = () => {
       </div>
       ):( 
         <div>
-          <Box sx={{height:"100vh"}}> 
+          <Box sx={{height:"100%"}}> 
        <Box
        sx={{
          width: '100%',

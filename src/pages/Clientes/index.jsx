@@ -47,7 +47,7 @@ const Clientes = () => {
           slidesToScroll: 3,
           infinite: true,
           dots: true,
- 
+          centerMode:true,
         }
       },
       {
@@ -56,7 +56,7 @@ const Clientes = () => {
           
           slidesToShow: 1,
           slidesToScroll: 1,
- 
+          centerMode:true
 
         }
       },
@@ -65,6 +65,7 @@ const Clientes = () => {
         settings: {
           slidesToShow: 1, // Muestra 1 slide en pantallas muy pequeñas
           slidesToScroll: 1,
+          centerMode:true, 
          }
       }
     ]
@@ -76,11 +77,11 @@ const Clientes = () => {
       <Box sx={{
         width: '100%',
         py: 8,
-          
+          px:4,
         background: '#333333',
         color: 'white',
         textAlign: 'center',
-         height:isNonMobileScreens?"100vh":"75vh"
+         height:isNonMobileScreens?"100vh":"75vh" 
       }}>
         <Slide direction="left" triggerOnce={false}>
           <Typography variant={isNonMobileScreens ? "h2" : "h4"} mb={5} fontWeight="700" fontFamily="Oswald, sans-serif">
@@ -91,20 +92,22 @@ const Clientes = () => {
         <Box sx={{
           width: isNonMobileScreens ? '100%' : "100%",
            
-          justifyContent:"center",
+          justifyContent:"space-evenly",
           // py: 0, 
-            // px: { xs: 10, sm: 10,},
+             px: { xs: 1, sm: 1},
           // padding:{ xs: 10, sm: 10,xl:30},
         }}>
-          <Slider {...settings} className="custom-slider" sx={{}}>
+          <Slider {...settings} className="custom-slider"   sx={{}}>
             {images.map((image, index) => (
               <Box  key={index} sx={{
-                
                 // margin: 15,
+                width: isNonMobileScreens?'50%':"100%",
+                  height: isNonMobileScreens?'50%':"100%",  
+                  
                 display:"flex",
                 flexDirection:"column",
                 transition: 'transform 0.3s ease-in-out',
-                marginTop: '20px',
+                marginTop: '20px', 
                 // paddingRight:isNonMobileScreens? "0px":'70px',  
                 // paddingLeft:isNonMobileScreens? "0px":'70px',  
                 ':hover': {
@@ -114,12 +117,12 @@ const Clientes = () => {
                 <img src={image} alt={`Empresa ${index + 1}`} style={{
                   // maxWidth: '50%',
                   // maxHeight: '50%',  
-                  width: '50%',
-                  height: '50%',  
+                  width: isNonMobileScreens?'50%':"100%",
+                  height: isNonMobileScreens?'50%':"100%",  
                   objectFit: 'contain',
                   borderRadius: "25px",
                   boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)'      ,
-                  
+                 
                 }} />
               </Box>
             ))}
