@@ -132,13 +132,13 @@ const Proyectos = () => {
     <div id="proyectos">
       <Box sx={{ background: '#333333', height: isNonMobileScreens?"100%":"100%",    }}  >
         <Slide direction="left" triggerOnce={false}>
-          <Typography variant={isNonMobileScreens?"h2":"h4"} style={{ color: "white", fontWeight: 700, fontFamily: "'Oswald', sans-serif" }} sx={{ display: "flex", paddingTop: "50px", justifyContent: "center", paddingBottom: "50px" }}>
+          <Typography variant={isNonMobileScreens?"h2":"h4"} style={{ color: "white", fontWeight: 700, fontFamily: "'Oswald', sans-serif" }} sx={{ display: "flex", paddingTop:isNonMobileScreens? "100px":"100px", justifyContent: "center", paddingBottom: "50px" }}>
             Proyectos
-          </Typography></Slide>
+          </Typography>  
+          </Slide> 
 
 
-
-        <Carousel
+ <Carousel
           autoPlay={true}
           interval={5000}
           animation="slide"
@@ -198,6 +198,7 @@ const Proyectos = () => {
                         color: "white",fontSize:isNonMobileScreens ?"1rem":"0.5rem",
                         fontFamily: 'Oswald, sans-serif',
                         textAlign: 'justify'  , 
+                        display:isNonMobileScreens?"block":"none"
                       }} gutterBottom>
                         {project.description}
                       </Typography>
@@ -208,7 +209,7 @@ const Proyectos = () => {
               ))}
             </Grid>
           ))}
-        </Carousel>
+        </Carousel>  
       </Box>
       {/* email */}
 

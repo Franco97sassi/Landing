@@ -52,7 +52,7 @@ const Contacto = () => {
     <div>
       {/* email */}
 
-      <Box sx={{  height: isNonMobileScreens?"100%":"200vh", background: 'black' }}>
+      <Box sx={{  height: isNonMobileScreens?"100%":"100%", background: 'black',paddingBottom:"1rem" }}>
         <Slide direction="left" triggerOnce={false}>
           <Typography variant={isNonMobileScreens?"h2":"h4"}  style={{ color: "white", fontFamily: "'Oswald', sans-serif", fontWeight: "700" }} sx={{ display: "flex",alignContent:"center", justifyContent: "center", paddingTop: "50px" }}>
             Contáctanos
@@ -64,10 +64,10 @@ const Contacto = () => {
         justifyContent={isNonMobileScreens ? "center" : "center"} 
         alignItems={isNonMobileScreens ? "center" : "center"} 
         style={{ 
-          height: '100%', 
+          // height: isNonMobileScreens ?  "100%":"50%" ,
           flexDirection: isNonMobileScreens ? 'row' : 'row' 
         }}>
-          <Grid item xs={12} md={6} xl={6} style={{ display: 'flex', flexDirection: 'column',alignContent:"center", alignItems: 'center' }}>
+          <Grid item xs={12} md={6} xl={6} style={{marginTop:"1.5rem", display: 'flex', flexDirection: 'column',alignContent:"center", alignItems: 'center'  }}>
             <Box style={{ border: "5px solid white", padding: "10px", marginBottom: "10px", width: "300px" }}>
               <Typography sx={{ fontSize: "1.5rem", color: "white", mb: 3, fontFamily: "'Oswald', sans-serif" }} >
                 Redes Sociales
@@ -76,7 +76,7 @@ const Contacto = () => {
                 <a href="https://www.facebook.com/profile.php?id=100093530245392">
                   <img style={{ width: "27px", marginTop: "0px", cursor: "pointer" }} src={icono2}></img></a>
                 <a href="https://www.instagram.com/techx_mx/?hl=es">
-                   <img style={{ width: "33px", marginTop: "0px", cursor: "pointer" }} src={linkedinFooterImg}></img></a>
+                   <img style={{ width: "27px", marginTop: "0px", cursor: "pointer" }} src={linkedinFooterImg}></img></a>
 
 
               </Box>
@@ -110,10 +110,10 @@ const Contacto = () => {
           </Grid>
           
           
-          <Grid item xs={12} md={6} xl={6} sx={{marginTop:"10px", display: 'flex', flexDirection: 'column', justifyItems: "center", alignItems: 'center',marginBottom:"20px" }}>
+          <Grid item xs={12} md={6} xl={6} sx={{marginTop:"2rem", display: 'flex', flexDirection: 'column', justifyItems: "center", alignItems: 'center',marginBottom:"0px" }}>
             <Box sx={{ display: 'flex', alignItems: 'center' , flexDirection: 'column', height: "475px", position: 'relative', background: "#CCCCCC", borderRadius: '50px', border: "1px solid white", padding: "10px", marginBottom: "10px", width: "300px" }}>
               <AccountCircleIcon sx={{ fontSize: 50, color: '#333333', mt: 2, }} />
-              <Stack spacing={2} sx={{ width: '100%', marginTop: "50px"  }}>
+              <Stack spacing={0} sx={{ width: '100%', marginTop: "50px"  }}>
                 <form  ref={form} onSubmit={sendEmail} >
                   <TextField
                     sx={{marginLeft:"30px",marginBottom:"1rem",

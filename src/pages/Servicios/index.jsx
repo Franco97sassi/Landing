@@ -124,11 +124,11 @@ const Servicios = () => {
     <div id="servicios">
               <Slide direction="left" triggerOnce={false} in={inView}> 
 
-    <Typography  variant={isNonMobileScreens?"h2":"h4"} style={{fontWeight: 700, fontFamily: "'Oswald', sans-serif",textAlign:"center"  }}  sx={{paddingTop:isNonMobileScreens?"25px":"50px",  color:"white", display: "flex", justifyContent: "center", paddingBottom: isNonMobileScreens?"80px":"60px"  }}>
+    <Typography  variant={isNonMobileScreens?"h2":"h4"} style={{fontWeight: 700, fontFamily: "'Oswald', sans-serif",textAlign:"center"  }}  sx={{paddingTop:isNonMobileScreens?"100px":"100px",  color:"white", display: "flex", justifyContent: "center", paddingBottom: isNonMobileScreens?"0px":"60px"  }}>
       ¿Qué podemos hacer por ti?
     </Typography> </Slide>
 
-    <Grid sx={{background: 'black'  }} marginTop={-25} 
+    <Grid sx={{background: 'black'  }} marginTop={-25} paddingTop='100px'
      container justifyContent={isNonMobileScreens ? "center" : "center"}  columnSpacing={20} rowSpacing={20} 
      paddingBottom='200px' paddingRight={isNonMobileScreens?"0px":"50px"} paddingLeft={isNonMobileScreens?"0px":"50px"} columns={{ xs: 0, sm: 8, md: 10, lg: 14 }}>
      

@@ -50,7 +50,7 @@ import "./styles.css"
    return (
     <Box className="ticker-wrap" sx={{
       display: "flex", 
-      height: isNonMobileScreens ? "70vh" : "50vh",
+      height: isNonMobileScreens ? "25vh" : "25vh",
       flexDirection: "row",
       justifyContent: "center",
       alignItems: "center"

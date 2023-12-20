@@ -201,7 +201,7 @@ const Estadisticas = () => {
      </Box>
      
      <Box sx={{
-       paddingBottom: "300px",
+       paddingBottom: "3rem",
        width: '100%',
        height: "100%",
        display: 'flex',
