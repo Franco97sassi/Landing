@@ -37,7 +37,7 @@ import Servicios from '../Servicios';
     // Agrega las URL de las imágenes restantes aquí
   ];
 
-  const chunkSize = 3;
+  const chunkSize = isNonMobileScreens ? 3 : 1;
   const [currentChunk, setCurrentChunk] = useState(0);
   const [inView, setInView] = useState(false);
 
@@ -58,7 +58,7 @@ import Servicios from '../Servicios';
     <div id="nosotros">
       <Box sx={{ background: 'white' }}>
         <Slide direction="left" triggerOnce={false} in={inView}>
-          <Typography  variant={isNonMobileScreens?"h2":"h4"} sx={{ paddingTop:isNonMobileScreens?"0px": "50px",display: "flex", justifyContent: "center",   fontWeight: 700, fontFamily: "'Oswald', sans-serif", color: 'black' }}>
+          <Typography  variant={isNonMobileScreens?"h2":"h4"} sx={{ paddingTop:isNonMobileScreens?"25px": "50px",display: "flex", justifyContent: "center",   fontWeight: 700, fontFamily: "'Oswald', sans-serif", color: 'black' }}>
             Nuestro Equipo
           </Typography>
         </Slide>

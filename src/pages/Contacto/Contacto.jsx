@@ -52,22 +52,22 @@ const Contacto = () => {
     <div>
       {/* email */}
 
-      <Box sx={{  height: isNonMobileScreens?"125vh":"200vh", background: 'black' }}>
+      <Box sx={{  height: isNonMobileScreens?"100%":"200vh", background: 'black' }}>
         <Slide direction="left" triggerOnce={false}>
-          <Typography variant={isNonMobileScreens?"h2":"h4"}  style={{ color: "white", fontFamily: "'Oswald', sans-serif", fontWeight: "700" }} sx={{ display: "flex", justifyContent: "center", paddingTop: "50px" }}>
+          <Typography variant={isNonMobileScreens?"h2":"h4"}  style={{ color: "white", fontFamily: "'Oswald', sans-serif", fontWeight: "700" }} sx={{ display: "flex",alignContent:"center", justifyContent: "center", paddingTop: "50px" }}>
             Contáctanos
           </Typography>
         </Slide>
         <Grid container 
         rowSpacing={1} 
-        columnSpacing={{ xs: 0, sm: 6, md: 6  }} 
+        columnSpacing={{ xs: 12, sm: 6, md: 6 }} 
         justifyContent={isNonMobileScreens ? "center" : "center"} 
         alignItems={isNonMobileScreens ? "center" : "center"} 
         style={{ 
           height: '100%', 
-          flexDirection: isNonMobileScreens ? 'column' : 'row' 
+          flexDirection: isNonMobileScreens ? 'row' : 'row' 
         }}>
-          <Grid item xs={12} md={6} xl={6} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+          <Grid item xs={12} md={6} xl={6} style={{ display: 'flex', flexDirection: 'column',alignContent:"center", alignItems: 'center' }}>
             <Box style={{ border: "5px solid white", padding: "10px", marginBottom: "10px", width: "300px" }}>
               <Typography sx={{ fontSize: "1.5rem", color: "white", mb: 3, fontFamily: "'Oswald', sans-serif" }} >
                 Redes Sociales
@@ -82,29 +82,7 @@ const Contacto = () => {
               </Box>
 
 
-              <Box sx={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-                height: "100%",  // Asegura que el contenedor ocupe toda la altura
-              }}>
-                <Button sx={{
-                  fontFamily: "'Oswald', sans-serif",
-                  borderColor: "white",
-                  borderWidth: "2px",
-                  borderStyle: "solid",
-                  borderRadius: "15px",
-                  color: "white",
-                  background: 'black',
-                  width: "220px",
-                  margin: "auto",  // Centrar horizontalmente
-                  marginTop: "10px",  // Agregar espacio en la parte superior
-
-                }}>
-                  Etiquetanos en tu historia
-                </Button>
-              </Box>
+              
 
 
 
@@ -130,6 +108,7 @@ const Contacto = () => {
 
             </Box>
           </Grid>
+          
           
           <Grid item xs={12} md={6} xl={6} sx={{marginTop:"10px", display: 'flex', flexDirection: 'column', justifyItems: "center", alignItems: 'center',marginBottom:"20px" }}>
             <Box sx={{ display: 'flex', alignItems: 'center' , flexDirection: 'column', height: "475px", position: 'relative', background: "#CCCCCC", borderRadius: '50px', border: "1px solid white", padding: "10px", marginBottom: "10px", width: "300px" }}>

@@ -107,9 +107,19 @@ const Sobre = () => {
           </Typography>
         </Box>
       </Slide>
-                  <Typography sx={{  color: "black", fontSize:isNonMobileScreens? "1.5rem":"1rem", fontFamily: 'Oswald, sans-serif' }}>
+               { isNonMobileScreens? (
+               <div> 
+               <Typography sx={{  color: "black", fontSize:isNonMobileScreens? "1.5rem":"1rem", fontFamily: 'Oswald, sans-serif' }}>
                     Somos una empresa de desarrollo de software.<br /> Contamos con <span style={{ fontWeight: "bold" }}>desarrolladores capacitados en diversos requerimientos</span>.<br /> Nos enfocamos en <span style={{ fontWeight: "bold" }}>brindar soluciones tecnológicas a empresas que buscan innovación tecnológica, automatización y optimización en sus operaciones diarias</span>.
                   </Typography>
+                  </div> 
+                  ):( 
+                    <div>   
+                  <Typography sx={{  color: "black", fontSize:isNonMobileScreens? "1.5rem":"1rem", fontFamily: 'Oswald, sans-serif' }}>
+                    Somos una empresa de desarrollo de software.Contamos con <span style={{ fontWeight: "bold" }}>desarrolladores capacitados en diversos requerimientos</span>.Nos enfocamos en <span style={{ fontWeight: "bold" }}>brindar soluciones tecnológicas a empresas que buscan innovación tecnológica, automatización y optimización en sus operaciones diarias</span>.
+                  </Typography>
+                  </div> 
+                  )}   
                 </Box>
               </Slide>
             </Item>

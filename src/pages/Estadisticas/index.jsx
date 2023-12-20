@@ -79,9 +79,8 @@ const Estadisticas = () => {
       </Box>
       
       <Box sx={{
-        paddingBottom: "300px",
         width: '100%',
-        height: isNonMobileScreens?"75vh":"100vh",
+        height: isNonMobileScreens?"100%":"100%",
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
@@ -204,7 +203,7 @@ const Estadisticas = () => {
      <Box sx={{
        paddingBottom: "300px",
        width: '100%',
-       height: "90vh",
+       height: "100%",
        display: 'flex',
        flexDirection: 'column',
        

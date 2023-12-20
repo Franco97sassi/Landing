@@ -31,10 +31,10 @@ return (
 {isNonMobileScreens? ( 
 <Box
         style={{
-          height: isNonMobileScreens?"100vh":"200vh",
+          height: isNonMobileScreens?"100%":"200vh",
           display: "flex", // Añadido para activar flexbox
           flexDirection: "column", // Establece la dirección principal como vertical
-          justifyContent: "flex-start", // Centra el contenido en el eje vertical
+          justifyContent: "center", // Centra el contenido en el eje vertical
           alignItems: "center", // Centra el contenido en el eje horizontal
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${fondo2})`,
           backgroundRepeat: "no-repeat",
