@@ -1,9 +1,12 @@
 // import { Box, Grid, Typography } from '@mui/material';
 // import React from 'react';
-import icono1 from "../../assets/icono1.png";
+import icono1 from "../../assets/qw.png";
 import icono2 from "../../assets/face.png";
 import whatsapp from "../../assets/t.png";
 
+import a1 from "../../assets/a2.png";
+import b2 from "../../assets/b2.png";
+import c3 from "../../assets/c3.png";
 
 
 import React from 'react';
@@ -104,11 +107,11 @@ const Footer = () => {
 
                       <Box sx={{ display: "flex", alignItems: "center", width: "100%", justifyContent: "space-between" }}>
                         <a href="https://www.facebook.com/profile.php?id=100093530245392">
-                          <img style={{ width: "27px", marginTop: "27px",  cursor: "pointer" }} src={icono2}></img></a>
+                          <img style={{ width: "27px", marginTop: "27px",  cursor: "pointer" }} src={a1}></img></a>
                         <a href="https://api.whatsapp.com/send?phone=526622297062" target="_blank">
-                          <img style={{ width: "27px", marginTop: "27px",  cursor: "pointer" }} src={whatsapp}></img>
+                          <img style={{ width: "27px", marginTop: "27px",  cursor: "pointer" }} src={b2}></img>
                         </a>
-                        <a href="https://www.instagram.com/techx_mx/?hl=es"> <img style={{ width: "27px", marginTop: "27px", cursor: "pointer" }} src={linkedinFooterImg}></img></a>
+                        <a href="https://www.instagram.com/techx_mx/?hl=es"> <img style={{ width: "27px", marginTop: "27px", cursor: "pointer" }} src={c3}></img></a>
 
                       </Box>
 
@@ -333,11 +336,11 @@ const Footer = () => {
 
                   <Box sx={{ display: "flex", alignItems: "center", width: "100%", justifyContent: "space-between" }}>
                     <a href="https://www.facebook.com/profile.php?id=100093530245392">
-                      <img style={{ width: "27px", marginTop: "27px", marginTop: "30px", cursor: "pointer" }} src={icono2}></img></a>
+                      <img style={{ width: "27px", marginTop: "27px", marginTop: "30px", cursor: "pointer" }} src={a1}></img></a>
                     <a href="https://api.whatsapp.com/send?phone=526622297062" target="_blank">
-                      <img style={{ width: "27px", marginTop: "27px", cursor: "pointer" }} src={whatsapp}></img>
+                      <img style={{ width: "27px", marginTop: "27px", cursor: "pointer" }} src={b2}></img>
                     </a>
-                    <a href="https://www.instagram.com/techx_mx/?hl=es"> <img style={{ width: "27px", marginTop: "27px", cursor: "pointer" }} src={linkedinFooterImg}></img></a>
+                    <a href="https://www.instagram.com/techx_mx/?hl=es"> <img style={{ width: "27px", marginTop: "27px", cursor: "pointer" }} src={c3}></img></a>
 
                   </Box>
 

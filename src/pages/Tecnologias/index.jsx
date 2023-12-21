@@ -43,14 +43,14 @@ import "./styles.css"
    const tecnologiasDuplicadas = Array(5).fill(tecnologias).flat();
    const renderCarouselItem = (item) => (
     <Box key={item.nombre} sx={{ textAlign: 'center' }}>
-      <img src={item.imageUrl} alt={item.nombre} style={{ height: '75px', width: 'auto' }} />
+      <img src={item.imageUrl} alt={item.nombre} style={{ height: '100%', width: '100%' }} />
       
     </Box>
   );
    return (
     <Box className="ticker-wrap" sx={{
       display: "flex", 
-      height: isNonMobileScreens ? "25vh" : "25vh",
+      height: isNonMobileScreens ? "25vh" : "50vh",
       flexDirection: "row",
       justifyContent: "center",
       alignItems: "center"
@@ -60,13 +60,13 @@ import "./styles.css"
         <div className="ticker">
           {tecnologiasDuplicadas.map((tec, index) => (
             <div key={index} className="ticker-item">
-              <img src={tec.imageUrl} alt={tec.nombre} style={{ height:isNonMobileScreens ?  '10rem':"15rem", width: 'auto' }} />
+              <img src={tec.imageUrl} alt={tec.nombre} style={{ height:isNonMobileScreens ?  '10rem':"50rem", width: isNonMobileScreens ?  '10rem':"50rem" }} />
             </div>
           ))}
         </div>
       ) : (
         // Renderizar como carrusel para pantallas móviles
-        <Carousel interval={2000}>
+        <Carousel interval={2000}  navButtonsAlwaysVisible={isNonMobileScreens}>
           {tecnologias.map((item) => renderCarouselItem(item))}
         </Carousel>
       )}
