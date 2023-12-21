@@ -55,7 +55,7 @@ import Servicios from '../Servicios';
   }, []);
 
   return (
-    <div id="nosotros">
+    <div id="nosotros"  >
       <Box sx={{ background: 'white' }}>
         <Slide direction="left" triggerOnce={false} in={inView}>
           <Typography  variant={isNonMobileScreens?"h2":"h4"} sx={{ paddingTop:isNonMobileScreens?"100px": "100px",display: "flex", justifyContent: "center",   fontWeight: 700, fontFamily: "'Oswald', sans-serif", color: 'black' }}>

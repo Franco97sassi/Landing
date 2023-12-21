@@ -129,7 +129,7 @@ const Proyectos = () => {
   };
 
   return (
-    <div id="proyectos">
+    <div id="proyectos" >
       <Box sx={{ background: '#333333', height: isNonMobileScreens?"100%":"100%",    }}  >
         <Slide direction="left" triggerOnce={false}>
           <Typography variant={isNonMobileScreens?"h2":"h4"} style={{ color: "white", fontWeight: 700, fontFamily: "'Oswald', sans-serif" }} sx={{ display: "flex", paddingTop:isNonMobileScreens? "100px":"100px", justifyContent: "center", paddingBottom: "50px" }}>
