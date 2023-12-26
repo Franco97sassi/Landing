@@ -56,7 +56,7 @@ const Estadisticas = () => {
           alignItems: 'center', // Centrado horizontalmente
           background: 'black',
           paddingTop: "50px",
-          paddingBottom: "100px", // Puedes ajustar el paddingBottom para equilibrar con paddingTop si es necesario
+          paddingBottom: "50px", // Puedes ajustar el paddingBottom para equilibrar con paddingTop si es necesario
  
         }}
       >
@@ -83,8 +83,8 @@ const Estadisticas = () => {
         height: isNonMobileScreens?"100%":"100%",
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
+        justifyContent: 'flex-start',
+        alignItems: 'flex-start',
         background: 'black',
         marginX: 'auto', // Esto centra el Box en el medio horizontalmente, manteniendo el mismo espacio en los lados
         paddingX: '0px', // Añade el mismo padding a los lados derecho e izquierdo, ajusta según sea necesario
