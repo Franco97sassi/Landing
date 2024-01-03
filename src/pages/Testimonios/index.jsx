@@ -57,38 +57,29 @@ return (
           <Grid item xs={20} sm={4} >
             <Item><Typography
               style={{ textAlign: 'justify', fontFamily: "'Oswald', sans-serif" }}
-              sx={{ fontSize: "1.5rem", color: "white", paddingTop: "50px" }}
-            > Boost your product and service's credibility by
-            adding testimonials from your clients. People
-            love recommendations so feedback from
-            others who've tried it is invaluable.</Typography> </Item>
+              sx={{ fontSize: "1rem", color: "white", paddingTop: "50px" }}
+            >  "Estos chicos realmente hacen magia; logran transformar ideas complejas en soluciones reales en un tiempo sorprendentemente corto. Lo que más me impresiona es la calidad del trabajo que entregan. Cada proyecto que hemos emprendido juntos ha superado mis expectativas, no solo en términos de funcionalidad y eficiencia, sino también en diseño y facilidad de uso. Es raro encontrar un equipo que combine habilidad técnica, creatividad y un compromiso inquebrantable con la excelencia. TechX no solo cumple con estos criterios, sino que los supera constantemente."</Typography> </Item>
           </Grid>
           <Grid item xs={20} sm={4} >
             <Item><Typography
               style={{ textAlign: 'justify', fontFamily: "'Oswald', sans-serif" }} // Añadido para justificar el texto
-              sx={{ fontSize: "1.5rem", color: "white", paddingTop: "50px" }}
-            >Boost your product and service's credibility by
-              adding testimonials from your clients. People
-              love recommendations so feedback from
-              others who've tried it is invaluable.</Typography></Item>
+              sx={{ fontSize: "1rem", color: "white", paddingTop: "50px" }}
+            >"Desde el primer momento, quedé impresionado por la capacidad del equipo de TechX para realizar tareas impresionantes en un plazo muy breve, entregando soluciones de alta calidad que pocos en la industria pueden igualar, algo verdaderamente asombroso. Lo que realmente distingue a TechX es su excepcional servicio al cliente; en cada etapa del proyecto, me sentí valorado y escuchado, con respuestas rápidas, atención personalizada y un compromiso genuino con la satisfacción del cliente, destacando en un mercado competitivo. Cada proyecto desarrollado juntos ha sido una muestra de innovación y excelencia técnica."</Typography></Item>
           </Grid>
           <Grid item xs={20} sm={4}>
             <Item><Typography
               style={{ textAlign: 'justify', fontFamily: "'Oswald', sans-serif" }}// Añadido para justificar el texto
-              sx={{ fontSize: "1.5rem", color: "white", paddingTop: "50px" }}
-            >Boost your product and service's credibility by
-              adding testimonials from your clients. People
-              love recommendations so feedback from
-              others who've tried it is invaluable.</Typography></Item>
+              sx={{ fontSize: "1rem", color: "white", paddingTop: "50px" }}
+            > "Mi experiencia con TechX ha sido excepcional en todos los aspectos. Desde nuestro primer proyecto juntos, me impresionó profundamente su habilidad para ofrecer soluciones tecnológicas de vanguardia, integrando lo último en inteligencia artificial y automatización de una manera verdaderamente fantástica. Lo que realmente marca la diferencia en TechX es su capacidad para hacer accesible esta tecnología avanzada a precios muy competitivos. En cada interacción, he encontrado un equipo que no solo es altamente competente y eficiente, sino también increíblemente dedicado a entender y satisfacer las necesidades específicas de sus clientes."</Typography></Item>
           </Grid>
           <Grid item xs={20} sm={4}>
-            <Item><Typography sx={{ fontSize: "20px", color: "white" }} >Santa Solana Post</Typography></Item>
+            <Item><Typography sx={{ fontSize: "20px", color: "white" }} >- Todo Floral</Typography></Item>
           </Grid>
           <Grid item xs={20} sm={4}>
-            <Item><Typography sx={{ fontSize: "20px", color: "white" }}>Mariana's Luxe Travels</Typography></Item>
+            <Item><Typography sx={{ fontSize: "20px", color: "white" }}>- E-Ndustry</Typography></Item>
           </Grid>
           <Grid item xs={20} sm={4}>
-            <Item><Typography sx={{ fontSize: "20px", color: "white" }}>Fairhill Journal</Typography></Item>
+            <Item><Typography sx={{ fontSize: "20px", color: "white" }}>- Proveedora de las Artes Gráficas</Typography></Item>
           </Grid>
         </Grid>
 
