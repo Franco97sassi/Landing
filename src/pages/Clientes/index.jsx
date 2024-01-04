@@ -145,8 +145,7 @@ import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import {   Slide } from "react-awesome-reveal";
 
 import empresa1 from '../../assets/1.png';
-import empresa2 from '../../assets/2.png';
-import empresa5 from '../../assets/3.png';
+ import empresa5 from '../../assets/3.png';
 import empresa4 from '../../assets/4.png';
 import empresa3 from '../../assets/5.png';
 import empresa6 from '../../assets/6.png';
@@ -158,8 +157,7 @@ import Servicios from '../Servicios';
 
   const projectImages = [
     { imageUrl: empresa1, profesion: "CEO", nombre: "Mario Eduardo Diaz" },
-    { imageUrl: empresa2, profesion: "QA and Fullstack Developer", nombre: "Luis Luna" },
-    { imageUrl: empresa3, profesion: "Sr. Fullstack Developer", nombre: "Facundo Moreyra" },
+     { imageUrl: empresa3, profesion: "Sr. Fullstack Developer", nombre: "Facundo Moreyra" },
     { imageUrl: empresa4, profesion: "Jr. Fullstack Developer", nombre: "Santiago Mercado" },
     { imageUrl: empresa5, profesion: "Jr. Fullstack Developer", nombre: "Franco Sassi" },
     { imageUrl: empresa6, profesion: "Jr. Fullstack Developer", nombre: "Alejandro Bardabid" },
@@ -192,7 +190,7 @@ import Servicios from '../Servicios';
       <Box sx={{ background: "#333333 "}}>
         <Slide direction="left" triggerOnce={false} in={inView}>
           <Typography  variant={isNonMobileScreens?"h2":"h4"} sx={{ paddingTop:isNonMobileScreens?"25px": "50px",display: "flex", justifyContent: "center",   fontWeight: 700, fontFamily: "'Oswald', sans-serif", color: 'white' }}>
-            Nuestro Equipo
+            Nuestros Clientes
           </Typography>
         </Slide>
 
