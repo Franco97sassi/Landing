@@ -10,7 +10,7 @@ import miembro2 from "../../assets/miembro2.png";
 import miembro3 from "../../assets/miembro3.png";
 import miembro4 from "../../assets/miembro4.png";
 import miembro5 from "../../assets/miembro5.png";
-import miembro6 from "../../assets/miembro6.png";
+import miembro6 from "../../assets/marcos1.png";
 import miembro7 from "../../assets/luca1.png";
 import miembro8 from "../../assets/miembro8.png";
 import miembro9 from "../../assets/miembro9.png";
@@ -28,7 +28,7 @@ import Servicios from '../Servicios';
     { imageUrl: miembro3, profesion: "Sr. Fullstack Developer", nombre: "Facundo Moreyra" },
     { imageUrl: miembro4, profesion: "Jr. Fullstack Developer", nombre: "Santiago Mercado" },
     { imageUrl: miembro5, profesion: "Jr. Fullstack Developer", nombre: "Franco Sassi" },
-    { imageUrl: miembro6, profesion: "Jr. Fullstack Developer", nombre: "Alejandro Bardabid" },
+    { imageUrl: miembro6, profesion: "Jr. Frontend Developer", nombre: "Marcos Ferreira" },
     { imageUrl: miembro7, profesion: "Jr. Python Developer", nombre: "Luca Cussino" },
      { imageUrl: miembro12, profesion: "Community Manager", nombre: "Zyanya Zaldaña" },
         { imageUrl: miembro11, profesion: "UX-UI Designer", nombre: "Christian Morales" },
