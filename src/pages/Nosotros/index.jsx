@@ -26,7 +26,6 @@ import Servicios from '../Servicios';
     { imageUrl: miembro1, profesion: "CEO", nombre: "Mario Eduardo Diaz" },
     { imageUrl: miembro2, profesion: "QA and Fullstack Developer", nombre: "Luis Luna" },
     { imageUrl: miembro3, profesion: "Sr. Fullstack Developer", nombre: "Facundo Moreyra" },
-    { imageUrl: miembro4, profesion: "Jr. Fullstack Developer", nombre: "Santiago Mercado" },
     { imageUrl: miembro5, profesion: "Jr. Fullstack Developer", nombre: "Franco Sassi" },
     { imageUrl: miembro6, profesion: "Jr. Frontend Developer", nombre: "Marcos Ferreira" },
     { imageUrl: miembro7, profesion: "Jr. Python Developer", nombre: "Luca Cussino" },
