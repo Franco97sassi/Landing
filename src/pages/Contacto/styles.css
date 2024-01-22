@@ -57,3 +57,18 @@
 .signup-section button:hover {
     background-color: #0056b3;
 }
+
+
+.submitted {
+    background: green; 
+    background-color: green;/* o el color que desees */
+  }
+  
+  .submitted .MuiTextField-root {
+    display: none;
+  }
+  
+  .submitted .MuiAlert-icon {
+    display: block !important;
+  }
+
