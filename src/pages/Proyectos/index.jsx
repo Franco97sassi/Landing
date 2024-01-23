@@ -86,7 +86,7 @@ const Proyectos = () => {
 
 
     {
-      imageUrl: parkea, url: "https://www.todofloral.com/", nombre: "Parkea"
+      imageUrl: parkea, url: "https://www.parkeasonora.com/", nombre: "Parkea"
       , description:
       "Nuestro servicio proporciona una solución integral para el registro y gestión de estacionamientos. Diseñado para facilitar la administración de espacios de estacionamiento, permite a los usuarios registrar de manera eficiente y segura tanto los estacionamientos disponibles como los vehículos que los ocupan. Una característica distintiva de nuestro sistema es la capacidad de registrar evidencias sobre los autos, incluyendo fotografías y detalles específicos del vehículo, lo que asegura un control más riguroso y una mayor seguridad. Esta herramienta es ideal para administradores de estacionamientos que buscan optimizar su operación y ofrecer un servicio de calidad a sus clientes."    }
 
