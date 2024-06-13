@@ -23,7 +23,7 @@ Dynamic Landing Page for TechX: Seamlessly blending animation, scroll effects, a
   Who they are and their testimonials.
 - **Projects:**
   Work completed by the employees.
-  - **Technologies:**
+- **Technologies:**
   Languages and frameworks in use.
 - **Team:**
    The developers on the team, including front-end and back-end, as well as designers and testers.
