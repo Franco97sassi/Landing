@@ -1,5 +1,10 @@
 # Landing TechX
 
+ <a href="https://www.techxmx.com/">
+ <img src="https://i.imgur.com/tgsdviP.png" alt="Fondo" width="100%" />
+</a>
+
+## Description
 Dynamic Landing Page for TechX: Seamlessly blending animation, scroll effects, and diverse relevant information.
 
 ## Installation
