@@ -1,7 +1,7 @@
 # Landing TechX
 
  <a href="https://www.techxmx.com/">
- <img src="https://i.imgur.com/tgsdviP.png" alt="Fondo" width="100%" />
+ <img src="https://i.imgur.com/UNfInAZ.png" alt="Fondo" width="100%" />
 </a>
 
 ## Description
